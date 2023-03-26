@@ -12,6 +12,7 @@ const Home = () => {
         <Header/>
       </Container>
       <section>
+        Section 1
       </section>
     </>
   )

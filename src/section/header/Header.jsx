@@ -8,10 +8,10 @@ const Header = () => (
   <header id='mainHeader'>
     <br></br>
     <Grid container spacing={2}>
-      <Grid xs={8}>
+      <Grid m={8}>
         <h4><Link to='/HomePage' className="links" id="title" >KHEDOYANS GUESTHOUSE</Link></h4>
       </Grid>
-      <Grid xs={4}>
+      <Grid m={4}>
         <div className="linksDiv">
           <span className="linksSection">
             <h4><Link to='/rooms' className="links">ROOMS</Link></h4>

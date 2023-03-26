@@ -1,25 +1,27 @@
-import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-const Gallery = lazy(() => import("./compontents/pages/Gallery"));
-const ContactUs = lazy(() => import('./compontents/pages/ContactUs'));
-const Rooms = lazy(() => import('./compontents/pages/Rooms'));
-const LoginPage = lazy(() => import('./compontents/pages/LoginPage'));
-const HomePage = lazy(() => import('./compontents/pages/HomePage'));
-const RegisterPage = lazy(() => import('./compontents/pages/RegisterPage'));
-const Restaurant = lazy(() => import('./compontents/pages/Restaurant'));
+import { withSuspense } from './helpers/withSuspense';
+
+// const Gallery = withSuspense(lazy(() => import("./pages/Gallery")));
+// const ContactUs = withSuspense(lazy(() => import('./pages/ContactUs')));
+// const Rooms = withSuspense(lazy(() => import('./pages/Rooms')));
+// const LoginPage = withSuspense(lazy(() => import('./pages/LoginPage')));
+const Home = withSuspense(lazy(() => import('./pages/home/Home')));
+// const RegisterPage = withSuspense(lazy(() => import('./pages/RegisterPage')));
+// const Restaurant = withSuspense(lazy(() => import('./pages/Restaurant')));
 
 const App = () => {
 
   return (
     <Routes>
-      <Route path='/' element={<Suspense><LoginPage /></Suspense>} />
-      <Route path='/registerPage' element={<Suspense><RegisterPage /></Suspense>} />
-      <Route path='/homePage' element={<Suspense><HomePage /></Suspense>} />
-      <Route path='/rooms' element={<Suspense><Rooms /></Suspense>} />
-      <Route path='/restaurant' element={<Suspense><Restaurant /></Suspense>} />
-      <Route path='/contactUs' element={<Suspense><ContactUs /></Suspense>} />
-      <Route path='/gallery' element={<Suspense><Gallery /></Suspense>} />
+      {/* <Route path='/' element={<LoginPage />} /> */}
+      {/* <Route path='/registerPage' element={<RegisterPage />} /> */}
+      <Route path='/home' element={<Home />} />
+      {/* <Route path='/rooms' element={<Rooms />} /> */}
+      {/* <Route path='/restaurant' element={<Restaurant />} /> */}
+      {/* <Route path='/contactUs' element={<ContactUs />} /> */}
+      {/* <Route path='/gallery' element={<Gallery />} /> */}
     </Routes>
   );
 }
