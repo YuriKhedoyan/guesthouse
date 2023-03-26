@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, TextField, Button } from "@mui/material";
+import { Container} from "@mui/material";
 
-import Header from "../../common/Header";
+import Header from "../../section/header/Header";
 
 import './Home.sass'
 
