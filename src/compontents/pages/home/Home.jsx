@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, TextField, Button } from "@mui/material";
 
-import Header from "../common/Header";
+import Header from "../../common/Header";
 
-import '../../Assets/Styles/HomePage.sass'
+import '../../assets/styles/Home.sass'
 
-const RegisterPage = () => {
+const Home = () => {
   return (
     <>
       <Container>
@@ -17,4 +17,4 @@ const RegisterPage = () => {
   )
 }
 
-export default RegisterPage;
+export default Home;
