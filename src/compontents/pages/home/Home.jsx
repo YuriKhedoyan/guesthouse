@@ -3,7 +3,7 @@ import { Container, TextField, Button } from "@mui/material";
 
 import Header from "../../common/Header";
 
-import '../../assets/styles/Home.sass'
+import './Home.sass'
 
 const Home = () => {
   return (
