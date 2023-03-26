@@ -1,15 +1,15 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom'
 
+const Gallery = lazy(() => import("./compontents/pages/Gallery"));
+const ContactUs = lazy(() => import('./compontents/pages/ContactUs'));
+const Rooms = lazy(() => import('./compontents/pages/Rooms'));
+const LoginPage = lazy(() => import('./compontents/pages/LoginPage'));
+const HomePage = lazy(() => import('./compontents/pages/HomePage'));
+const RegisterPage = lazy(() => import('./compontents/pages/RegisterPage'));
+const Restaurant = lazy(() => import('./compontents/pages/Restaurant'));
 
 const App = () => {
-  const Gallery = lazy(() => import("./compontents/pages/Gallery"));
-  const ContactUs = lazy(() => import('./compontents/pages/ContactUs'));
-  const Rooms = lazy(() => import('./compontents/pages/Rooms'));
-  const LoginPage = lazy(() => import('./compontents/pages/LoginPage'));
-  const HomePage = lazy(() => import('./compontents/pages/HomePage'));
-  const RegisterPage = lazy(() => import('./compontents/pages/RegisterPage'));
-  const Restaurant = lazy(() => import('./compontents/pages/Restaurant'));
 
   return (
     <Routes>

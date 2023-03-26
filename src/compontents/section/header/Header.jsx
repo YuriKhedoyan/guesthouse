@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from '@mui/material/';
+import { Grid } from '@mui/material';
 import { Link } from "react-router-dom";
 
 import './Header.sass'
@@ -14,16 +14,16 @@ const Header = () => (
       <Grid xs={4}>
         <div className="linksDiv">
           <span className="linksSection">
-            <h4><Link to='/rooms' className="links">ROOMS </Link></h4>
+            <h4><Link to='/rooms' className="links">ROOMS</Link></h4>
           </span>
           <span className="linksSection">
-            <h4><Link to='/gallery' className="links">GALLERY </Link></h4>
+            <h4><Link to='/gallery' className="links">GALLERY</Link></h4>
           </span>
           <span className="linksSection">
-            <h4><Link to='/restaurant' className="links">RESTAURANT </Link></h4>
+            <h4><Link to='/restaurant' className="links">RESTAURANT</Link></h4>
           </span>
           <span className="linksSection">
-            <h4><Link to='/contactUs' className="links">CONTACT US </Link></h4>
+            <h4><Link to='/contactUs' className="links">CONTACT US</Link></h4>
           </span>
         </div>
       </Grid>
