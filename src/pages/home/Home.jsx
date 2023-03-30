@@ -1,19 +1,29 @@
-import React from "react";
-import { Container} from "@mui/material";
+import { React, lazy } from "react";
+import { Container } from "@mui/material";
 
-import Header from "../../section/header/Header";
+import { withSuspense } from "../../helpers/withSuspense";
+
+import pic1 from "../../assets/images/9S5A9235-1-scaled.jpg"
 
 import './Home.sass'
 
 const Home = () => {
+
+  const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
+  const Header = withSuspense(lazy(() => import('../../section/header/Header')));
+
   return (
     <>
+
+      <Img picture={pic1} alt="Spruce branch" imgId="mainImage" />
+      <h2 className="centered">KHEDOYANS GUESTHOUSE</h2>
       <Container>
-        <Header/>
+        <div className="top-left">
+          <Header />
+        </div>
       </Container>
-      <section>
-        Section 1
-      </section>
+      <br></br>
+      <br></br>
     </>
   )
 }
