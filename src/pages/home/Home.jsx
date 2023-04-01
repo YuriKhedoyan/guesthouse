@@ -3,9 +3,9 @@ import { Container } from "@mui/material";
 
 import { withSuspense } from "../../helpers/withSuspense";
 
-import pic1 from "../../assets/images/9S5A9235-1-scaled.jpg"
+import house2 from "../../assets/images/house2.jpg"
 
-import './Home.sass'
+import './Home.scss'
 
 const Home = () => {
 
@@ -14,16 +14,16 @@ const Home = () => {
 
   return (
     <>
+      <section>
+        <Img picture={house2} alt="View From Top Of The House" imgId="sc1Background" />
+        <h2 className="center">KHEDOYANS GUESTHOUSE</h2>
+        <Container>
+          <div className="top-left">
+            <Header />
+          </div>
+        </Container>
+      </section>
 
-      <Img picture={pic1} alt="Spruce branch" imgId="mainImage" />
-      <h2 className="centered">KHEDOYANS GUESTHOUSE</h2>
-      <Container>
-        <div className="top-left">
-          <Header />
-        </div>
-      </Container>
-      <br></br>
-      <br></br>
     </>
   )
 }
