@@ -14,7 +14,7 @@ import restaurant6 from '../../assets/images/restaurant6.jpg'
 import restaurant7 from '../../assets/images/restaurant7.jpg'
 import houseRestaurant from '../../assets/images/houseRestaurant.jpg'
 
-import './Restaurant.sass'
+import './Restaurant.scss'
 
 const Restaurant = () => {
 
