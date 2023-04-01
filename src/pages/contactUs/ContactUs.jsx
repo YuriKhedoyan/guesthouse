@@ -5,12 +5,13 @@ import Button from '@mui/material/Button';
 
 import Img from "../../compontents/img/Img";
 import { withSuspense } from "../../helpers/withSuspense";
-const Header = withSuspense(lazy(() => import('../../section/header/Header')));
-const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
 
 import house2 from "../../assets/images/house2.jpg"
 
-import './ContactUs.sass'
+import './ContactUs.scss'
+
+const Header = withSuspense(lazy(() => import('../../section/header/Header')));
+const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
 
 const ContactUs = () => {
   return (

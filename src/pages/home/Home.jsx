@@ -5,7 +5,7 @@ import { withSuspense } from "../../helpers/withSuspense";
 
 import house2 from "../../assets/images/house2.jpg"
 
-import './Home.sass'
+import './Home.scss'
 
 const Home = () => {
 

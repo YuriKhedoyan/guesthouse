@@ -29,7 +29,7 @@ import house3 from "../../assets/images/house3.jpg"
 import house4 from "../../assets/images/house4.jpg"
 import house from "../../assets/images/house.jpg"
 
-import './Gallery.sass'
+import './Gallery.scss'
 const Header = withSuspense(lazy(() => import('../../section/header/Header')));
 const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
 

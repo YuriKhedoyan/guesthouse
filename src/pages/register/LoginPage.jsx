@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, TextField, Button, Alert } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import './SignInUp.sass'
+import './SignInUp.scss'
 
 const LoginPage = () => {
   const [login, setLogin] = useState('');
