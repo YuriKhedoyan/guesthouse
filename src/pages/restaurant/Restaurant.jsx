@@ -17,24 +17,6 @@ import houseRestaurant from '../../assets/images/houseRestaurant.jpg'
 import './Restaurant.sass'
 
 const Restaurant = () => {
-  const images = [
-    restaurant1,
-    restaurant2,
-    restaurant3,
-    restaurant4,
-    restaurant5,
-    restaurant6,
-    restaurant7,
-    houseRestaurant
-  ]
-  
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '800px'
-  }
 
   return (
     <>
@@ -55,7 +37,9 @@ const Restaurant = () => {
             <p> <b>Breakfast</b> is considered the most important meal of the day, therefor our restaurant offers a full buffet breakfast of special Armenian dishes alongside with international foods. Ingredients are sourced fresh and local, dairy products such as cheeses, yogurts, milks, and creams. We also have a variety of local jams, pastries, fruits and a wide selection of hot dishes with freshly-squeezed juices, with a last touch of coffee and tea.</p>
           </Grid>
           <Grid item xs={7}>
-            <Img picture={restaurant2} class={'photos'} alt='Restaurant' />
+            <div className="images">
+              <Img picture={restaurant2} class={'photos'} alt='Restaurant' />
+            </div>
           </Grid>
         </Grid>
         <br></br>
@@ -63,8 +47,9 @@ const Restaurant = () => {
         <br></br>
         <Grid container spacing={2}>
           <Grid item xs={5}>
-
-            <Img picture={restaurant7} class={'photos'} alt='Restaurant' />
+            <div className="images">
+              <Img picture={restaurant7} class={'photos'} alt='Restaurant' />
+            </div>
           </Grid>
           <Grid item xs={7}>
             <h3>Dinner</h3>

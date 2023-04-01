@@ -13,7 +13,7 @@ import pic1 from "../../assets/images/9S5A9235-1-scaled.jpg"
 import './Rooms.sass'
 
 const Rooms = () => {
-  
+
   const Header = withSuspense(lazy(() => import('../../section/header/Header')));
   const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
   const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
