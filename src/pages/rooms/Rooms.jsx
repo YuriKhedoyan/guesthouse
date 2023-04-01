@@ -98,6 +98,7 @@ const Rooms = () => {
           </Grid>
         </Grid>
       </Container>
+      <Footer></Footer>
     </>
   )
 }
