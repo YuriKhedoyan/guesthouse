@@ -1,6 +1,5 @@
 import React, { lazy } from 'react';
-import ReactDOM from 'react-dom/client'; 
-// import { from 'react';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { withSuspense } from './helpers/withSuspense';
