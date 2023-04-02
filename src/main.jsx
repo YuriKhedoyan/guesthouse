@@ -1,5 +1,6 @@
-import ReactDOM from 'react-dom/client';
-import { lazy, React } from 'react';
+import ReactDOM from 'react-dom/client'; 
+import { lazy } from 'react';
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { withSuspense } from './helpers/withSuspense';
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-	<React>
+	<React.StrictMode>
 		<RouterProvider router={router} />
-	</React>
+	</React.StrictMode>
 );
