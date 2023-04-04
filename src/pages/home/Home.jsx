@@ -17,7 +17,7 @@ const Home = () => {
 		<>
 			<section>
 				<Img
-					picture={house2}
+					pathToPicture={house2}
 					alt="View From Top Of The House"
 					imgId="sc1Background"
 				/>

@@ -30,13 +30,18 @@ import house4 from '../../assets/images/house4.jpg';
 import house from '../../assets/images/house.jpg';
 
 import './Gallery.scss';
+
 const Header = withSuspense(lazy(() => import('../../section/header/Header')));
 const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
 
 const Gallery = () => {
 	return (
 		<>
-			<Img picture={house2} alt="House From Top" imgId="mainImage" />
+			<Img
+				pathToPicture={house2}
+				alternativeName="House From Top"
+				id="mainImage"
+			/>
 			<h2 className="centered">GALLERY</h2>
 			<Container>
 				<div className="top-left">
@@ -48,99 +53,191 @@ const Gallery = () => {
 			<Container>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Img picture={restaurant1} class={'photos'} alt="Restaurant" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={restaurant2} class={'photos'} alt="Restaurant" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={restaurant3} class={'photos'} alt="Restaurant" />
-					</Grid>
-				</Grid>
-				<br></br>
-				<Grid container spacing={3}>
-					<Grid item xs={4}>
-						<Img picture={restaurant4} class={'photos'} alt="Restaurant" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={restaurant5} class={'photos'} alt="Restaurant" />
+						<Img
+							pathToPicture={restaurant1}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
-							picture={houseRestaurant}
-							class={'photos'}
-							alt="House Restaurant"
+							pathToPicture={restaurant2}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={restaurant3}
+							className="photos"
+							alternativeName="Restaurant"
 						/>
 					</Grid>
 				</Grid>
 				<br></br>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Img picture={restaurant6} class={'photos'} alt="Restaurant" />
+						<Img
+							pathToPicture={restaurant4}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={restaurant7} class={'photos'} alt="Restaurant" />
+						<Img
+							pathToPicture={restaurant5}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={garden1} class={'photos'} alt="Garden" />
-					</Grid>
-				</Grid>
-				<br></br>
-				<Grid container spacing={3}>
-					<Grid item xs={4}>
-						<Img picture={garden2} class={'photos'} alt="Garden" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={garden3} class={'photos'} alt="Garden" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={garden4} class={'photos'} alt="Garden" />
-					</Grid>
-				</Grid>
-				<br></br>
-				<Grid container spacing={3}>
-					<Grid item xs={4}>
-						<Img picture={garden5} class={'photos'} alt="Garden" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={garden6} class={'photos'} alt="Garden" />
-					</Grid>
-					<Grid item xs={4}>
-						<Img picture={garden7} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={houseRestaurant}
+							className="photos"
+							alternativeName="House Restaurant"
+						/>
 					</Grid>
 				</Grid>
 				<br></br>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Img picture={garden8} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={restaurant6}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={garden9} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={restaurant7}
+							className="photos"
+							alternativeName="Restaurant"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={garden10} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={garden1}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+				</Grid>
+				<br></br>
+				<Grid container spacing={3}>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden2}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden3}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden4}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+				</Grid>
+				<br></br>
+				<Grid container spacing={3}>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden5}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden6}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden7}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+				</Grid>
+				<br></br>
+				<Grid container spacing={3}>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden8}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden9}
+							className="photos"
+							alternativeName="Garden"
+						/>
+					</Grid>
+					<Grid item xs={4}>
+						<Img
+							pathToPicture={garden10}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 				</Grid>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Img picture={house1} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house1}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={house2} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house2}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={house3} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house3}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 				</Grid>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<Img picture={house4} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house4}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={house1} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house1}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 					<Grid item xs={4}>
-						<Img picture={house} class={'photos'} alt="Garden" />
+						<Img
+							pathToPicture={house}
+							className="photos"
+							alternativeName="Garden"
+						/>
 					</Grid>
 				</Grid>
 			</Container>

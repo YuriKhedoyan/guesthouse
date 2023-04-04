@@ -1,35 +1,21 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Container, Grid } from '@mui/material';
 
-<<<<<<< HEAD
 import Img from '../../compontents/img/Img';
+import { withSuspense } from '../../helpers/withSuspense';
 
 import restaurant2 from '../../assets/images/restaurant2.jpg';
 import restaurant7 from '../../assets/images/restaurant7.jpg';
 
 const Header = withSuspense(lazy(() => import('../../section/header/Header')));
 const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
-=======
-import Header from '../../section/header/Header';
-import Footer from '../../section/footer/Footer';
-import Img from '../../compontents/img/Img';
 
-// import restaurant1 from '../../assets/images/restaurant1.jpg';
-import restaurant2 from '../../assets/images/restaurant2.jpg';
-// import restaurant3 from '../../assets/images/restaurant3.jpg';
-// import restaurant4 from '../../assets/images/restaurant4.jpg';
-// import restaurant5 from '../../assets/images/restaurant5.jpg';
-// import restaurant6 from '../../assets/images/restaurant6.jpg';
-import restaurant7 from '../../assets/images/restaurant7.jpg';
-// import houseRestaurant from '../../assets/images/houseRestaurant.jpg';
-
->>>>>>> c0e51d0421f5383547e1d23eca3f1da47e462d34
 import './Restaurant.scss';
 
 const Restaurant = () => {
 	return (
 		<>
-			<Img picture={restaurant7} alt="House From Top" imgId="mainImage" />
+			<Img pathToPicture={restaurant7} alt="House From Top" imgId="mainImage" />
 			<h2 className="centered">RESTAURANT</h2>
 			<Container>
 				<div className="top-left">
@@ -44,10 +30,6 @@ const Restaurant = () => {
 						<h3>Breakfast</h3>
 						<br></br>
 						<p>
-<<<<<<< HEAD
-=======
-							{' '}
->>>>>>> c0e51d0421f5383547e1d23eca3f1da47e462d34
 							<b>Breakfast</b> is considered the most important meal of the day,
 							therefor our restaurant offers a full buffet breakfast of special
 							Armenian dishes alongside with international foods. Ingredients
@@ -59,7 +41,11 @@ const Restaurant = () => {
 					</Grid>
 					<Grid item xs={7}>
 						<div className="images">
-							<Img picture={restaurant2} class={'photos'} alt="Restaurant" />
+							<Img
+								pathToPicture={restaurant2}
+								class={'photos'}
+								alt="Restaurant"
+							/>
 						</div>
 					</Grid>
 				</Grid>
@@ -69,7 +55,11 @@ const Restaurant = () => {
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<div className="images">
-							<Img picture={restaurant7} class={'photos'} alt="Restaurant" />
+							<Img
+								pathToPicture={restaurant7}
+								class={'photos'}
+								alt="Restaurant"
+							/>
 						</div>
 					</Grid>
 					<Grid item xs={7}>
@@ -80,17 +70,10 @@ const Restaurant = () => {
 							time of the day. With our talented Chef and all the varieties of
 							international dishes, we offer the best Cuisine within the region.
 							The restaurant is also fulfilled with wide range of wines, to
-<<<<<<< HEAD
-							everyone’s taste. While guests relax and enjoy their glass of wine
-							and dinner in the coziest atmosphere, the evening is lead with
-							Jazz music played live by different famous performers. Khedoyans
-							Guesthouse's Restaurant features both indoor and outdoor dining.
-=======
 							everyones taste. While guests relax and enjoy their glass of wine
 							and dinner in the coziest atmosphere, the evening is lead with
 							Jazz music played live by different famous performers. Khedoyans
 							Guesthouse`s Restaurant features both indoor and outdoor dining.
->>>>>>> c0e51d0421f5383547e1d23eca3f1da47e462d34
 							Our restaurant is open for all guests travelling within Khedoyans
 							Guesthouse.
 						</p>

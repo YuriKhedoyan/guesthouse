@@ -16,7 +16,11 @@ import './ContactUs.scss';
 const ContactUs = () => {
 	return (
 		<>
-			<Img picture={house2} alt="House From Top" imgId="mainImage" />
+			<Img
+				pathToPicture={house2}
+				alternativeName="House From Top"
+				id="mainImage"
+			/>
 			<h2 className="centered">CONTACT US</h2>
 			<Container>
 				<div className="top-left">
