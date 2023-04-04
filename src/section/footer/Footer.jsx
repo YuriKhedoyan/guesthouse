@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import './Footer.sass'
+import './Footer.scss';
 
 const Footer = () => (
-  <footer id='mainFooter'>
-    <div>
-    </div>
-  </footer>
-)
+	<footer id="mainFooter">
+		<div></div>
+	</footer>
+);
 
 export default Footer;
