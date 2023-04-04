@@ -22,6 +22,7 @@ const Rooms = () => {
 	const Header = withSuspense(
 		lazy(() => import('../../section/header/Header'))
 	);
+<<<<<<< HEAD
 	const Footer = withSuspense(
 		lazy(() => import('../../section/footer/Footer'))
 	);
@@ -116,4 +117,102 @@ const Rooms = () => {
 	);
 };
 
+=======
+
+	const Footer = withSuspense(
+		lazy(() => import('../../section/footer/Footer'))
+	);
+  
+	const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
+	return (
+		<>
+			<Img picture={pic1} alt="Spruce branch" imgId="mainImage" />
+			<h2 className="centered">ROOMS</h2>
+			<Container>
+				<div className="top-left">
+					<Header></Header>
+				</div>
+				<br></br>
+				<br></br>
+				<Grid container spacing={2}>
+					<Grid item xs={6}>
+						<div className="cards">
+							<span>
+								<Card sx={{ maxWidth: 450 }}>
+									<CardMedia
+										component="img"
+										height="300"
+										image={housePicture1}
+										alt="Paella dish"
+									/>
+									<CardContent>
+										<h3>Standard Room</h3>
+									</CardContent>
+									<CardActions disableSpacing>
+										<h3>From 53.000 ֏</h3>
+									</CardActions>
+								</Card>
+							</span>
+							<span>
+								<Card sx={{ maxWidth: 450 }}>
+									<CardMedia
+										component="img"
+										height="300"
+										image={housePicture2}
+										alt="Paella dish"
+									/>
+									<CardContent>
+										<h3>Standard Room</h3>
+									</CardContent>
+									<CardActions disableSpacing>
+										<h3>From 53.000 ֏</h3>
+									</CardActions>
+								</Card>
+							</span>
+						</div>
+					</Grid>
+					<Grid item xs={6}>
+						<div className="cards">
+							<span>
+								<Card sx={{ maxWidth: 450 }}>
+									<CardMedia
+										component="img"
+										height="300"
+										image={housePicture3}
+										alt="Paella dish"
+									/>
+									<CardContent>
+										<h3>Standard Room</h3>
+									</CardContent>
+									<CardActions disableSpacing>
+										<h3>From 53.000 ֏</h3>
+									</CardActions>
+								</Card>
+							</span>
+							<span>
+								<Card sx={{ maxWidth: 450 }}>
+									<CardMedia
+										component="img"
+										height="300"
+										image={housePicture4}
+										alt="Paella dish"
+									/>
+									<CardContent>
+										<h3>Standard Room</h3>
+									</CardContent>
+									<CardActions disableSpacing>
+										<h3>From 53.000 ֏</h3>
+									</CardActions>
+								</Card>
+							</span>
+						</div>
+					</Grid>
+				</Grid>
+			</Container>
+			<Footer></Footer>
+		</>
+	);
+};
+
+>>>>>>> c0e51d0421f5383547e1d23eca3f1da47e462d34
 export default Rooms;
