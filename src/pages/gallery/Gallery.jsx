@@ -40,7 +40,7 @@ const Gallery = () => {
 			<Img
 				pathToPicture={house2}
 				alternativeName="House From Top"
-				id="mainImage"
+				pictureId="mainImage"
 			/>
 			<h2 className="centered">GALLERY</h2>
 			<Container>
@@ -55,21 +55,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant1}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant2}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant3}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
@@ -79,21 +79,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant4}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant5}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={houseRestaurant}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="House Restaurant"
 						/>
 					</Grid>
@@ -103,21 +103,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant6}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={restaurant7}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Restaurant"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden1}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
@@ -127,21 +127,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden2}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden3}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden4}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
@@ -151,21 +151,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden5}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden6}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden7}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
@@ -175,21 +175,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden8}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden9}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={garden10}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
@@ -198,21 +198,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house1}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house2}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house3}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
@@ -221,21 +221,21 @@ const Gallery = () => {
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house4}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house1}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>
 					<Grid item xs={4}>
 						<Img
 							pathToPicture={house}
-							className="photos"
+							pictureClassName="photos"
 							alternativeName="Garden"
 						/>
 					</Grid>

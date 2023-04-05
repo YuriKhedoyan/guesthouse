@@ -15,7 +15,7 @@ import './Restaurant.scss';
 const Restaurant = () => {
 	return (
 		<>
-			<Img pathToPicture={restaurant7} alt="House From Top" imgId="mainImage" />
+			<Img pathToPicture={restaurant7} alt="House From Top" pictureId="mainImage" />
 			<h2 className="centered">RESTAURANT</h2>
 			<Container>
 				<div className="top-left">

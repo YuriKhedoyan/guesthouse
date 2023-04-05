@@ -28,7 +28,7 @@ const Rooms = () => {
 	const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
 	return (
 		<>
-			<Img pathToPicture={pic1} alt="Spruce branch" imgId="mainImage" />
+			<Img pathToPicture={pic1} alt="Spruce branch" pictureId="mainImage" />
 			<h2 className="centered">ROOMS</h2>
 			<Container>
 				<div className="top-left">

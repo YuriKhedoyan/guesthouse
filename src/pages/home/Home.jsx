@@ -1,4 +1,4 @@
-import { React, lazy } from 'react';
+import React, { lazy } from 'react';
 import { Container } from '@mui/material';
 
 import { withSuspense } from '../../helpers/withSuspense';
@@ -15,11 +15,11 @@ const Home = () => {
 
 	return (
 		<>
-			<section>
+			<section >
 				<Img
 					pathToPicture={house2}
 					alt="View From Top Of The House"
-					imgId="sc1Background"
+					pictureId="sc1Background"
 				/>
 				<h2 className="center">KHEDOYANS GUESTHOUSE</h2>
 				<Container>
