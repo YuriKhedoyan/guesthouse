@@ -19,7 +19,7 @@ const ContactUs = () => {
 			<Img
 				pathToPicture={house2}
 				alternativeName="House From Top"
-				id="mainImage"
+				pictureId="mainImage"
 			/>
 			<h2 className="centered">CONTACT US</h2>
 			<Container>
