@@ -5,14 +5,8 @@ import Header from '../../section/header/Header';
 import Footer from '../../section/footer/Footer';
 import Img from '../../compontents/img/Img';
 
-// import restaurant1 from '../../assets/images/restaurant1.jpg';
 import restaurant2 from '../../assets/images/restaurant2.jpg';
-// import restaurant3 from '../../assets/images/restaurant3.jpg';
-// import restaurant4 from '../../assets/images/restaurant4.jpg';
-// import restaurant5 from '../../assets/images/restaurant5.jpg';
-// import restaurant6 from '../../assets/images/restaurant6.jpg';
 import restaurant7 from '../../assets/images/restaurant7.jpg';
-// import houseRestaurant from '../../assets/images/houseRestaurant.jpg';
 
 import './Restaurant.scss';
 

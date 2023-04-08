@@ -15,7 +15,6 @@ const LoginPage = () => {
 
 	return (
 		<>
-			{/* <Alert onClose={() => {}}>This is a success alert — check it out!</Alert> */}
 			<Container>
 				<div id="mainDiv">
 					<h3>Welcome Khedoyans Guesthouse</h3>

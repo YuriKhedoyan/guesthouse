@@ -26,7 +26,7 @@ const Rooms = () => {
 	const Footer = withSuspense(
 		lazy(() => import('../../section/footer/Footer'))
 	);
-  
+
 	const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
 	return (
 		<>
