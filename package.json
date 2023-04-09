@@ -12,12 +12,15 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.15",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "react-suspense": "^0.1.0",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
