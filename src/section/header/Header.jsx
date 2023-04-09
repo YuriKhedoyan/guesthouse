@@ -11,7 +11,7 @@ const Header = () => {
 			<Grid container spacing={2}>
 				<Grid item xs={8}>
 					<h4>
-						<Link to="/home" className="links" id="title">
+						<Link to="/" className="links" id="title">
 							KHEDOYANS GUESTHOUSE
 						</Link>
 					</h4>

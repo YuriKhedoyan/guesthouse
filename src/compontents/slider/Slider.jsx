@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import './Slider.scss';
 
 import restaurant4 from '../../assets/images/restaurant4.jpg';
 import restaurant7 from '../../assets/images/restaurant7.jpg';
 import garden9 from '../../assets/images/garden9.jpg';
+import house2 from '../../assets/images/house2.jpg';
 
-const Slider = ( props ) => {
-	const photos = [restaurant4, restaurant7, garden9];
+import './Slider.scss';
+
+const Slider = props => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			setCurrentImageIndex((currentImageIndex + 1) % photos.length);
-		}, 3000);
-		return () => clearInterval(intervalId);
-	}, [currentImageIndex, photos.length]);
+	const images  = [house2, garden9, restaurant7, restaurant4];
 
 	const handlePrevious = () => {
 		setCurrentImageIndex(
-			(currentImageIndex + photos.length - 1) % photos.length
+			(currentImageIndex + images.length - 1) % images.length
 		);
 	};
 
 	const handleNext = () => {
-		setCurrentImageIndex((currentImageIndex + 1) % photos.length);
+		setCurrentImageIndex((currentImageIndex + 1) % images.length);
 	};
 
 	return (
@@ -33,7 +28,7 @@ const Slider = ( props ) => {
 			<img
 				// eslint-disable-next-line react/prop-types
 				className={`slider__image ${props.photoClassName}`}
-				src={photos[currentImageIndex]}
+				src={images[currentImageIndex]}
 				alt={`Slide ${currentImageIndex}`}
 			/>
 			<div className="slider__button-container">
