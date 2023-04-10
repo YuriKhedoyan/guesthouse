@@ -41,19 +41,29 @@ const Footer = () => {
                 </Link>
                 <br></br>
                 <Link to="/restaurant" className="texts links">
-                  <p className="texts">{links.restaurant[0] + links.restaurant.slice(1).toLowerCase()}</p>
+                  <p className="texts">
+                    {links.restaurant[0] +
+											links.restaurant.slice(1).toLowerCase()}
+                  </p>
                 </Link>
                 <br></br>
                 <Link to="/rooms" className="texts links">
-                  <p className="texts">{links.rooms[0] + links.rooms.slice(1).toLowerCase()}</p>
+                  <p className="texts">
+                    {links.rooms[0] + links.rooms.slice(1).toLowerCase()}
+                  </p>
                 </Link>
                 <br></br>
                 <Link to="/gallery" className="texts links">
-                  <p className="texts">{links.gallery[0] + links.gallery.slice(1).toLowerCase()}</p>
+                  <p className="texts">
+                    {links.gallery[0] + links.gallery.slice(1).toLowerCase()}
+                  </p>
                 </Link>
                 <br></br>
                 <Link to="/contactUs" className="texts links">
-                  <p className="texts">{links.contactUs[0] + links.contactUs.slice(1).toLowerCase()}</p>
+                  <p className="texts">
+                    {links.contactUs[0] +
+											links.contactUs.slice(1).toLowerCase()}
+                  </p>
                 </Link>
               </div>
             </Grid>
