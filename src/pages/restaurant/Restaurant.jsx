@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { Container, Grid } from "@mui/material";
 
 import Img from "../../compontents/img/Img";
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import restaurant2 from "../../assets/images/restaurant2.jpg";
@@ -14,14 +14,14 @@ const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 import "./Restaurant.scss";
 
 const Restaurant = () => {
-  const { restaurantInformation, links } = staticValues;
+  const { restaurantInformation, links } = eng;
 
   return (
     <>
       <Img
-        pathToPicture={restaurant7}
+        src={restaurant7}
         alt="House From Top"
-        pictureId="mainImage"
+        id="mainImage"
       />
       <h2 className="centered">{links.restaurant}</h2>
       <Container>

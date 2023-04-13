@@ -2,34 +2,41 @@ import React, { useState } from "react";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-import restaurant4 from "../../assets/images/restaurant4.jpg";
-import restaurant7 from "../../assets/images/restaurant7.jpg";
-import garden9 from "../../assets/images/garden9.jpg";
-import house2 from "../../assets/images/house2.jpg";
+import images from "../../locales/images.json";
 
 import "./Slider.scss";
 
 const Slider = props => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [house2, garden9, restaurant7, restaurant4];
+  const { restaurant } = images;
+  const [currentImageIndex, setCurrentImageIndex] = useState(2);
+  const [currentImage, setCurrentImage] = useState(restaurant["restaurant1"]);
 
   const handlePrevious = () => {
-    setCurrentImageIndex(
-      (currentImageIndex + images.length - 1) % images.length
-    );
+    if (currentImageIndex !== 1) {
+      setCurrentImageIndex(currentImageIndex - 1);
+      setCurrentImage(restaurant[`restaurant${currentImageIndex}`]);
+    } else {
+      setCurrentImageIndex(Object.keys(images).length);
+      setCurrentImage(restaurant[`restaurant${currentImageIndex}`]);
+    }
   };
 
   const handleNext = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % images.length);
+    if (currentImageIndex !== Object.keys(images).length) {
+      setCurrentImageIndex(currentImageIndex + 1);
+      setCurrentImage(restaurant[`restaurant${currentImageIndex}`]);
+    } else {
+      setCurrentImageIndex(1);
+      setCurrentImage(restaurant[`restaurant${currentImageIndex}`]);
+    }
   };
 
   return (
     <div className="slider">
       <img
-        // eslint-disable-next-line react/prop-types
-        className={`slider__image ${props.photoClassName}`}
-        src={images[currentImageIndex]}
-        alt={`Slide ${currentImageIndex}`}
+        src={currentImage.src}
+        alt={`Slide ${currentImage.alt}`}
+        className={`slider__image ${props.className}`}
       />
       <div className="slider__button-container">
         <button className="slider__button" onClick={handlePrevious}>

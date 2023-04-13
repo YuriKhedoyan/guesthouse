@@ -1,0 +1,100 @@
+{
+	"house": {
+		"house1": {
+			"src": "/src/assets/images/house.jpg",
+			"alt": "Photo of the house"
+		},
+		"house2": {
+			"src": "/src/assets/images/house1.jpg",
+			"alt": "Photo of the house"
+		},
+		"house3": {
+			"src": "/src/assets/images/house2.jpg",
+			"alt": "Photo of the house"
+		},
+		"house4": {
+			"src": "/src/assets/images/house3.jpg",
+			"alt": "Photo of the house"
+		},
+		"house5": {
+			"src": "/src/assets/images/house4.jpg",
+			"alt": "Photo of the house"
+		},
+		"houseRestaurant": {
+			"src": "/src/assets/images/houseRestaurant.jpg",
+			"alt": "Photo of the House's Restaurant"
+		}
+	},
+	"restaurant": {
+		"restaurant1": {
+			"src": "/src/assets/images/restaurant1.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant2": {
+			"src": "/src/assets/images/restaurant2.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant3": {
+			"src": "/src/assets/images/restaurant3.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant4": {
+			"src": "/src/assets/images/restaurant4.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant5": {
+			"src": "/src/assets/images/restaurant5.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant6": {
+			"src": "/src/assets/images/restaurant6.jpg",
+			"alt": "Photo of the restaurant1"
+		},
+		"restaurant7": {
+			"src": "/src/assets/images/restaurant7.jpg",
+			"alt": "Photo of the restaurant1"
+		}
+	},
+	"garden": {
+		"garden1": {
+			"src": "/src/assets/images/garden1.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden2": {
+			"src": "/src/assets/images/garden2.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden3": {
+			"src": "/src/assets/images/garden3.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden4": {
+			"src": "/src/assets/images/garden4.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden5": {
+			"src": "/src/assets/images/garden5.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden6": {
+			"src": "/src/assets/images/garden6.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden7": {
+			"src": "/src/assets/images/garden7.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden8": {
+			"src": "/src/assets/images/garden8.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden9": {
+			"src": "/src/assets/images/garden9.jpg",
+			"alt": "Photo of the garden1"
+		},
+		"garden10": {
+			"src": "/src/assets/images/garden10.jpg",
+			"alt": "Photo of the garden1"
+		}
+	}
+}

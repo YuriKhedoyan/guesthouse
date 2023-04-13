@@ -8,7 +8,7 @@ import {
   CardMedia,
 } from "@mui/material";
 
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import housePicture1 from "../../assets/images/house.jpg";
@@ -20,7 +20,7 @@ import pic1 from "../../assets/images/9S5A9235-1-scaled.jpg";
 import "./Rooms.scss";
 
 const Rooms = () => {
-  const { roomsInformation, links } = staticValues;
+  const { roomsInformation, links } = eng;
 
   const Header = withSuspense(
     lazy(() => import("../../section/header/Header"))
@@ -32,7 +32,7 @@ const Rooms = () => {
 
   return (
     <>
-      <Img pathToPicture={pic1} alt="Spruce branch" pictureId="mainImage" />
+      <Img src={pic1} alt="Spruce branch" id="mainImage" />
       <h2 className="centered">{links.rooms}</h2>
       <Container>
         <div className="top-left">

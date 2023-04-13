@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 import Img from "../../compontents/img/Img";
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 import { withSuspense } from "../../helpers/withSuspense";
 
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
@@ -15,13 +15,13 @@ import house2 from "../../assets/images/house2.jpg";
 import "./ContactUs.scss";
 
 const ContactUs = () => {
-  const { links } = staticValues;
+  const { links } = eng;
   return (
     <>
       <Img
-        pathToPicture={house2}
-        alternativeName="House From Top"
-        pictureId="mainImage"
+        src={house2}
+        id="mainImage"
+        alt="House From Top"
       />
       <h2 className="centered">{links.contactUs}</h2>
       <Container>
@@ -68,9 +68,9 @@ const ContactUs = () => {
                 rows="10"
                 id="message"
                 name="message-en"
-                className="form-control"
                 aria-required="true"
                 aria-invalid="false"
+                className="form-control"
               ></textarea>
             </span>
           </p>

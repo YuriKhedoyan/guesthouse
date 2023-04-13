@@ -2,12 +2,12 @@ import React from "react";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 
 import "./Header.scss";
 
 const Header = () => {
-  const { links } = staticValues;
+  const { links } = eng;
 
   return (
     <header id="mainHeader">

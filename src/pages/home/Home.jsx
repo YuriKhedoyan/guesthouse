@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 import Slider from "./../../compontents/slider/Slider";
 import { withSuspense } from "../../helpers/withSuspense";
 
@@ -15,13 +15,13 @@ import house from "../../assets/images/house.jpg";
 import "./Home.scss";
 
 const Home = () => {
-  const { about, roomsInformation } = staticValues;
+  const { about, roomsInformation } = eng;
 
   return (
     <>
       <section id="sc1">
         <div className="fullScreen">
-          <Slider photoClassName="fullScreen"></Slider>
+          <Slider className="fullScreen"></Slider>
         </div>
         <Container>
           <div className="top-left">
@@ -62,9 +62,9 @@ const Home = () => {
               </Grid>
               <Grid item xs={4}>
                 <Img
-                  pathToPicture={house}
-                  pictureClassName="photos"
-                  alternativeName="Restaurant"
+                  src={house}
+                  alt="Restaurant"
+                  className="photos"
                 />
               </Grid>
             </Grid>

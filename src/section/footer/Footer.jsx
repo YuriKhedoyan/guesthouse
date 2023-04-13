@@ -4,12 +4,12 @@ import { Container, Grid } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-import staticValues from "../../staticValues.json";
+import eng from "../../locales/eng.json";
 
 import "./Footer.scss";
 
 const Footer = () => {
-  const { informationAboutHouse, links } = staticValues;
+  const { informationAboutHouse, links } = eng;
   return (
     <>
       <footer>
