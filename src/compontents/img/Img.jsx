@@ -1,13 +1,9 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+import React from "react";
 
-const Img = props => (
-	<img
-		src={props.pathToPicture}
-		alt={props.alternativeName}
-		id={props.pictureId}
-		className={props.pictureClassName}
-	/>
-);
+const Img = props => {
+  const { id, src, alt, className } = props;
+
+  return <img id={id} src={src} alt={alt} className={className} />;
+};
 
 export default Img;
