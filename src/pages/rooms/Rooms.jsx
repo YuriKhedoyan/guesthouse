@@ -16,16 +16,46 @@ import "./Rooms.scss";
 
 const { rooms, otherPictures } = images;
 const { roomsInformation, links } = eng;
+const props = {
+  standardRoom: {
+    height: "300",
+    component: "img",
+    alt: rooms.standardRoom.src,
+    image: rooms.standardRoom.src,
+  },
+  deluxe: {
+    height: "300",
+    component: "img",
+    alt: rooms.deluxe.src,
+    image: rooms.deluxe.src,
+  },
+  duplex: {
+    height: "300",
+    component: "img",
+    alt: rooms.duplex.src,
+    image: rooms.duplex.src,
+  },
+  deluxeSuperior: {
+    height: "300",
+    component: "img",
+    alt: rooms.deluxeSuperior.src,
+    image: rooms.deluxeSuperior.src,
+  },
+  headerImg: {
+    id: "mainImage",
+    src: otherPictures.spruceBranch.src,
+    alt: otherPictures.spruceBranch.alt,
+  },
+};
 
 const Rooms = () => {
-
   const Header = withSuspense(lazy(() => import("../../section/header/Header")));
   const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
   const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 
   return (
     <>
-      <Img src={otherPictures.spruceBranch.src} alt={otherPictures.spruceBranch.alt} id="mainImage" />
+      <Img {...props.headerImg}/>
       <h2 className="centered">{links.rooms}</h2>
       <Container>
         <div className="top-left">
@@ -38,12 +68,7 @@ const Rooms = () => {
             <div className="cards">
               <span>
                 <Card sx={{ maxWidth: 450 }}>
-                  <CardMedia
-                    height="300"
-                    component="img"
-                    alt="Paella dish"
-                    image={rooms.standardRoom.src}
-                  />
+                  <CardMedia {...props.standardRoom}/>
                   <CardContent>
                     <h3>{roomsInformation.standardRoom.category}</h3>
                   </CardContent>
@@ -54,12 +79,7 @@ const Rooms = () => {
               </span>
               <span>
                 <Card sx={{ maxWidth: 450 }}>
-                  <CardMedia
-                    height="300"
-                    component="img"
-                    alt="Paella dish"
-                    image={rooms.deluxe.src}
-                  />
+                  <CardMedia {...props.deluxeSuperior}/>
                   <CardContent>
                     <h3>{roomsInformation.deluxeSuperior.category}</h3>
                   </CardContent>
@@ -75,12 +95,7 @@ const Rooms = () => {
             <div className="cards">
               <span>
                 <Card sx={{ maxWidth: 450 }}>
-                  <CardMedia
-                    height="300"
-                    component="img"
-                    alt="Paella dish"
-                    image={rooms.deluxeSuperior.src}
-                  />
+                  <CardMedia {...props.deluxe}/>
                   <CardContent>
                     <h3>{roomsInformation.deluxe.category}</h3>
                   </CardContent>
@@ -91,12 +106,7 @@ const Rooms = () => {
               </span>
               <span>
                 <Card sx={{ maxWidth: 450 }}>
-                  <CardMedia
-                    height="300"
-                    component="img"
-                    alt="Paella dish"
-                    image={rooms.duplex.src}
-                  />
+                  <CardMedia {...props.duplex}/>
                   <CardContent>
                     <h3>{roomsInformation.duplex.category}</h3>
                   </CardContent>

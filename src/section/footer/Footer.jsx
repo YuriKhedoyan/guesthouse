@@ -9,6 +9,11 @@ import eng from "../../locales/eng.json";
 import "./Footer.scss";
 
 const { informationAboutHouse, links } = eng;
+const props = {
+  links: {
+    className: "texts links"
+  }
+};
 
 const Footer = () => {
   return (
@@ -20,7 +25,9 @@ const Footer = () => {
             <Grid item xs={8}>
               <div>
                 <p>{informationAboutHouse.place} </p>
+                <p className="space"></p>
                 <p>{informationAboutHouse.phoneNumber}</p>
+                <p className="space"></p>
                 <p>{informationAboutHouse.email}</p>
                 <br></br>
                 <div id="icons">
@@ -36,34 +43,32 @@ const Footer = () => {
             <Grid item xs={1}>
               <div>
                 <p className="texts">SITEMAP</p>
-                <br></br>
-                <Link to="/" className="texts links">
+                <p className="space"></p>
+                <Link to="/" {...props.links}>
                   <p className="texts">Home</p>
                 </Link>
-                <br></br>
-                <Link to="/restaurant" className="texts links">
+                <p className="space"></p>
+                <Link to="/restaurant" {...props.links}>
                   <p className="texts">
-                    {links.restaurant[0] +
-											links.restaurant.slice(1).toLowerCase()}
+                    {links.restaurant[0] + links.restaurant.slice(1).toLowerCase()}
                   </p>
                 </Link>
-                <br></br>
-                <Link to="/rooms" className="texts links">
+                <p className="space"></p>
+                <Link to="/rooms" {...props.links}>
                   <p className="texts">
                     {links.rooms[0] + links.rooms.slice(1).toLowerCase()}
                   </p>
                 </Link>
-                <br></br>
-                <Link to="/gallery" className="texts links">
+                <p className="space"></p>
+                <Link to="/gallery" {...props.links}>
                   <p className="texts">
                     {links.gallery[0] + links.gallery.slice(1).toLowerCase()}
                   </p>
                 </Link>
-                <br></br>
-                <Link to="/contactUs" className="texts links">
+                <p className="space"></p>
+                <Link to="/contactUs" {...props.links}>
                   <p className="texts">
-                    {links.contactUs[0] +
-											links.contactUs.slice(1).toLowerCase()}
+                    {links.contactUs[0] + links.contactUs.slice(1).toLowerCase()}
                   </p>
                 </Link>
               </div>

@@ -20,10 +20,17 @@ const Gallery = () => {
     Object.values(house),
     Object.values(garden),
   ];
+  const props = {
+    headerImg: {
+      id: "mainImage",
+      src: images.house.house2.src,
+      alt: images.house.house2.alt
+    }
+  };
 
   return (
     <>
-      <Img src={images.house.house2.src} alt="House From Top" id="mainImage" />
+      <Img  {...props.headerImg}/>
       <h2 className="centered">{links.gallery}</h2>
       <Container>
         <div className="top-left">

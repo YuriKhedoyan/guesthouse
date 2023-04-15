@@ -3,22 +3,30 @@ import { Container, Grid } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-import Img from "../../compontents/img/Img";
 import eng from "../../locales/eng.json";
+import Img from "../../compontents/img/Img";
+import images from "../../locales/images.json";
 import { withSuspense } from "../../helpers/withSuspense";
 
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
-import house2 from "../../assets/images/house2.jpg";
-
 import "./ContactUs.scss";
 
+const { links } = eng;
+const { house } = images;
+const props = {
+  textField: {
+    variant: "outlined",
+    id: "outlined-basic",
+    className: "inputTexts",
+  },
+};
+
 const ContactUs = () => {
-  const { links } = eng;
   return (
     <>
-      <Img src={house2} id="mainImage" alt="House From Top" />
+      <Img src={house.house2.src} id="mainImage" alt="House From Top" />
       <h2 className="centered">{links.contactUs}</h2>
       <Container>
         <div className="top-left">
@@ -34,22 +42,14 @@ const ContactUs = () => {
 								Name<span className="text-danger ml-1">*</span>
               </label>
               <br></br>
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                className="inputTexts"
-              />
+              <TextField {...props.textField} />
             </Grid>
             <Grid item sm={6}>
               <label>
 								Email<span className="text-danger ml-1">*</span>
               </label>
               <br></br>
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                className="inputTexts"
-              />
+              <TextField {...props.textField} />
             </Grid>
           </Grid>
           <br></br>

@@ -1,9 +1,14 @@
 import React from "react";
 
 const Img = props => {
-  const { id, src, alt, className } = props;
-
-  return <img id={id} src={src} alt={alt} className={className} />;
+  return (
+    <img
+      id={props.id}
+      src={props.src}
+      alt={props.alt}
+      className={props.className}
+    />
+  );
 };
 
 export default Img;
