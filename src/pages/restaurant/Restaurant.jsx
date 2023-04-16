@@ -6,10 +6,10 @@ import Img from "../../compontents/img/Img";
 import images from "../../locales/images.json";
 import { withSuspense } from "../../helpers/withSuspense";
 
+import "./Restaurant.scss";
+
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
-
-import "./Restaurant.scss";
 
 const Restaurant = () => {
 	const { restaurant } = images;
@@ -20,7 +20,7 @@ const Restaurant = () => {
 			<h2 className="centered">{links.restaurant}</h2>
 			<Container>
 				<div className="top-left">
-					<Header></Header>
+					<Header />
 				</div>
 			</Container>
 			<br></br>
@@ -52,7 +52,7 @@ const Restaurant = () => {
 					</Grid>
 				</Grid>
 			</Container>
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };

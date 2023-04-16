@@ -1,5 +1,12 @@
 import React, { lazy } from "react";
-import { Container, Grid, Card, CardActions, CardContent, CardMedia } from "@mui/material";
+import {
+	Container,
+	Grid,
+	Card,
+	CardActions,
+	CardContent,
+	CardMedia,
+} from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images.json";
@@ -7,52 +14,22 @@ import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Rooms.scss";
 
+const Header = withSuspense(lazy(() => import("../../section/header/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
+
 const Rooms = () => {
-	const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-	const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
-	const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 
 	const { rooms, otherPictures } = images;
 	const { roomsInformation, links } = eng;
-	const props = {
-		standardRoom: {
-			height: "300",
-			component: "img",
-			alt: rooms.standardRoom.src,
-			image: rooms.standardRoom.src,
-		},
-		deluxe: {
-			height: "300",
-			component: "img",
-			alt: rooms.deluxe.src,
-			image: rooms.deluxe.src,
-		},
-		duplex: {
-			height: "300",
-			component: "img",
-			alt: rooms.duplex.src,
-			image: rooms.duplex.src,
-		},
-		deluxeSuperior: {
-			height: "300",
-			component: "img",
-			alt: rooms.deluxeSuperior.src,
-			image: rooms.deluxeSuperior.src,
-		},
-		headerImg: {
-			id: "mainImage",
-			src: otherPictures.spruceBranch.src,
-			alt: otherPictures.spruceBranch.alt,
-		},
-	};
 
 	return (
 		<>
-			<Img {...props.headerImg} />
+			<Img src={otherPictures.spruceBranch.src} alt={otherPictures.spruceBranch.alt} id="mainImage" />
 			<h2 className="centered">{links.rooms}</h2>
 			<Container>
 				<div className="top-left">
-					<Header></Header>
+					<Header />
 				</div>
 				<br></br>
 				<br></br>
@@ -61,7 +38,12 @@ const Rooms = () => {
 						<div className="cards">
 							<span>
 								<Card sx={{ maxWidth: 450 }}>
-									<CardMedia {...props.standardRoom} />
+									<CardMedia
+										height="300"
+										component="img"
+										alt={rooms.standardRoom.alt}
+										image={rooms.standardRoom.src}
+									/>
 									<CardContent>
 										<h3>{roomsInformation.standardRoom.category}</h3>
 									</CardContent>
@@ -72,7 +54,12 @@ const Rooms = () => {
 							</span>
 							<span>
 								<Card sx={{ maxWidth: 450 }}>
-									<CardMedia {...props.deluxeSuperior} />
+									<CardMedia
+										height="300"
+										component="img"
+										alt={rooms.deluxe.alt}
+										image={rooms.deluxe.src}
+									/>
 									<CardContent>
 										<h3>{roomsInformation.deluxeSuperior.category}</h3>
 									</CardContent>
@@ -88,7 +75,12 @@ const Rooms = () => {
 						<div className="cards">
 							<span>
 								<Card sx={{ maxWidth: 450 }}>
-									<CardMedia {...props.deluxe} />
+									<CardMedia
+										height="300"
+										component="img"
+										alt={rooms.deluxeSuperior.alt}
+										image={rooms.deluxeSuperior.src}
+									/>
 									<CardContent>
 										<h3>{roomsInformation.deluxe.category}</h3>
 									</CardContent>
@@ -99,7 +91,12 @@ const Rooms = () => {
 							</span>
 							<span>
 								<Card sx={{ maxWidth: 450 }}>
-									<CardMedia {...props.duplex} />
+									<CardMedia
+										height="300"
+										component="img"
+										alt={rooms.duplex.alt}
+										image={rooms.duplex.src}
+									/>
 									<CardContent>
 										<h3>{roomsInformation.duplex.category}</h3>
 									</CardContent>
@@ -113,8 +110,9 @@ const Rooms = () => {
 				</Grid>
 				<br></br>
 			</Container>
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };
+
 export default Rooms;

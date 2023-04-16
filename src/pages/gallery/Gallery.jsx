@@ -1,15 +1,15 @@
-import { lazy, React } from 'react';
-import { Container, Grid } from '@mui/material';
+import { lazy, React } from "react";
+import { Container, Grid } from "@mui/material";
 
-import eng from '../../locales/eng.json';
-import Img from '../../compontents/img/Img';
-import images from '../../locales/images.json';
-import { withSuspense } from '../../helpers/withSuspense';
+import eng from "../../locales/eng.json";
+import Img from "../../compontents/img/Img";
+import images from "../../locales/images.json";
+import { withSuspense } from "../../helpers/withSuspense";
 
-const Header = withSuspense(lazy(() => import('../../section/header/Header')));
-const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
+import "./Gallery.scss";
 
-import './Gallery.scss';
+const Header = withSuspense(lazy(() => import("../../section/header/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
 const Gallery = () => {
 	const { links } = eng;
@@ -23,7 +23,7 @@ const Gallery = () => {
 	return (
 		<>
 			<Img
-				id={'mainImage'}
+				id='mainImage'
 				src={images.house.house2.src}
 				alt={images.house.house2.alt}
 			/>
@@ -54,7 +54,7 @@ const Gallery = () => {
 					))}
 				</Grid>
 			</Container>
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };

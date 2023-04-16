@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Container, TextField, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Container, TextField, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import './SignInUp.scss';
+import "./SignInUp.scss";
 
 const LoginPage = () => {
-	const [login, setLogin] = useState('');
-	const [passwrod, setPassword] = useState('');
+	const [login, setLogin] = useState("");
+	const [passwrod, setPassword] = useState("");
 
 	const clear = () => {
-		setPassword('');
-		setLogin('');
+		setPassword("");
+		setLogin("");
 	};
 
 	return (

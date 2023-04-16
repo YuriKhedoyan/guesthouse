@@ -1,24 +1,22 @@
-import React, { lazy } from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Grid } from '@mui/material';
+import React, { lazy } from "react";
+import { Link } from "react-router-dom";
+import { Container, Grid } from "@mui/material";
 
-import eng from '../../locales/eng.json';
-import images from '../../locales/images.json';
-import Slider from './../../compontents/slider/Slider';
-import { withSuspense } from '../../helpers/withSuspense';
+import eng from "../../locales/eng.json";
+import images from "../../locales/images.json";
+import Slider from "./../../compontents/slider/Slider";
+import { withSuspense } from "../../helpers/withSuspense";
 
-const Img = withSuspense(lazy(() => import('../../compontents/img/Img')));
-const Header = withSuspense(lazy(() => import('../../section/header/Header')));
-const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
+import "./Home.scss";
 
-import './Home.scss';
+const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
+const Header = withSuspense(lazy(() => import("../../section/header/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+
 
 const Home = () => {
 	const { about, roomsInformation } = eng;
 	const { house } = images;
-	const props = {
-		about: {},
-	};
 
 	return (
 		<>
@@ -138,7 +136,7 @@ const Home = () => {
 				<br></br>
 				<br></br>
 			</section>
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };
