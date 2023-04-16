@@ -1,20 +1,20 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import eng from '../../locales/eng.json';
+import eng from "../../locales/eng.json";
 
-import './Header.scss';
+import "./Header.scss";
 
 const Header = () => {
 	const { links } = eng;
 	const props = {
 		title: {
-			className: 'links',
-			id: 'title',
+			className: "links",
+			id: "title",
 		},
 		links: {
-			className: 'links',
+			className: "links",
 		},
 	};
 

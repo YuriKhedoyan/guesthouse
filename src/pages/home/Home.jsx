@@ -14,133 +14,133 @@ const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 import "./Home.scss";
 
 const Home = () => {
-  const { about, roomsInformation } = eng;
-  const { house } = images;
-  const props = {
-    about: {
-      src: house.house1.src,
-      alt: "Restaurant",
-      className: "photos",
-    },
-  };
+	const { about, roomsInformation } = eng;
+	const { house } = images;
+	const props = {
+		about: {
+			src: house.house1.src,
+			alt: "Restaurant",
+			className: "photos",
+		},
+	};
 
-  return (
-    <>
-      <section id="sc1">
-        <div className="fullScreen">
-          <Slider className="fullScreen"></Slider>
-        </div>
-        <Container>
-          <div className="top-left">
-            <Header />
-          </div>
-        </Container>
-      </section>
-      <section id="sc2">
-        <Container>
-          <Grid container spacing={3}>
-            <Grid item xs={4}>
-              <h3 className="texts">{roomsInformation.countOfRooms}</h3>
-              <p className="texts">{roomsInformation.categories}</p>
-            </Grid>
-            <Grid item xs={4}>
-              <h3 className="texts">
-                <b>Restaurant</b>
-                <p className="texts">Restaurant at home</p>
-              </h3>
-            </Grid>
-            <Grid item xs={4}>
-              <h3 className="texts">
-                <b>24/7</b>
-                <p className="texts">Always by your side</p>
-              </h3>
-            </Grid>
-          </Grid>
-        </Container>
-      </section>
-      <br></br>
-      <section id="sc3">
-        <div>
-          <Container>
-            <Grid container spacing={2}>
-              <Grid item xs={4}>
-                <h4 className="texts">Welcome to Khedoyans Guesthouse</h4>
-                <p className="texts">{about}</p>
-              </Grid>
-              <Grid item xs={4}>
-                <Img {...props.about} />
-              </Grid>
-            </Grid>
-          </Container>
-        </div>
-      </section>
-      <section id="sc4">
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            <span id="backgroundImg1">
-              <div>
-                <p className="texts">
-                  {roomsInformation.standardRoom.category}
-                </p>
-                <p className="texts">{roomsInformation.standardRoom.price}</p>
-              </div>
-            </span>
-          </Grid>
-          <Grid item xs={6}>
-            <span id="backgroundImg2">
-              <div>
-                <p className="texts">{roomsInformation.deluxe.category}</p>
-                <p className="texts">{roomsInformation.deluxe.price}</p>
-              </div>
-            </span>
-          </Grid>
-        </Grid>
-        <Grid container spacing={2}>
-          <Grid item xs={6}>
-            <span id="backgroundImg3">
-              <div>
-                <p className="texts">
-                  {roomsInformation.deluxeSuperior.category}
-                </p>
-                <p className="texts">{roomsInformation.deluxeSuperior.price}</p>
-              </div>
-            </span>
-          </Grid>
-          <Grid item xs={6}>
-            <span id="backgroundImg4">
-              <div>
-                <p className="texts">{roomsInformation.duplex.category}</p>
-                <p className="texts">{roomsInformation.duplex.price}</p>
-              </div>
-            </span>
-          </Grid>
-        </Grid>
-        <Link to="/rooms" className="links">
-          <div id="linkToRooms">
-            <br></br>
-            <p>All rooms</p>
-          </div>
-        </Link>
-      </section>
-      <section id="sc6">
-        <p className="texts">Our Benefits</p>
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
-            <p className="texts yellow">High Class Rooms</p>
-          </Grid>
-          <Grid item xs={4}>
-            <p className="texts">Wonderful Nature</p>
-          </Grid>
-          <Grid item xs={4}>
-            <p className="texts yellow">Best Cuisine</p>
-          </Grid>
-        </Grid>
-        <br></br>
-        <br></br>
-      </section>
-      <Footer></Footer>
-    </>
-  );
+	return (
+		<>
+			<section id="sc1">
+				<div className="fullScreen">
+					<Slider className="fullScreen"></Slider>
+				</div>
+				<Container>
+					<div className="top-left">
+						<Header />
+					</div>
+				</Container>
+			</section>
+			<section id="sc2">
+				<Container>
+					<Grid container spacing={3}>
+						<Grid item xs={4}>
+							<h3 className="texts">{roomsInformation.countOfRooms}</h3>
+							<p className="texts">{roomsInformation.categories}</p>
+						</Grid>
+						<Grid item xs={4}>
+							<h3 className="texts">
+								<b>Restaurant</b>
+								<p className="texts">Restaurant at home</p>
+							</h3>
+						</Grid>
+						<Grid item xs={4}>
+							<h3 className="texts">
+								<b>24/7</b>
+								<p className="texts">Always by your side</p>
+							</h3>
+						</Grid>
+					</Grid>
+				</Container>
+			</section>
+			<br></br>
+			<section id="sc3">
+				<div>
+					<Container>
+						<Grid container spacing={2}>
+							<Grid item xs={4}>
+								<h4 className="texts">Welcome to Khedoyans Guesthouse</h4>
+								<p className="texts">{about}</p>
+							</Grid>
+							<Grid item xs={4}>
+								<Img {...props.about} />
+							</Grid>
+						</Grid>
+					</Container>
+				</div>
+			</section>
+			<section id="sc4">
+				<Grid container spacing={2}>
+					<Grid item xs={6}>
+						<span id="backgroundImg1">
+							<div>
+								<p className="texts">
+									{roomsInformation.standardRoom.category}
+								</p>
+								<p className="texts">{roomsInformation.standardRoom.price}</p>
+							</div>
+						</span>
+					</Grid>
+					<Grid item xs={6}>
+						<span id="backgroundImg2">
+							<div>
+								<p className="texts">{roomsInformation.deluxe.category}</p>
+								<p className="texts">{roomsInformation.deluxe.price}</p>
+							</div>
+						</span>
+					</Grid>
+				</Grid>
+				<Grid container spacing={2}>
+					<Grid item xs={6}>
+						<span id="backgroundImg3">
+							<div>
+								<p className="texts">
+									{roomsInformation.deluxeSuperior.category}
+								</p>
+								<p className="texts">{roomsInformation.deluxeSuperior.price}</p>
+							</div>
+						</span>
+					</Grid>
+					<Grid item xs={6}>
+						<span id="backgroundImg4">
+							<div>
+								<p className="texts">{roomsInformation.duplex.category}</p>
+								<p className="texts">{roomsInformation.duplex.price}</p>
+							</div>
+						</span>
+					</Grid>
+				</Grid>
+				<Link to="/rooms" className="links">
+					<div id="linkToRooms">
+						<br></br>
+						<p>All rooms</p>
+					</div>
+				</Link>
+			</section>
+			<section id="sc6">
+				<p className="texts">Our Benefits</p>
+				<Grid container spacing={3}>
+					<Grid item xs={4}>
+						<p className="texts yellow">High Class Rooms</p>
+					</Grid>
+					<Grid item xs={4}>
+						<p className="texts">Wonderful Nature</p>
+					</Grid>
+					<Grid item xs={4}>
+						<p className="texts yellow">Best Cuisine</p>
+					</Grid>
+				</Grid>
+				<br></br>
+				<br></br>
+			</section>
+			<Footer></Footer>
+		</>
+	);
 };
 
 export default Home;

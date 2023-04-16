@@ -13,17 +13,17 @@ const Register = withSuspense(lazy(() => import("./pages/register/Register")));
 const Restaurant = withSuspense(lazy(() => import("./pages/restaurant/Restaurant")));
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/rooms" element={<Rooms />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/restaurant" element={<Restaurant />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />}/>
+				<Route path="/rooms" element={<Rooms />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/gallery" element={<Gallery />} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/contactUs" element={<ContactUs />} />
+				<Route path="/restaurant" element={<Restaurant />} />
+			</Routes>
+		</BrowserRouter>
+	</React.StrictMode>
 );

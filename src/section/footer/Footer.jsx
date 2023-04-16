@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Grid } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Grid } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
-import eng from '../../locales/eng.json';
+import eng from "../../locales/eng.json";
 
-import './Footer.scss';
+import "./Footer.scss";
 
 const Footer = () => {
 	const { informationAboutHouse, links } = eng;
 	const props = {
 		links: {
-			className: 'texts links',
+			className: "texts links",
 		},
 	};
 

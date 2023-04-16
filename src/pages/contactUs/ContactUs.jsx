@@ -1,26 +1,26 @@
-import { React, lazy } from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { Container, Grid } from '@mui/material';
+import { React, lazy } from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { Container, Grid } from "@mui/material";
 
-import eng from '../../locales/eng.json';
-import Img from '../../compontents/img/Img';
-import images from '../../locales/images.json';
-import { withSuspense } from '../../helpers/withSuspense';
+import eng from "../../locales/eng.json";
+import Img from "../../compontents/img/Img";
+import images from "../../locales/images.json";
+import { withSuspense } from "../../helpers/withSuspense";
 
-const Header = withSuspense(lazy(() => import('../../section/header/Header')));
-const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
+const Header = withSuspense(lazy(() => import("../../section/header/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
-import './ContactUs.scss';
+import "./ContactUs.scss";
 
 const ContactUs = () => {
 	const { links } = eng;
 	const { house } = images;
 	const props = {
 		textField: {
-			variant: 'outlined',
-			id: 'outlined-basic',
-			className: 'inputTexts',
+			variant: "outlined",
+			id: "outlined-basic",
+			className: "inputTexts",
 		},
 	};
 
