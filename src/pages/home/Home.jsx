@@ -9,22 +9,20 @@ import { withSuspense } from "../../helpers/withSuspense";
 
 const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-
-import Footer from "../../section/footer/Footer";
+const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
 import "./Home.scss";
 
-const { about, roomsInformation } = eng;
-const { house } = images;
-const props = {
-  about: {
-    src: house.house1.src,
-    alt: "Restaurant" ,
-    className: "photos",
-  }
-};
-
 const Home = () => {
+  const { about, roomsInformation } = eng;
+  const { house } = images;
+  const props = {
+    about: {
+      src: house.house1.src,
+      alt: "Restaurant",
+      className: "photos",
+    },
+  };
 
   return (
     <>
@@ -70,7 +68,7 @@ const Home = () => {
                 <p className="texts">{about}</p>
               </Grid>
               <Grid item xs={4}>
-                <Img  {...props.about}/>
+                <Img {...props.about} />
               </Grid>
             </Grid>
           </Container>

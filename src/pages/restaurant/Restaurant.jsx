@@ -11,30 +11,29 @@ const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
 import "./Restaurant.scss";
 
-const { restaurant } = images;
-const { restaurantInformation, links } = eng;
-const props = {
-  restaurant1: {
-    className: "photos",
-    alt: restaurant.restaurant2.alt,
-    src: restaurant.restaurant2.src,
-  },
-  restaurant2: {
-    className: "photos",
-    alt: restaurant.restaurant3.alt,
-    src: restaurant.restaurant3.src,
-  },
-  headerImg: {
-    id: "mainImage",
-    alt: restaurant.restaurant7.alt,
-    src: restaurant.restaurant7.src,
-  },
-};
-
 const Restaurant = () => {
+  const { restaurant } = images;
+  const { restaurantInformation, links } = eng;
+  const props = {
+    restaurant1: {
+      className: "photos",
+      alt: restaurant.restaurant2.alt,
+      src: restaurant.restaurant2.src,
+    },
+    restaurant2: {
+      className: "photos",
+      alt: restaurant.restaurant3.alt,
+      src: restaurant.restaurant3.src,
+    },
+    headerImg: {
+      id: "mainImage",
+      alt: restaurant.restaurant7.alt,
+      src: restaurant.restaurant7.src,
+    },
+  };
   return (
     <>
-      <Img {...props.headerImg}/>
+      <Img {...props.headerImg} />
       <h2 className="centered">{links.restaurant}</h2>
       <Container>
         <div className="top-left">
