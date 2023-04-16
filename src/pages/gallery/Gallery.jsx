@@ -1,15 +1,15 @@
-import { lazy, React } from "react";
-import { Container, Grid } from "@mui/material";
+import { lazy, React } from 'react';
+import { Container, Grid } from '@mui/material';
 
-import eng from "../../locales/eng.json";
-import Img from "../../compontents/img/Img";
-import images from "../../locales/images.json";
-import { withSuspense } from "../../helpers/withSuspense";
+import eng from '../../locales/eng.json';
+import Img from '../../compontents/img/Img';
+import images from '../../locales/images.json';
+import { withSuspense } from '../../helpers/withSuspense';
 
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Header = withSuspense(lazy(() => import('../../section/header/Header')));
+const Footer = withSuspense(lazy(() => import('../../section/footer/Footer')));
 
-import "./Gallery.scss";
+import './Gallery.scss';
 
 const Gallery = () => {
 	const { links } = eng;
@@ -19,17 +19,14 @@ const Gallery = () => {
 		Object.values(house),
 		Object.values(garden),
 	];
-	const props = {
-		headerImg: {
-			id: "mainImage",
-			src: images.house.house2.src,
-			alt: images.house.house2.alt,
-		},
-	};
 
 	return (
 		<>
-			<Img {...props.headerImg} />
+			<Img
+				id={'mainImage'}
+				src={images.house.house2.src}
+				alt={images.house.house2.alt}
+			/>
 			<h2 className="centered">{links.gallery}</h2>
 			<Container>
 				<div className="top-left">

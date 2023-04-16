@@ -14,26 +14,9 @@ import "./Restaurant.scss";
 const Restaurant = () => {
 	const { restaurant } = images;
 	const { restaurantInformation, links } = eng;
-	const props = {
-		restaurant1: {
-			className: "photos",
-			alt: restaurant.restaurant2.alt,
-			src: restaurant.restaurant2.src,
-		},
-		restaurant2: {
-			className: "photos",
-			alt: restaurant.restaurant3.alt,
-			src: restaurant.restaurant3.src,
-		},
-		headerImg: {
-			id: "mainImage",
-			alt: restaurant.restaurant7.alt,
-			src: restaurant.restaurant7.src,
-		},
-	};
 	return (
 		<>
-			<Img {...props.headerImg} />
+			<Img src={restaurant.restaurant1.src} id="mainImage" alt={restaurant.restaurant1.alt} />
 			<h2 className="centered">{links.restaurant}</h2>
 			<Container>
 				<div className="top-left">
@@ -51,7 +34,7 @@ const Restaurant = () => {
 					</Grid>
 					<Grid item xs={7}>
 						<div className="images">
-							<Img {...props.restaurant1} />
+							<Img src={restaurant.restaurant1.src} id="mainImage" alt={restaurant.restaurant1.alt} />
 						</div>
 					</Grid>
 				</Grid>
@@ -59,7 +42,7 @@ const Restaurant = () => {
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<div className="images">
-							<Img {...props.restaurant2} />
+							<Img src={restaurant.restaurant2.src} id="mainImage" alt={restaurant.restaurant2.alt} />
 						</div>
 					</Grid>
 					<Grid item xs={7}>
