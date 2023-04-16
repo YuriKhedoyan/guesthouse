@@ -23,7 +23,7 @@ const Gallery = () => {
 	return (
 		<>
 			<Img
-				id='mainImage'
+				id="mainImage"
 				src={images.house.house2.src}
 				alt={images.house.house2.alt}
 			/>
