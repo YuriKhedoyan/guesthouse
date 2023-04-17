@@ -13,7 +13,6 @@ const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
-
 const Home = () => {
 	const { about, roomsInformation } = eng;
 	const { house } = images;

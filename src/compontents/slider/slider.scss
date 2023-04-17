@@ -1,36 +1,36 @@
 .slider__button-container {
-	position: absolute;
-	top: 92%;
-	left: 88%;
+  position: absolute;
+  top: 92%;
+  left: 88%;
 }
 
 .slider__button {
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-	padding: 8px;
-	font-size: 1.5rem;
-	color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .slider__button:hover {
-	color: #000;
+  color: #000;
 }
 
 .slider__button-icon {
-	width: 34px;
-	height: 34px;
+  width: 34px;
+  height: 34px;
 }
 
 .slider__image--hidden {
-	opacity: 0;
+  opacity: 0;
 }
 
 .fullScreen {
-	position: relative;
-	z-index: 0;
-	width: 100%;
-	height: 935px;
-	object-fit: cover;
-	overflow: hidden;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 935px;
+  object-fit: cover;
+  overflow: hidden;
 }
