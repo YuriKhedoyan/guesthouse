@@ -6,17 +6,9 @@ import eng from "../../locales/eng.json";
 
 import "./Header.scss";
 
+const { links } = eng;
+
 const Header = () => {
-	const { links } = eng;
-	const props = {
-		title: {
-			className: "links",
-			id: "title",
-		},
-		links: {
-			className: "links",
-		},
-	};
 
 	return (
 		<header id="mainHeader">
@@ -24,7 +16,7 @@ const Header = () => {
 			<Grid container spacing={2}>
 				<Grid item xs={8}>
 					<h4>
-						<Link to="/" {...props.title}>
+						<Link to="/" className="links" id="title">
 							{links.home}
 						</Link>
 					</h4>
@@ -33,28 +25,28 @@ const Header = () => {
 					<div className="linksDiv">
 						<span className="linksSection">
 							<h4>
-								<Link to="/rooms" {...props.links}>
+								<Link to="/rooms" className="links">
 									{links.rooms}
 								</Link>
 							</h4>
 						</span>
 						<span className="linksSection">
 							<h4>
-								<Link to="/gallery" {...props.links}>
+								<Link to="/gallery" className="links">
 									{links.gallery}
 								</Link>
 							</h4>
 						</span>
 						<span className="linksSection">
 							<h4>
-								<Link to="/restaurant" {...props.links}>
+								<Link to="/restaurant" className="links">
 									{links.restaurant}
 								</Link>
 							</h4>
 						</span>
 						<span className="linksSection">
 							<h4>
-								<Link to="/contactUs" {...props.links}>
+								<Link to="/contactUs" className="links">
 									{links.contactUs}
 								</Link>
 							</h4>

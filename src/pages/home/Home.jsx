@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import Slider from "./../../compontents/slider/Slider";
 import { withSuspense } from "../../helpers/withSuspense";
 
@@ -13,11 +13,10 @@ const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
+const { about, roomsInformation } = eng;
+const { house } = images;
 
 const Home = () => {
-	const { about, roomsInformation } = eng;
-	const { house } = images;
-
 	return (
 		<>
 			<section id="sc1">
@@ -62,11 +61,7 @@ const Home = () => {
 								<p className="texts">{about}</p>
 							</Grid>
 							<Grid item xs={4}>
-								<Img
-									className="photos"
-									src={house.house1.src}
-									alt={house.house1.alt}
-								/>
+								<Img className="photos" src={house[0].src} alt={house[0].alt} />
 							</Grid>
 						</Grid>
 					</Container>

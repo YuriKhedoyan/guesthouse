@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import eng from "../../locales/eng.json";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Rooms.scss";
@@ -18,14 +18,18 @@ const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
 
-const Rooms = () => {
+const { roomsInformation, links } = eng;
+const { rooms, otherPictures } = images;
 
-	const { rooms, otherPictures } = images;
-	const { roomsInformation, links } = eng;
+const Rooms = () => {
 
 	return (
 		<>
-			<Img src={otherPictures.spruceBranch.src} alt={otherPictures.spruceBranch.alt} id="mainImage" />
+			<Img
+				src={otherPictures.spruceBranch.src}
+				alt={otherPictures.spruceBranch.alt}
+				id="mainImage"
+			/>
 			<h2 className="centered">{links.rooms}</h2>
 			<Container>
 				<div className="top-left">
