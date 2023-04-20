@@ -3,7 +3,7 @@ import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import Img from "../../compontents/img/Img";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Restaurant.scss";
@@ -11,12 +11,12 @@ import "./Restaurant.scss";
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
+const { restaurant } = images;
+const { restaurantInformation, links } = eng;
 const Restaurant = () => {
-	const { restaurant } = images;
-	const { restaurantInformation, links } = eng;
 	return (
 		<>
-			<Img src={restaurant.restaurant1.src} id="mainImage" alt={restaurant.restaurant1.alt} />
+			<Img src={restaurant[0].src} id="mainImage" alt={restaurant[0].alt} />
 			<h2 className="centered">{links.restaurant}</h2>
 			<Container>
 				<div className="top-left">
@@ -34,7 +34,7 @@ const Restaurant = () => {
 					</Grid>
 					<Grid item xs={7}>
 						<div className="images">
-							<Img src={restaurant.restaurant1.src} id="mainImage" alt={restaurant.restaurant1.alt} />
+							<Img src={restaurant[0].src} id="mainImage" alt={restaurant[0].alt} />
 						</div>
 					</Grid>
 				</Grid>
@@ -42,7 +42,7 @@ const Restaurant = () => {
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<div className="images">
-							<Img src={restaurant.restaurant2.src} id="mainImage" alt={restaurant.restaurant2.alt} />
+							<Img src={restaurant[1].src} id="mainImage" alt={restaurant[1].alt} />
 						</div>
 					</Grid>
 					<Grid item xs={7}>

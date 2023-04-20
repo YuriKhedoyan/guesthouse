@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import Slider from "./../../compontents/slider/Slider";
 import { withSuspense } from "../../helpers/withSuspense";
 
@@ -64,8 +64,8 @@ const Home = () => {
 							<Grid item xs={4}>
 								<Img
 									className="photos"
-									src={house.house1.src}
-									alt={house.house1.alt}
+									src={house[0].src}
+									alt={house[0].alt}
 								/>
 							</Grid>
 						</Grid>

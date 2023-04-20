@@ -5,7 +5,7 @@ import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import Img from "../../compontents/img/Img";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./ContactUs.scss";
@@ -13,13 +13,14 @@ import "./ContactUs.scss";
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
+const { links } = eng;
+const { house } = images;
+
 const ContactUs = () => {
-	const { links } = eng;
-	const { house } = images;
 
 	return (
 		<>
-			<Img src={house.house2.src} id="mainImage" alt="House From Top" />
+			<Img src={house[1].src} id="mainImage" alt="House From Top" />
 			<h2 className="centered">{links.contactUs}</h2>
 			<Container>
 				<div className="top-left">

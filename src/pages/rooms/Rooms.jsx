@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import eng from "../../locales/eng.json";
-import images from "../../locales/images.json";
+import images from "../../locales/images.js";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Rooms.scss";

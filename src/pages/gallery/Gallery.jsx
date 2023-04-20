@@ -3,7 +3,7 @@ import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import Img from "../../compontents/img/Img";
-import images from "../../locales/images.json";
+import images from "../../locales/images";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Gallery.scss";
@@ -11,21 +11,19 @@ import "./Gallery.scss";
 const Header = withSuspense(lazy(() => import("../../section/header/Header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
 
+const { links } = eng;
+const { restaurant, house, garden } = images;
+
 const Gallery = () => {
-	const { links } = eng;
-	const { restaurant, house, garden } = images;
-	const pictures = [
-		Object.values(restaurant),
-		Object.values(house),
-		Object.values(garden),
-	];
+	const pictures = [restaurant, house, garden];
 
 	return (
 		<>
 			<Img
 				id="mainImage"
-				src={images.house.house2.src}
-				alt={images.house.house2.alt}
+				src={house[3].src}
+				alt={house[3].alt}
+				className="animation"
 			/>
 			<h2 className="centered">{links.gallery}</h2>
 			<Container>
