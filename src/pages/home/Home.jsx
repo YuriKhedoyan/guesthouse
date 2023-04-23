@@ -4,14 +4,14 @@ import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
-import Slider from "./../../compontents/slider/Slider";
+import Slider from "./../../compontents/Slider";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Home.scss";
 
-const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/Img")));
+const Header = withSuspense(lazy(() => import("../../section/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { about, roomsInformation } = eng;
 const { house } = images;

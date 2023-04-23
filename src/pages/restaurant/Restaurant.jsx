@@ -2,14 +2,14 @@ import React, { lazy } from "react";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
-import Img from "../../compontents/img/Img";
 import images from "../../locales/images.js";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Restaurant.scss";
 
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/Img")));
+const Header = withSuspense(lazy(() => import("../../section/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { restaurant } = images;
 const { restaurantInformation, links } = eng;

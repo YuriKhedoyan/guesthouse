@@ -14,9 +14,9 @@ import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Rooms.scss";
 
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
-const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
+const Img = withSuspense(lazy(() => import("../../compontents/Img")));
+const Header = withSuspense(lazy(() => import("../../section/Header")));
+const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { roomsInformation, links } = eng;
 const { rooms, otherPictures } = images;

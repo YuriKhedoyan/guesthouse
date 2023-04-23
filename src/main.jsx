@@ -4,13 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { withSuspense } from "./helpers/withSuspense";
 
-const Gallery = withSuspense(lazy(() => import("./pages/gallery/Gallery")));
-const ContactUs = withSuspense(lazy(() => import("./pages/contactUs/ContactUs")));
-const Rooms = withSuspense(lazy(() => import("./pages/rooms/Rooms")));
+const Gallery = withSuspense(lazy(() => import("./pages/Gallery")));
+const ContactUs = withSuspense(lazy(() => import("./pages/ContactUs")));
+const Rooms = withSuspense(lazy(() => import("./pages/Rooms")));
+const Home = withSuspense(lazy(() => import("./pages/Home")));
 const Login = withSuspense(lazy(() => import("./pages/register/Login")));
-const Home = withSuspense(lazy(() => import("./pages/home/Home")));
 const Register = withSuspense(lazy(() => import("./pages/register/Register")));
-const Restaurant = withSuspense(lazy(() => import("./pages/restaurant/Restaurant")));
+const Restaurant = withSuspense(lazy(() => import("./pages/Restaurant")));
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
