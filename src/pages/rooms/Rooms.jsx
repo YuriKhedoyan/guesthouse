@@ -22,7 +22,6 @@ const { roomsInformation, links } = eng;
 const { rooms, otherPictures } = images;
 
 const Rooms = () => {
-
 	return (
 		<>
 			<Img
