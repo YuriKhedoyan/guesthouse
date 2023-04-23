@@ -17,6 +17,8 @@ const { links } = eng;
 const { house } = images;
 
 const ContactUs = () => {
+
+const ContactUs = () => {
 	return (
 		<>
 			<Img src={house[1].src} id="mainImage" alt="House From Top" />

@@ -35,11 +35,7 @@ const Restaurant = () => {
 					</Grid>
 					<Grid item xs={7}>
 						<div className="images">
-							<Img
-								id="mainImage"
-								src={restaurant[0].src}
-								alt={restaurant[0].alt}
-							/>
+							<Img src={restaurant[0].src} id="mainImage" alt={restaurant[0].alt} />
 						</div>
 					</Grid>
 				</Grid>
@@ -47,11 +43,7 @@ const Restaurant = () => {
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<div className="images">
-							<Img
-								id="mainImage"
-								src={restaurant[1].src}
-								alt={restaurant[1].alt}
-							/>
+							<Img src={restaurant[1].src} id="mainImage" alt={restaurant[1].alt} />
 						</div>
 					</Grid>
 					<Grid item xs={7}>
