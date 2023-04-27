@@ -1,12 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 import eng from "../../locales/eng.json";
+import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Footer.scss";
+
+const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 
 const { informationAboutHouse, links } = eng;
 
@@ -71,9 +74,7 @@ const Footer = () => {
 							</div>
 						</Grid>
 						<Grid item xs={5}>
-							<div className="googleMap">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14379.799418338926!2d44.86534121906999!3d40.74046266323563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4041acd13eb6c271%3A0xc2c4cd041074fe13!2z1LTVq9Ws1avVu9Wh1bY!5e0!3m2!1shy!2sam!4v1682243115373!5m2!1shy!2sam"  width="1000" height="220" style={{border:0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-							</div>
+							<Maps></Maps>
 						</Grid>
 					</Grid>
 				</Container>
