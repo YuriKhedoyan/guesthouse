@@ -21,7 +21,6 @@ const Header = () => {
 	return (
 		<div id="mainHeader">
 			<header>
-				<p className="space"></p>
 				<Grid container spacing={2} className="content">
 					<Grid item xs={8}>
 						<h4>

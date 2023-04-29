@@ -24,13 +24,10 @@ const Restaurant = () => {
 					<Header />
 				</div>
 			</Container>
-			<p className="space"></p>
-			<p className="space"></p>
 			<Container>
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<h3>Breakfast</h3>
-						<p className="space"></p>
 						<p>{restaurantInformation.breakfast}</p>
 					</Grid>
 					<Grid item xs={7}>
@@ -48,7 +45,6 @@ const Restaurant = () => {
 					</Grid>
 					<Grid item xs={7}>
 						<h3>Dinner</h3>
-						<p className="space"></p>
 						<p>{restaurantInformation.dinner}</p>
 					</Grid>
 				</Grid>

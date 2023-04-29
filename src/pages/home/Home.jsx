@@ -15,7 +15,6 @@ const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { about, roomsInformation } = eng;
 const { house } = images;
-console.log("a");
 
 const Home = () => {
 	return (
@@ -52,7 +51,6 @@ const Home = () => {
 					</Grid>
 				</Container>
 			</section>
-			<p className="space"></p>
 			<section id="sc3">
 				<div>
 					<Container>
@@ -111,7 +109,6 @@ const Home = () => {
 				</Grid>
 				<Link to="/rooms" className="links">
 					<div id="linkToRooms">
-						<p className="space"></p>
 						<p>All rooms</p>
 					</div>
 				</Link>
@@ -129,8 +126,6 @@ const Home = () => {
 						<p className="texts yellow">Best Cuisine</p>
 					</Grid>
 				</Grid>
-				<p className="space"></p>
-				<p className="space"></p>
 			</section>
 			<Footer />
 		</>

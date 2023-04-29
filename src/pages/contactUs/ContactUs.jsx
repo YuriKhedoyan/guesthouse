@@ -28,13 +28,11 @@ const ContactUs = () => {
 			</Container>
 			<Container>
 				<div className="writingSection">
-					<p className="space"></p>
 					<Grid container spacing={2}>
 						<Grid item sm={6}>
 							<label>
 								Name<span className="text-danger ml-1">*</span>
 							</label>
-							<p className="space"></p>
 							<TextField
 								id="outlined-basic"
 								variant="outlined"
@@ -45,7 +43,6 @@ const ContactUs = () => {
 							<label>
 								Email<span className="text-danger ml-1">*</span>
 							</label>
-							<p className="space"></p>
 							<TextField
 								id="outlined-basic"
 								variant="outlined"
@@ -58,7 +55,6 @@ const ContactUs = () => {
 						<label>
 							Message<span className="text-danger ml-1">*</span>
 						</label>
-						<p className="space"></p>
 						<span className="wpcf7-form-control-wrap" data-name="message-en">
 							<textarea
 								cols="40"
@@ -76,7 +72,6 @@ const ContactUs = () => {
 					</Button>
 				</div>
 			</Container>
-			<p className="space"></p>
 			<Footer />
 		</>
 	);

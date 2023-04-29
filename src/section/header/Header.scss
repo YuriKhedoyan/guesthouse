@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 9999;
   overflow: hidden;
+  max-height: 35px;
   padding-left: 70px;
   padding-bottom: 50px;
 
@@ -17,6 +18,10 @@
       margin-left: 15px;
     }
   }
+}
+
+.content {
+  margin-top: 5px;
 }
 
 .links {

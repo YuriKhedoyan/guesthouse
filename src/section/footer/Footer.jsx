@@ -17,17 +17,13 @@ const Footer = () => {
 	return (
 		<>
 			<footer>
-				<p className="space"></p>
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={5}>
 							<div>
-								<p>{informationAboutHouse.place} </p>
-								<p className="space"></p>
-								<p>{informationAboutHouse.phoneNumber}</p>
-								<p className="space"></p>
-								<p>{informationAboutHouse.email}</p>
-								<p className="space"></p>
+								<p className="informations">{informationAboutHouse.place} </p>
+								<p className="informations">{informationAboutHouse.phoneNumber}</p>
+								<p className="informations">{informationAboutHouse.email}</p>
 								<div id="icons">
 									<span>
 										<InstagramIcon></InstagramIcon>
@@ -40,8 +36,9 @@ const Footer = () => {
 						</Grid>
 						<Grid item xs={1}>
 							<div>
-								<p className="texts">SITEMAP</p>
-								<p className="space"></p>
+								<div>
+									<p className="texts">SITEMAP</p>
+								</div>
 								<Link to="/" className="texts links">
 									<p className="texts">Home</p>
 								</Link>

@@ -25,8 +25,6 @@ const Gallery = () => {
 					<Header />
 				</div>
 			</Container>
-			<p className="space"></p>
-			<p className="space"></p>
 			<Container>
 				<Grid container spacing={3}>
 					{Object.values(pictures[0]).map(picture => (

@@ -34,8 +34,6 @@ const Rooms = () => {
 				<div className="top-left">
 					<Header />
 				</div>
-				<p className="space"></p>
-				<p className="space"></p>
 				<Grid container spacing={2}>
 					<Grid item xs={6}>
 						<div className="cards">
@@ -73,7 +71,6 @@ const Rooms = () => {
 							</span>
 						</div>
 					</Grid>
-					<p className="space"></p>
 					<Grid item xs={6}>
 						<div className="cards">
 							<span>
@@ -111,7 +108,6 @@ const Rooms = () => {
 						</div>
 					</Grid>
 				</Grid>
-				<p className="space"></p>
 			</Container>
 			<Footer />
 		</>
