@@ -17,7 +17,7 @@ const Footer = () => {
 	return (
 		<>
 			<footer>
-				<br></br>
+				<p className="space"></p>
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={5}>
@@ -27,7 +27,7 @@ const Footer = () => {
 								<p>{informationAboutHouse.phoneNumber}</p>
 								<p className="space"></p>
 								<p>{informationAboutHouse.email}</p>
-								<br></br>
+								<p className="space"></p>
 								<div id="icons">
 									<span>
 										<InstagramIcon></InstagramIcon>

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -9,30 +9,19 @@ import "./Header.scss";
 const { links } = eng;
 
 const Header = () => {
-	const [isSticky, setSticky] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.pageYOffset > 50) {
-				setSticky(true);
-			} else {
-				setSticky(false);
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
-	const headerClass = isSticky ? "sticky" : "default";
+	window.addEventListener("scroll", function() {
+		let element = document.getElementById("mainHeader");
+		if (window.scrollY >= 50) {
+			element.classList.add("sticky");
+		} else {
+			element.classList.remove("sticky");
+		}
+	});
 
 	return (
-		<div id="mainHeader" className={headerClass}>
+		<div id="mainHeader">
 			<header>
-				<br></br>
+				<p className="space"></p>
 				<Grid container spacing={2} className="content">
 					<Grid item xs={8}>
 						<h4>

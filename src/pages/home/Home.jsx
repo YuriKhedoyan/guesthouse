@@ -51,7 +51,7 @@ const Home = () => {
 					</Grid>
 				</Container>
 			</section>
-			<br></br>
+			<p className="space"></p>
 			<section id="sc3">
 				<div>
 					<Container>
@@ -110,7 +110,7 @@ const Home = () => {
 				</Grid>
 				<Link to="/rooms" className="links">
 					<div id="linkToRooms">
-						<br></br>
+						<p className="space"></p>
 						<p>All rooms</p>
 					</div>
 				</Link>
@@ -128,8 +128,8 @@ const Home = () => {
 						<p className="texts yellow">Best Cuisine</p>
 					</Grid>
 				</Grid>
-				<br></br>
-				<br></br>
+				<p className="space"></p>
+				<p className="space"></p>
 			</section>
 			<Footer />
 		</>
