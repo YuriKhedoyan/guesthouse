@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -68,4 +68,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default memo(Header);

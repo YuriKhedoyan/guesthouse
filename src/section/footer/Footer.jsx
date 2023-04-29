@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -83,4 +83,4 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
+export default memo(Footer);

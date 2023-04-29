@@ -1,4 +1,4 @@
-import { React, lazy } from "react";
+import React, { lazy, memo } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Container, Grid } from "@mui/material";
@@ -82,4 +82,4 @@ const ContactUs = () => {
 	);
 };
 
-export default ContactUs;
+export default memo(ContactUs);

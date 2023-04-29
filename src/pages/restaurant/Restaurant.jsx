@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
@@ -58,4 +58,4 @@ const Restaurant = () => {
 	);
 };
 
-export default Restaurant;
+export default memo(Restaurant);

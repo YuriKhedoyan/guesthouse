@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 import {
 	Container,
 	Grid,
@@ -118,4 +118,4 @@ const Rooms = () => {
 	);
 };
 
-export default Rooms;
+export default memo(Rooms);

@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, memo } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
@@ -15,6 +15,7 @@ const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { about, roomsInformation } = eng;
 const { house } = images;
+console.log("a");
 
 const Home = () => {
 	return (
@@ -136,4 +137,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default memo(Home);

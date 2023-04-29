@@ -1,4 +1,4 @@
-import { lazy, React } from "react";
+import React, { lazy, memo } from "react";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
@@ -13,10 +13,9 @@ const Footer = withSuspense(lazy(() => import("../../section/Footer")));
 
 const { links } = eng;
 const { restaurant, house, garden } = images;
+const pictures = [restaurant, house, garden];
 
 const Gallery = () => {
-	const pictures = [restaurant, house, garden];
-
 	return (
 		<>
 			<Img id="mainImage" src={house[3].src} alt={house[3].alt} />
@@ -52,4 +51,4 @@ const Gallery = () => {
 	);
 };
 
-export default Gallery;
+export default memo(Gallery);
