@@ -1,6 +1,11 @@
 import React, { memo } from "react";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
+import PlaceIcon from "@mui/icons-material/Place";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 import eng from "../../locales/eng.json";
 
@@ -30,6 +35,20 @@ const Header = () => {
 						</h4>
 					</Grid>
 					<Grid item xs={4}>
+						<div>
+							<span className="infoSection">
+								<p className="info"><FacebookIcon/><InstagramIcon/></p>
+							</span>
+							<span className="infoSection">
+								<p className="info"><PlaceIcon/></p><p className="info txt">Անդրանիկ 4</p>
+							</span>
+							<span className="infoSection">
+								<p className="info"><LocalPhoneIcon/></p><p className="info txt">+374 12 345-678</p>
+							</span>
+							<span className="infoSection">
+								<p className="info"><EmailIcon/></p><p className="info txt">example@gmail.com</p>
+							</span>
+						</div>
 						<div className="linksDiv">
 							<span className="linksSection">
 								<h4>
@@ -39,6 +58,8 @@ const Header = () => {
 								</h4>
 							</span>
 							<span className="linksSection">
+								<h4>
+								</h4>
 								<h4>
 									<Link to="/gallery" className="links">
 										{links.gallery}

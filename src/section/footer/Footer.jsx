@@ -26,10 +26,10 @@ const Footer = () => {
 								<p className="informations">{informationAboutHouse.email}</p>
 								<div id="icons">
 									<span>
-										<InstagramIcon></InstagramIcon>
+										<InstagramIcon/>
 									</span>
 									<span>
-										<FacebookIcon></FacebookIcon>
+										<FacebookIcon/>
 									</span>
 								</div>
 							</div>
