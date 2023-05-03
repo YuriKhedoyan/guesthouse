@@ -6,39 +6,41 @@ import images from "../../locales/images.js";
 
 import "./Slider.scss";
 
-const { restaurant } = images;
+const { house } = images;
 
 const Slider = props => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(2);
-	const [currentImage, setCurrentImage] = useState(Object.values(restaurant)[0]);
+	const [currentImage, setCurrentImage] = useState(Object.values(house)[0]);
 
 	const handlePrevious = () => {
 		if (currentImageIndex !== 1) {
 			setCurrentImageIndex(currentImageIndex - 1);
-			setCurrentImage(restaurant[currentImageIndex]);
+			setCurrentImage(house[currentImageIndex]);
 		} else {
 			setCurrentImageIndex(Object.keys(images).length);
-			setCurrentImage(restaurant[currentImageIndex]);
+			setCurrentImage(house[currentImageIndex]);
 		}
 	};
 
 	const handleNext = () => {
 		if (currentImageIndex !== Object.keys(images).length) {
 			setCurrentImageIndex(currentImageIndex + 1);
-			setCurrentImage(restaurant[currentImageIndex]);
+			setCurrentImage(house[currentImageIndex]);
 		} else {
 			setCurrentImageIndex(0);
-			setCurrentImage(restaurant[currentImageIndex]);
+			setCurrentImage(house[currentImageIndex]);
 		}
 	};
 
 	return (
 		<div className="slider">
-			<img
-				src={currentImage.src}
-				alt={currentImage.alt}
-				className={`slider__image ${props.className}`}
-			/>
+			<div id="images">
+				<img
+					src={currentImage.src}
+					alt={currentImage.alt}
+					className={`slider__image ${props.className}`}
+				/>
+			</div>
 			<div className="slider__button-container">
 				<button className="slider__button" onClick={handlePrevious}>
 					<KeyboardArrowLeftIcon className="slider__button-icon" />

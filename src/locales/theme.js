@@ -1,4 +1,6 @@
-export const theme = {
+import { createTheme } from "@material-ui/core/styles";
+
+export const theme = createTheme({
 	colors: {
 		primary: "#007bff",
 		secondary: "#6c757d",
@@ -13,4 +15,4 @@ export const theme = {
 		medium: "2em",
 		large: "3em",
 	},
-};
+});
