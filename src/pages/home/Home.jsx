@@ -1,11 +1,13 @@
-import React, { lazy, memo } from "react";
+import React, { lazy, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
 import Slider from "./../../compontents/Slider";
+import ThemeContext from "../../locales/themeContext";
 import { withSuspense } from "../../helpers/withSuspense";
+import LanguageContext from "./../../locales/languageContext";
 
 import "./Home.scss";
 
@@ -17,6 +19,9 @@ const { about, roomsInformation } = eng;
 const { house } = images;
 
 const Home = () => {
+	const {theme} = useContext(ThemeContext);
+	const {language} = useContext(LanguageContext);
+
 	return (
 		<>
 			<section id="sc1">
@@ -51,7 +56,7 @@ const Home = () => {
 					</Grid>
 				</Container>
 			</section>
-			<section id="sc3">
+			<section id="sc3" className={theme}>
 				<div>
 					<Container>
 						<Grid container spacing={2}>
@@ -113,7 +118,7 @@ const Home = () => {
 					</div>
 				</Link>
 			</section>
-			<section id="sc6">
+			<section id="sc6" className={theme}>
 				<p className="texts">Our Benefits</p>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
@@ -132,4 +137,4 @@ const Home = () => {
 	);
 };
 
-export default memo(Home);
+export default Home;

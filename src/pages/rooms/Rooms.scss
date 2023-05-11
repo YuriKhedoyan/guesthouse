@@ -1,5 +1,8 @@
 * {
   overflow-x: hidden;
+}
+
+body {
   margin: 0;
 }
 
@@ -42,4 +45,9 @@ img {
 .css-1osj8n2-MuiGrid-root {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.css-1rwjz6-MuiCardActions-root,
+.css-46bh2p-MuiCardContent-root {
+  padding: 0;
 }

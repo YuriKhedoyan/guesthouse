@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "home": "Home",
+    "restaurant": "Restaurant",
+    "gallery": "Gallery",
+    "conactUs": "Conact Us",
+    "rooms": "Rooms"
+  },
+  "address": "Andranik 4"
+}

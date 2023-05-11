@@ -1,10 +1,11 @@
-import React, { lazy, memo } from "react";
+import React, { lazy, memo, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 import eng from "../../locales/eng.json";
+import ThemeContext from "../../locales/themeContext";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Footer.scss";
@@ -14,9 +15,10 @@ const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 const { informationAboutHouse, links } = eng;
 
 const Footer = () => {
+	const {theme} = useContext(ThemeContext);
 	return (
 		<>
-			<footer>
+			<footer className={theme}>
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={5}>

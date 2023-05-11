@@ -56,7 +56,7 @@ body {
 
 #sc2 {
   width: 100%;
-  height: 150px;
+  height: 120px;
   background-color: #353535;
   padding-top: 50px;
 }
@@ -64,11 +64,12 @@ body {
 .texts {
   color: white;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 #sc3 {
-  margin-top: 10px;
+  padding-top: 10px;
+
   div {
     margin-left: 130px;
   }
@@ -172,7 +173,7 @@ body {
 }
 
 #sc6 {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 
   .texts {
     font-size: 25px;
@@ -183,7 +184,7 @@ body {
   }
 
   .yellow {
-    color: #ffb752;
+    color: #ffb752 !important;
   }
 }
 
