@@ -44,26 +44,22 @@ const Footer = () => {
 								<Link to="/" className="texts links">
 									<p className="texts">Home</p>
 								</Link>
-								<p className="space"></p>
 								<Link to="/restaurant" className="texts links">
 									<p className="texts">
 										{links.restaurant[0] +
 											links.restaurant.slice(1).toLowerCase()}
 									</p>
 								</Link>
-								<p className="space"></p>
 								<Link to="/rooms" className="texts links">
 									<p className="texts">
 										{links.rooms[0] + links.rooms.slice(1).toLowerCase()}
 									</p>
 								</Link>
-								<p className="space"></p>
 								<Link to="/gallery" className="texts links">
 									<p className="texts">
 										{links.gallery[0] + links.gallery.slice(1).toLowerCase()}
 									</p>
 								</Link>
-								<p className="space"></p>
 								<Link to="/contactUs" className="texts links">
 									<p className="texts">
 										{links.contactUs[0] +

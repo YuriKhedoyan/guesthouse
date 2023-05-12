@@ -36,7 +36,6 @@ const Restaurant = () => {
 						</div>
 					</Grid>
 				</Grid>
-				<p className="space"></p>
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<div className="images">

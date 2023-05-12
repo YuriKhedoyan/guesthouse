@@ -11,9 +11,9 @@ import LanguageContext from "./../../locales/languageContext";
 
 import "./Home.scss";
 
-const Img = withSuspense(lazy(() => import("../../compontents/Img")));
-const Header = withSuspense(lazy(() => import("../../section/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img")));
+const Header = withSuspense(lazy(() => import("../../section/header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
 const { about, roomsInformation } = eng;
 const { house } = images;

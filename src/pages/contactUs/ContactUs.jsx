@@ -50,7 +50,6 @@ const ContactUs = () => {
 							/>
 						</Grid>
 					</Grid>
-					<p className="space"></p>
 					<p>
 						<label>
 							Message<span className="text-danger ml-1">*</span>

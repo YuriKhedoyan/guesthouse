@@ -4,11 +4,6 @@
     'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.space {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 footer {
   background: #353535 !important;
   width: 100%;
@@ -27,8 +22,8 @@ footer {
   }
 
   .texts {
-    display: inline;
-    margin-bottom: 5px;
+    margin: 10px;
+    color: white !important;
   }
 
   .informations {
