@@ -19,7 +19,7 @@ body {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: white !important;
   font-family: sans-serif;
 }
 
@@ -50,4 +50,25 @@ img {
 .css-1rwjz6-MuiCardActions-root,
 .css-46bh2p-MuiCardContent-root {
   padding: 0;
+}
+
+.css-1d9ctjl-MuiPaper-root-MuiCard-root {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+.light {
+  .css-1d9ctjl-MuiPaper-root-MuiCard-root {
+    background-color: #1a1a1a !important;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  }
+}
+
+.dark {
+  .css-1d9ctjl-MuiPaper-root-MuiCard-root {
+    background-color: white !important;
+    border:rgba(0, 0, 0, 0.9) 2px solid;
+    border-radius: 5px;
+  }
 }

@@ -1,22 +1,24 @@
-import React, { lazy, memo } from "react";
+import React, { lazy, memo, useContext } from "react";
 import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
+import ThemeContext from "../../locales/themeContext";
 import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Restaurant.scss";
 
-const Img = withSuspense(lazy(() => import("../../compontents/Img")));
-const Header = withSuspense(lazy(() => import("../../section/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img")));
+const Header = withSuspense(lazy(() => import("../../section/header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
 const { restaurant } = images;
 const { restaurantInformation, links } = eng;
 
 const Restaurant = () => {
+	const {theme} = useContext(ThemeContext);
 	return (
-		<>
+		<div className={theme}>
 			<Img src={restaurant[0].src} id="mainImage" alt={restaurant[0].alt} />
 			<h2 className="centered">{links.restaurant}</h2>
 			<Container>
@@ -49,7 +51,7 @@ const Restaurant = () => {
 				</Grid>
 			</Container>
 			<Footer />
-		</>
+		</div>
 	);
 };
 

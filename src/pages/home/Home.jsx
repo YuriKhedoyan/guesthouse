@@ -2,7 +2,6 @@ import React, { lazy, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
 import Slider from "./../../compontents/Slider";
 import ThemeContext from "../../locales/themeContext";
@@ -15,12 +14,11 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { about, roomsInformation } = eng;
 const { house } = images;
 
 const Home = () => {
 	const {theme} = useContext(ThemeContext);
-	const {language} = useContext(LanguageContext);
+	const {language, setLanguage, languages} = useContext(LanguageContext);
 
 	return (
 		<>
@@ -38,8 +36,8 @@ const Home = () => {
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={4}>
-							<h3 className="texts">{roomsInformation.countOfRooms}</h3>
-							<p className="texts">{roomsInformation.categories}</p>
+							<h3 className="texts">{languages[language].roomsInformation.countOfRooms}</h3>
+							<p className="texts">{languages[language].roomsInformation.categories}</p>
 						</Grid>
 						<Grid item xs={4}>
 							<h3 className="texts">
@@ -61,8 +59,8 @@ const Home = () => {
 					<Container>
 						<Grid container spacing={2}>
 							<Grid item xs={4}>
-								<h4 className="texts">Welcome to Khedoyans Guesthouse</h4>
-								<p className="texts">{about}</p>
+								<h4 className="texts">{languages[language].welcome}</h4>
+								<p className="texts">{languages[language].about}</p>
 							</Grid>
 							<Grid item xs={4}>
 								<Img className="photos" src={house[0].src} alt={house[0].alt} />
@@ -76,18 +74,16 @@ const Home = () => {
 					<Grid item xs={6}>
 						<span id="backgroundImg1">
 							<div>
-								<p className="texts">
-									{roomsInformation.standardRoom.category}
-								</p>
-								<p className="texts">{roomsInformation.standardRoom.price}</p>
+								<p className="texts">{languages[language].roomsInformation.standardRoom.category}</p>
+								<p className="texts">{languages[language].roomsInformation.standardRoom.price}</p>
 							</div>
 						</span>
 					</Grid>
 					<Grid item xs={6}>
 						<span id="backgroundImg2">
 							<div>
-								<p className="texts">{roomsInformation.deluxe.category}</p>
-								<p className="texts">{roomsInformation.deluxe.price}</p>
+								<p className="texts">{languages[language].roomsInformation.deluxe.category}</p>
+								<p className="texts">{languages[language].roomsInformation.deluxe.price}</p>
 							</div>
 						</span>
 					</Grid>
@@ -96,18 +92,16 @@ const Home = () => {
 					<Grid item xs={6}>
 						<span id="backgroundImg3">
 							<div>
-								<p className="texts">
-									{roomsInformation.deluxeSuperior.category}
-								</p>
-								<p className="texts">{roomsInformation.deluxeSuperior.price}</p>
+								<p className="texts">{languages[language].roomsInformation.deluxeSuperior.category}</p>
+								<p className="texts">{languages[language].roomsInformation.deluxeSuperior.price}</p>
 							</div>
 						</span>
 					</Grid>
 					<Grid item xs={6}>
 						<span id="backgroundImg4">
 							<div>
-								<p className="texts">{roomsInformation.duplex.category}</p>
-								<p className="texts">{roomsInformation.duplex.price}</p>
+								<p className="texts">{languages[language].roomsInformation.duplex.category}</p>
+								<p className="texts">{languages[language].roomsInformation.duplex.price}</p>
 							</div>
 						</span>
 					</Grid>
@@ -119,16 +113,16 @@ const Home = () => {
 				</Link>
 			</section>
 			<section id="sc6" className={theme}>
-				<p className="texts">Our Benefits</p>
+				<p className="texts">{languages[language].otherInformation.ourBenefites}</p>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<p className="texts yellow">High Class Rooms</p>
+						<p className="texts yellow">{languages[language].otherInformation.wonderfulNature}</p>
 					</Grid>
 					<Grid item xs={4}>
-						<p className="texts">Wonderful Nature</p>
+						<p className="texts">{languages[language].otherInformation.bestCuisine}</p>
 					</Grid>
 					<Grid item xs={4}>
-						<p className="texts yellow">Best Cuisine</p>
+						<p className="texts yellow">{languages[language].otherInformation.highClassRooms}</p>
 					</Grid>
 				</Grid>
 			</section>
