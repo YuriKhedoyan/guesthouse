@@ -2,8 +2,8 @@ import React, { lazy, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import eng from './locales/eng.json'
-import ThemeContext from "./contexts/themeContext";
 import withSuspense from "./helpers/withSuspense";
+import ThemeContext from "./contexts/themeContext";
 import LanguageContext from "./contexts/languageContext";
 
 const Home = withSuspense(lazy(() => import("./pages/home")));
@@ -22,10 +22,10 @@ const App = () => {
 				<BrowserRouter>
 					<Routes>
 						<Route path="/" element={<Home />}/>
-						{/* <Route path="/rooms" element={<Rooms />} />
+						<Route path="/rooms" element={<Rooms />} />
 						<Route path="/gallery" element={<Gallery />} />
 						<Route path="/contactUs" element={<ContactUs />} />
-						<Route path="/restaurant" element={<Restaurant />} /> */}
+						<Route path="/restaurant" element={<Restaurant />} />
 					</Routes>
 				</BrowserRouter>
 			</LanguageContext.Provider>

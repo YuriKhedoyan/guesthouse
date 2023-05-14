@@ -22,9 +22,10 @@
     }
   },
   "restaurantInformation": {
-    "restaurant": "Restaurant at home",
-    "breakfast": "Breakfast is considered the most important meal of the day, therefor our restaurant offers a full buffet breakfast of special Armenian dishes alongside with international foods. Ingredients are sourced fresh and local, dairy products such as cheeses, yogurts, milks, and creams. We also have a variety of local jams, pastries, fruits and a wide selection of hot dishes with freshly-squeezed juices, with a last touch of coffee and tea.",
-    "dinner": "Dinner at Khedoyans Guesthouse Hotel is the most expected time of the day. With our talented Chef and all the varieties of international dishes, we offer the best Cuisine within the region. The restaurant is also fulfilled with wide range of wines, to everyones taste. While guests relax and enjoy their glass of wine and dinner in the coziest atmosphere, the evening is lead with Jazz music played live by different famous performers. Khedoyans Guesthouse`s Restaurant features both indoor and outdoor dining. Our restaurant is open for all guests travelling within Khedoyans Guesthouse."
+    "breakfast": "Breakfast",
+    "aboutBreakfast": "Breakfast is considered the most important meal of the day, therefor our restaurant offers a full buffet breakfast of special Armenian dishes alongside with international foods. Ingredients are sourced fresh and local, dairy products such as cheeses, yogurts, milks, and creams. We also have a variety of local jams, pastries, fruits and a wide selection of hot dishes with freshly-squeezed juices, with a last touch of coffee and tea.",
+    "dinner": "Dinner",
+    "aboutDinner": "Dinner at Khedoyans Guesthouse Hotel is the most expected time of the day. With our talented Chef and all the varieties of international dishes, we offer the best Cuisine within the region. The restaurant is also fulfilled with wide range of wines, to everyones taste. While guests relax and enjoy their glass of wine and dinner in the coziest atmosphere, the evening is lead with Jazz music played live by different famous performers. Khedoyans Guesthouse`s Restaurant features both indoor and outdoor dining. Our restaurant is open for all guests travelling within Khedoyans Guesthouse."
   },
   "informationAboutHouse": {
     "place": "Andranik 4 st",

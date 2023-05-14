@@ -1,10 +1,10 @@
 import React, { lazy, memo, useContext } from "react";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
 import images from "../../locales/images";
-import withSuspense from "./helpers/withSuspense";
-import ThemeContext from "../../locales/themeContext";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./Gallery.scss";
 
@@ -12,16 +12,17 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { links } = eng;
 const { restaurant, house, garden } = images;
 const pictures = [restaurant, house, garden];
 
 const Gallery = () => {
 	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
+
 	return (
 		<div className={theme}>
 			<Img id="mainImage" src={house[3].src} alt={house[3].alt} />
-			<h2 className="centered">{links.gallery}</h2>
+			<h2 className="centered">{currentLanguage.links.gallery}</h2>
 			<Container>
 				<div className="top-left">
 					<Header />

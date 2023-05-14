@@ -3,10 +3,10 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
-import withSuspense from "./helpers/withSuspense";
-import ThemeContext from "../../locales/themeContext";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./ContactUs.scss";
 
@@ -14,15 +14,16 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { links } = eng;
-const { house } = images;
+const {house} = images
 
 const ContactUs = () => {
 	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
+
 	return (
 		<div className={theme}>
 			<Img src={house[1].src} id="mainImage" alt="House From Top" />
-			<h2 className="centered">{links.contactUs}</h2>
+			<h2 className="centered">{currentLanguage.links.contactUs}</h2>
 			<Container>
 				<div className="top-left">
 					<Header />
