@@ -3,8 +3,8 @@ import { Container, Grid, Card, CardActions, CardContent, CardMedia, } from "@mu
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
+import withSuspense from "./helpers/withSuspense";
 import ThemeContext from "../../locales/themeContext";
-import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Rooms.scss";
 

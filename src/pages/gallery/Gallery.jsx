@@ -3,8 +3,8 @@ import { Container, Grid } from "@mui/material";
 
 import eng from "../../locales/eng.json";
 import images from "../../locales/images";
+import withSuspense from "./helpers/withSuspense";
 import ThemeContext from "../../locales/themeContext";
-import { withSuspense } from "../../helpers/withSuspense";
 
 import "./Gallery.scss";
 

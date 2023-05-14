@@ -7,10 +7,13 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
+import eng from '../../locales/eng.json'
+import rus from '../../locales/rus.json'
+import arm from '../../locales/arm.json'
 import images from "../../locales/images.js";
-import ThemeContext from "../../locales/themeContext";
-import { withSuspense } from "../../helpers/withSuspense";
-import LanguageContext from "./../../locales/languageContext";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./Header.scss";
 
@@ -19,8 +22,9 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const { otherPictures } = images;
 
 const Header = () => {
+
 	const {theme, setTheme} = useContext(ThemeContext);
-	const {language, setLanguage, languages} = useContext(LanguageContext);
+	const {currentLanguage, setCurrentLanguage} = useContext(LanguageContext);
 
 	window.addEventListener("scroll", function() {
 		let element = document.getElementById("mainHeader");
@@ -34,9 +38,9 @@ const Header = () => {
 
 	const switchTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
-	const setLanguageAm = () => setLanguage("am");
-	const setLanguageRu = () => setLanguage("ru");
-	const setLanguageEng = () => setLanguage("eng");
+	const setLanguageAm = () => {setCurrentLanguage(arm)}
+	const setLanguageRu = () => {setCurrentLanguage(rus)}
+	const setLanguageEng = () => {setCurrentLanguage(eng)}
 
 	return (
 		<div className={theme}>
@@ -46,7 +50,7 @@ const Header = () => {
 						<Grid item xs={8}>
 							<h4>
 								<Link to="/" className="links" id="title">
-									{languages[language].links.home}
+									{currentLanguage.links.home}
 								</Link>
 								<Button onClick={switchTheme} variant="contained">{theme}</Button>
 								<span className="languageSelector">
@@ -64,20 +68,20 @@ const Header = () => {
 									<p className="info"><FacebookIcon/><InstagramIcon/></p>
 								</span>
 								<span className="infoSection">
-									<p className="info"><PlaceIcon/></p><p className="info txt">{languages[language].informationAboutHouse.place}</p>
+									<p className="info"><PlaceIcon/></p><p className="info txt">{currentLanguage.informationAboutHouse.place}</p>
 								</span>
 								<span className="infoSection">
-									<p className="info"><LocalPhoneIcon/></p><p className="info txt">{languages[language].informationAboutHouse.phoneNumber}</p>
+									<p className="info"><LocalPhoneIcon/></p><p className="info txt">{currentLanguage.informationAboutHouse.phoneNumber}</p>
 								</span>
 								<span className="infoSection">
-									<p className="info"><EmailIcon/></p><p className="info txt">{languages[language].informationAboutHouse.email}</p>
+									<p className="info"><EmailIcon/></p><p className="info txt">{currentLanguage.informationAboutHouse.email}</p>
 								</span>
 							</div>
 							<div className="linksDiv">
 								<span className="linksSection">
 									<h4>
 										<Link to="/rooms" className="links">
-											{languages[language].links.rooms}
+											{currentLanguage.links.rooms}
 										</Link>
 									</h4>
 								</span>
@@ -86,21 +90,21 @@ const Header = () => {
 									</h4>
 									<h4>
 										<Link to="/gallery" className="links">
-											{languages[language].links.gallery}
+											{currentLanguage.links.gallery}
 										</Link>
 									</h4>
 								</span>
 								<span className="linksSection">
 									<h4>
 										<Link to="/restaurant" className="links">
-											{languages[language].links.restaurant}
+											{currentLanguage.links.restaurant}
 										</Link>
 									</h4>
 								</span>
 								<span className="linksSection">
 									<h4>
 										<Link to="/contactUs" className="links">
-											{languages[language].links.contactUs}
+											{currentLanguage.links.contactUs}
 										</Link>
 									</h4>
 								</span>
