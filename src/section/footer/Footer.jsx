@@ -1,79 +1,66 @@
-import React from "react";
+import React, { lazy, memo, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-import eng from "../../locales/eng.json";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./Footer.scss";
 
-const Footer = () => {
-	const { informationAboutHouse, links } = eng;
-	const props = {
-		links: {
-			className: "texts links",
-		},
-	};
+const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 
+const Footer = () => {
+	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
+	console.log(currentLanguage)
+	
 	return (
 		<>
-			<footer>
-				<br></br>
+			<footer className={theme}>
 				<Container>
-					<Grid container spacing={2}>
-						<Grid item xs={8}>
+					<Grid container spacing={3}>
+						<Grid item xs={5}>
 							<div>
-								<p>{informationAboutHouse.place} </p>
-								<p className="space"></p>
-								<p>{informationAboutHouse.phoneNumber}</p>
-								<p className="space"></p>
-								<p>{informationAboutHouse.email}</p>
-								<br></br>
+								<p className="informations">{currentLanguage.informationAboutHouse.place}</p>
+								<p className="informations">{currentLanguage.informationAboutHouse.phoneNumber}</p>
+								<p className="informations">{currentLanguage.informationAboutHouse.email}</p>
 								<div id="icons">
 									<span>
-										<InstagramIcon></InstagramIcon>
+										<InstagramIcon/>
 									</span>
 									<span>
-										<FacebookIcon></FacebookIcon>
+										<FacebookIcon/>
 									</span>
 								</div>
 							</div>
 						</Grid>
 						<Grid item xs={1}>
 							<div>
-								<p className="texts">SITEMAP</p>
-								<p className="space"></p>
-								<Link to="/" {...props.links}>
-									<p className="texts">Home</p>
+								<div>
+									<p className="texts">SITEMAP</p>
+								</div>
+								<Link to="/" className="texts links">
+									<p className="texts">{currentLanguage.links.mainPage[0] + currentLanguage.links.mainPage.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<p className="space"></p>
-								<Link to="/restaurant" {...props.links}>
-									<p className="texts">
-										{links.restaurant[0] +
-											links.restaurant.slice(1).toLowerCase()}
-									</p>
+								<Link to="/restaurant" className="texts links">
+									<p className="texts">{currentLanguage.links.restaurant[0] + currentLanguage.links.restaurant.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<p className="space"></p>
-								<Link to="/rooms" {...props.links}>
-									<p className="texts">
-										{links.rooms[0] + links.rooms.slice(1).toLowerCase()}
-									</p>
+								<Link to="/rooms" className="texts links">
+									<p className="texts">{currentLanguage.links.rooms[0] + currentLanguage.links.rooms.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<p className="space"></p>
-								<Link to="/gallery" {...props.links}>
-									<p className="texts">
-										{links.gallery[0] + links.gallery.slice(1).toLowerCase()}
-									</p>
+								<Link to="/gallery" className="texts links">
+									<p className="texts">{currentLanguage.links.gallery[0] + currentLanguage.links.gallery.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<p className="space"></p>
-								<Link to="/contactUs" {...props.links}>
-									<p className="texts">
-										{links.contactUs[0] +
-											links.contactUs.slice(1).toLowerCase()}
-									</p>
+								<Link to="/contactUs" className="texts links">
+									<p className="texts">{currentLanguage.links.contactUs[0] + currentLanguage.links.contactUs.slice(1).toLocaleLowerCase()}</p>
 								</Link>
 							</div>
+						</Grid>
+						<Grid item xs={5}>
+							<Maps></Maps>
 						</Grid>
 					</Grid>
 				</Container>
@@ -82,4 +69,4 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
+export default memo(Footer);

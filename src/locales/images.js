@@ -120,6 +120,20 @@ const data = {
 			src: "/src/assets/images/9S5A9235-1-scaled.jpg",
 			alt: "Spruce Branch",
 		},
+		languages: {
+			am: {
+				src: "/src/assets/images/flag-of-armenia-logo.png",
+				alt: "Armenian Flag"
+			},
+			ru: {
+				src: "/src/assets/images/flag-of-russia-logo.png",
+				alt: "Russian Flag"
+			},
+			en: {
+				src: "/src/assets/images/flag-of-america-logo.png",
+				alt: "American Flag"
+			}
+		}
 	},
 };
 

@@ -1,38 +1,33 @@
-import { lazy, React } from "react";
+import React, { lazy, memo, useContext } from "react";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
-import Img from "../../compontents/img/Img";
 import images from "../../locales/images";
-import { withSuspense } from "../../helpers/withSuspense";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./Gallery.scss";
 
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img")));
+const Header = withSuspense(lazy(() => import("../../section/header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { links } = eng;
 const { restaurant, house, garden } = images;
+const pictures = [restaurant, house, garden];
 
 const Gallery = () => {
-	const pictures = [restaurant, house, garden];
+	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
 
 	return (
-		<>
-			<Img
-				id="mainImage"
-				src={house[3].src}
-				alt={house[3].alt}
-				className="animation"
-			/>
-			<h2 className="centered">{links.gallery}</h2>
+		<div className={theme}>
+			<Img id="mainImage" src={house[3].src} alt={house[3].alt} />
+			<h2 className="centered">{currentLanguage.links.gallery}</h2>
 			<Container>
 				<div className="top-left">
 					<Header />
 				</div>
 			</Container>
-			<br></br>
-			<br></br>
 			<Container>
 				<Grid container spacing={3}>
 					{Object.values(pictures[0]).map(picture => (
@@ -53,8 +48,8 @@ const Gallery = () => {
 				</Grid>
 			</Container>
 			<Footer />
-		</>
+		</div>
 	);
 };
 
-export default Gallery;
+export default memo(Gallery);

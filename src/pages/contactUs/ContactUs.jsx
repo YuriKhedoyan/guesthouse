@@ -1,27 +1,29 @@
-import { React, lazy } from "react";
+import React, { lazy, memo, useContext } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
-import Img from "../../compontents/img/Img";
 import images from "../../locales/images.js";
-import { withSuspense } from "../../helpers/withSuspense";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./ContactUs.scss";
 
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img")));
+const Header = withSuspense(lazy(() => import("../../section/header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { links } = eng;
-const { house } = images;
+const {house} = images
 
 const ContactUs = () => {
+	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
 
 	return (
-		<>
+		<div className={theme}>
 			<Img src={house[1].src} id="mainImage" alt="House From Top" />
-			<h2 className="centered">{links.contactUs}</h2>
+			<h2 className="centered">{currentLanguage.links.contactUs}</h2>
 			<Container>
 				<div className="top-left">
 					<Header />
@@ -29,13 +31,11 @@ const ContactUs = () => {
 			</Container>
 			<Container>
 				<div className="writingSection">
-					<br></br>
 					<Grid container spacing={2}>
 						<Grid item sm={6}>
 							<label>
 								Name<span className="text-danger ml-1">*</span>
 							</label>
-							<br></br>
 							<TextField
 								id="outlined-basic"
 								variant="outlined"
@@ -46,7 +46,6 @@ const ContactUs = () => {
 							<label>
 								Email<span className="text-danger ml-1">*</span>
 							</label>
-							<br></br>
 							<TextField
 								id="outlined-basic"
 								variant="outlined"
@@ -54,12 +53,10 @@ const ContactUs = () => {
 							/>
 						</Grid>
 					</Grid>
-					<br></br>
 					<p>
 						<label>
 							Message<span className="text-danger ml-1">*</span>
 						</label>
-						<br></br>
 						<span className="wpcf7-form-control-wrap" data-name="message-en">
 							<textarea
 								cols="40"
@@ -77,10 +74,9 @@ const ContactUs = () => {
 					</Button>
 				</div>
 			</Container>
-			<br></br>
 			<Footer />
-		</>
+		</div>
 	);
 };
 
-export default ContactUs;
+export default memo(ContactUs);

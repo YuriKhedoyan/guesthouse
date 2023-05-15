@@ -1,22 +1,25 @@
-import React, { lazy } from "react";
+import React, { lazy, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 
-import eng from "../../locales/eng.json";
 import images from "../../locales/images.js";
-import Slider from "./../../compontents/slider/Slider";
-import { withSuspense } from "../../helpers/withSuspense";
+import Slider from "./../../compontents/Slider";
+import withSuspense from "../../helpers/withSuspense";
+import ThemeContext from "../../contexts/themeContext";
+import LanguageContext from "../../contexts/languageContext";
 
 import "./Home.scss";
 
-const Img = withSuspense(lazy(() => import("../../compontents/img/Img")));
-const Header = withSuspense(lazy(() => import("../../section/header/Header")));
-const Footer = withSuspense(lazy(() => import("../../section/footer/Footer")));
+const Img = withSuspense(lazy(() => import("../../compontents/img")));
+const Header = withSuspense(lazy(() => import("../../section/header")));
+const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
+const { house } = images;
 
 const Home = () => {
-	const { about, roomsInformation } = eng;
-	const { house } = images;
+	const {theme} = useContext(ThemeContext);
+	const {currentLanguage} = useContext(LanguageContext);
+	
 
 	return (
 		<>
@@ -34,8 +37,8 @@ const Home = () => {
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={4}>
-							<h3 className="texts">{roomsInformation.countOfRooms}</h3>
-							<p className="texts">{roomsInformation.categories}</p>
+							<h3 className="texts">{currentLanguage.roomsInformation.countOfRooms}</h3>
+							<p className="texts">{currentLanguage.roomsInformation.categories}</p>
 						</Grid>
 						<Grid item xs={4}>
 							<h3 className="texts">
@@ -52,21 +55,16 @@ const Home = () => {
 					</Grid>
 				</Container>
 			</section>
-			<br></br>
-			<section id="sc3">
+			<section id="sc3" className={theme}>
 				<div>
 					<Container>
 						<Grid container spacing={2}>
 							<Grid item xs={4}>
-								<h4 className="texts">Welcome to Khedoyans Guesthouse</h4>
-								<p className="texts">{about}</p>
+								<h4 className="texts">{currentLanguage.welcome}</h4>
+								<p className="texts">{currentLanguage.about}</p>
 							</Grid>
 							<Grid item xs={4}>
-								<Img
-									className="photos"
-									src={house[0].src}
-									alt={house[0].alt}
-								/>
+								<Img className="photos" src={house[0].src} alt={house[0].alt} />
 							</Grid>
 						</Grid>
 					</Container>
@@ -77,18 +75,16 @@ const Home = () => {
 					<Grid item xs={6}>
 						<span id="backgroundImg1">
 							<div>
-								<p className="texts">
-									{roomsInformation.standardRoom.category}
-								</p>
-								<p className="texts">{roomsInformation.standardRoom.price}</p>
+								<p className="texts">{currentLanguage.roomsInformation.standardRoom.category}</p>
+								<p className="texts">{currentLanguage.roomsInformation.standardRoom.price}</p>
 							</div>
 						</span>
 					</Grid>
 					<Grid item xs={6}>
 						<span id="backgroundImg2">
 							<div>
-								<p className="texts">{roomsInformation.deluxe.category}</p>
-								<p className="texts">{roomsInformation.deluxe.price}</p>
+								<p className="texts">{currentLanguage.roomsInformation.deluxe.category}</p>
+								<p className="texts">{currentLanguage.roomsInformation.deluxe.price}</p>
 							</div>
 						</span>
 					</Grid>
@@ -97,44 +93,39 @@ const Home = () => {
 					<Grid item xs={6}>
 						<span id="backgroundImg3">
 							<div>
-								<p className="texts">
-									{roomsInformation.deluxeSuperior.category}
-								</p>
-								<p className="texts">{roomsInformation.deluxeSuperior.price}</p>
+								<p className="texts">{currentLanguage.roomsInformation.deluxeSuperior.category}</p>
+								<p className="texts">{currentLanguage.roomsInformation.deluxeSuperior.price}</p>
 							</div>
 						</span>
 					</Grid>
 					<Grid item xs={6}>
 						<span id="backgroundImg4">
 							<div>
-								<p className="texts">{roomsInformation.duplex.category}</p>
-								<p className="texts">{roomsInformation.duplex.price}</p>
+								<p className="texts">{currentLanguage.roomsInformation.duplex.category}</p>
+								<p className="texts">{currentLanguage.roomsInformation.duplex.price}</p>
 							</div>
 						</span>
 					</Grid>
 				</Grid>
 				<Link to="/rooms" className="links">
 					<div id="linkToRooms">
-						<br></br>
 						<p>All rooms</p>
 					</div>
 				</Link>
 			</section>
-			<section id="sc6">
-				<p className="texts">Our Benefits</p>
+			<section id="sc6" className={theme}>
+				<p className="texts">{currentLanguage.otherInformation.ourBenefites}</p>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>
-						<p className="texts yellow">High Class Rooms</p>
+						<p className="texts yellow">{currentLanguage.otherInformation.highClassRooms}</p>
 					</Grid>
 					<Grid item xs={4}>
-						<p className="texts">Wonderful Nature</p>
+						<p className="texts">{currentLanguage.otherInformation.bestCuisine}</p>
 					</Grid>
 					<Grid item xs={4}>
-						<p className="texts yellow">Best Cuisine</p>
+						<p className="texts yellow">{currentLanguage.otherInformation.wonderfulNature}</p>
 					</Grid>
 				</Grid>
-				<br></br>
-				<br></br>
 			</section>
 			<Footer />
 		</>
