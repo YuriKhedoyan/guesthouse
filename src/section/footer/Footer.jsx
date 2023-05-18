@@ -2,6 +2,7 @@ import React, { lazy, memo, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import CopyrightIcon from "@mui/icons-material/Copyright";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 import withSuspense from "../../helpers/withSuspense";
@@ -15,7 +16,6 @@ const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 const Footer = () => {
 	const {theme} = useContext(ThemeContext);
 	const {currentLanguage} = useContext(LanguageContext);
-	console.log(currentLanguage)
 	
 	return (
 		<>
@@ -27,6 +27,7 @@ const Footer = () => {
 								<p className="informations">{currentLanguage.informationAboutHouse.place}</p>
 								<p className="informations">{currentLanguage.informationAboutHouse.phoneNumber}</p>
 								<p className="informations">{currentLanguage.informationAboutHouse.email}</p>
+								<p className="informations">Copyright <CopyrightIcon/> 2023 by Yuri Khedoyan</p>
 								<div id="icons">
 									<span>
 										<InstagramIcon/>
