@@ -14,9 +14,9 @@ import "./Footer.scss";
 const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 
 const Footer = () => {
-	const {theme} = useContext(ThemeContext);
-	const {currentLanguage} = useContext(LanguageContext);
-	
+	const { theme } = useContext(ThemeContext);
+	const { currentLanguage } = useContext(LanguageContext);
+
 	return (
 		<>
 			<footer className={theme}>
@@ -27,13 +27,13 @@ const Footer = () => {
 								<p className="informations">{currentLanguage.informationAboutHouse.place}</p>
 								<p className="informations">{currentLanguage.informationAboutHouse.phoneNumber}</p>
 								<p className="informations">{currentLanguage.informationAboutHouse.email}</p>
-								<p className="informations">Copyright <CopyrightIcon/> 2023 by Yuri Khedoyan</p>
+								<p className="informations">Copyright <CopyrightIcon /> 2023 by Yuri Khedoyan</p>
 								<div id="icons">
 									<span>
-										<InstagramIcon/>
+										<InstagramIcon />
 									</span>
 									<span>
-										<FacebookIcon/>
+										<FacebookIcon />
 									</span>
 								</div>
 							</div>
@@ -61,7 +61,9 @@ const Footer = () => {
 							</div>
 						</Grid>
 						<Grid item xs={5}>
-							<Maps></Maps>
+							<div className="map">
+								<Maps></Maps>
+							</div>
 						</Grid>
 					</Grid>
 				</Container>

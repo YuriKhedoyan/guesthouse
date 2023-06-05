@@ -70,9 +70,9 @@ body {
 #sc3 {
   padding-top: 10px;
 
-  div {
-    margin-left: 130px;
-  }
+  // div {
+  //   margin-left: 130px;
+  // }
 
   .texts {
     color: black;
@@ -190,4 +190,92 @@ body {
 
 img {
   filter: brightness(50%);
+}
+
+@media only screen and (max-width: 1935px) {
+  #mainHeader #secondPart  {
+    margin-left: -22px !important;
+  }
+  .css-mhc70k-MuiGrid-root {
+    min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1860px) {
+  #mainHeader .css-gj1fbr-MuiGrid-root {
+    margin-left: -100px !important;
+  }
+  .title {
+    max-width: 530px;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  .css-mhc70k-MuiGrid-root {
+    max-width: 700px !important;
+  }
+  #secondPart {
+    div {
+      min-width: 553px;
+    }
+  }
+}
+
+.closing .info, .txt {
+  color: black !important;
+}
+
+@media (min-width: 1px){
+  .css-nzinn5-MuiContainer-root {
+    margin: 0 auto;
+    max-width: 5000px !important;
+  }
+}
+
+
+
+
+
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 820px; /* Set the desired height */
+  margin: 0 auto;
+  background-color: #ffffff;
+  animation: zoom 3s infinite;
+  overflow: hidden;
+}
+
+.animated-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 820px;
+  bottom: 100px; /* Adjust the distance from the bottom as needed */
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  box-sizing: border-box;
 }

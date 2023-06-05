@@ -8,7 +8,7 @@ footer {
   background: #353535 !important;
   width: 100%;
   overflow: hidden;
-  height: 250px !important;
+  min-height: 250px !important;
   padding-top: 10px;
 
   #icons {
@@ -38,4 +38,16 @@ footer {
 
 .css-u78q51-MuiGrid-root {
   min-width: 14%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .map {
+    display: block;
+  }
+
+  #navigationButton {
+    top: -50px;
+    left: 1022px;
+  }
 }
