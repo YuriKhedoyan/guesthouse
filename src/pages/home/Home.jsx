@@ -1,5 +1,5 @@
-import React, { lazy, useContext } from "react";
 import { Link } from "react-router-dom";
+import React, { lazy, useContext } from "react";
 import { Container, Grid } from "@mui/material";
 
 import images from "../../locales/images.js";
@@ -74,61 +74,35 @@ const Home = () => {
 				</div>
 			</section>
 			<section id="sc4">
-				<Grid container spacing={2}>
-					<Grid item xs={6}>
-						<div class="animated-container">
-							<Img src={restaurant[0].src} alt={restaurant[0].alt} className="animatedImages" />
-							<div class="text-overlay">
-								<div class="text">
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.category}</p>
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.price}</p>
-								</div>
-							</div>
-						</div>
-					</Grid>
-					<Grid item xs={6}>
-						<div class="animated-container">
-							<Img src={restaurant[1].src} alt={restaurant[1].alt} className="animatedImages" />
-							<div class="text-overlay">
-								<div class="text">
-									<p className="texts">{currentLanguage.roomsInformation.deluxe.category}</p>
-									<p className="texts">{currentLanguage.roomsInformation.deluxe.price}</p>
-								</div>
-							</div>
-						</div>
-					</Grid>
-				</Grid>
-				<Grid container spacing={2}>
-					<Grid item xs={6}>
-						<div class="animated-container">
-							<Img src={restaurant[2].src} alt={restaurant[2].alt} className="animatedImages" />
-							<div class="text-overlay">
-								<div class="text">
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.category}</p>
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.price}</p>
-								</div>
-							</div>
-						</div>
-					</Grid>
-					<Grid item xs={6}>
-						<div class="animated-container">
-							<Img src={restaurant[3].src} alt={restaurant[3].alt} className="animatedImages" />
-							<div class="text-overlay">
-								<div class="text">
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.category}</p>
-									<p className="texts">{currentLanguage.roomsInformation.standardRoom.price}</p>
-								</div>
-							</div>
-						</div>
-					</Grid>
-				</Grid>
-				<Link to="/rooms" className="links">
+				<div class="image-grid">
+					<div class="image-container">
+						<img src={restaurant[1].src} alt="Image 1" class="responsive-image" />
+						<p className="image-text title">{currentLanguage.roomsInformation.standardRoom.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.standardRoom.price}</p>
+					</div>
+					<div class="image-container">
+						<img src={restaurant[2].src} alt="Image 2" class="responsive-image" />
+						<p className="image-text title">{currentLanguage.roomsInformation.standardRoom.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.standardRoom.price}</p>
+					</div>
+					<div class="image-container">
+						<img src={restaurant[3].src} alt="Image 3" class="responsive-image" />
+						<p className="image-text title">{currentLanguage.roomsInformation.deluxe.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.deluxe.price}</p>
+					</div>
+					<div class="image-container">
+						<img src={restaurant[4].src} alt="Image 4" class="responsive-image" />
+						<p className="image-text title">{currentLanguage.roomsInformation.standardRoom.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.standardRoom.price}</p>
+					</div>
+				</div>
+				<Link to="/rooms" className={`links ${theme}`}>
 					<div id="linkToRooms">
 						<p>All rooms</p>
 					</div>
 				</Link>
 			</section>
-			<section id="sc6" className={theme}>
+			<section id="sc5" className={theme}>
 				<p className="texts">{currentLanguage.otherInformation.ourBenefites}</p>
 				<Grid container spacing={3}>
 					<Grid item xs={4}>

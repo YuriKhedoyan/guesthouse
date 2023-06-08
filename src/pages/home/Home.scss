@@ -70,9 +70,15 @@ body {
 #sc3 {
   padding-top: 10px;
 
-  // div {
-  //   margin-left: 130px;
-  // }
+  .css-mhc70k-MuiGrid-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .css-gj1fbr-MuiGrid-root {
+    min-width: 410px  ;
+  }
 
   .texts {
     color: black;
@@ -151,14 +157,14 @@ body {
   }
 
   .links {
-    color: black;
+    color: black ;
 
     #linkToRooms {
       width: 100%;
       height: 40px;
       overflow: hidden;
       padding-top: 10px;
-      background-color: #353535;
+      background-color: #353535 ;
 
       p {
         margin-top: 0;
@@ -172,7 +178,7 @@ body {
   }
 }
 
-#sc6 {
+#sc5 {
   padding-bottom: 10px;
 
   .texts {
@@ -234,48 +240,52 @@ img {
 
 
 
+.image-grid {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
 
+  .title {
+    font-weight: 500;
+    font-size: 30px; 
+ }
+}
 
+.responsive-image {
+  width: 100%;
+  object-fit: cover;
+  height: 550px;
+  animation: zoom 11s infinite alternate;
+  transform-origin: top left;
+}
+
+.image-text {
+  position: relative;
+  bottom: 150px;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 0;
+  padding: 5px;
+  text-align: center;
+  z-index: 1;
+
+}
+
+.image-container {
+  height: 550px;
+  overflow: hidden;
+}
 
 @keyframes zoom {
   0% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
   50% {
     transform: scale(1.2);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 
-.animated-container {
-  position: relative;
-  display: inline-block;
-  width: 90%;
-  height: 820px; /* Set the desired height */
-  margin: 0 auto;
-  background-color: #ffffff;
-  animation: zoom 3s infinite;
-  overflow: hidden;
-}
-
-.animated-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.text-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 820px;
-  bottom: 100px; /* Adjust the distance from the bottom as needed */
-  color: white;
-  padding: 10px;
-  font-size: 24px;
-  box-sizing: border-box;
-}

@@ -18,7 +18,7 @@ import LanguageContext from "../../contexts/languageContext";
 import "./Header.scss";
 
 const Img = withSuspense(lazy(() => import("../../compontents/img")));
-import Drawer from './../../compontents/drawer/index';
+const Drawer = withSuspense(lazy(() => import("./../../compontents/drawer/")));
 
 const { otherPictures } = images;
 
@@ -96,8 +96,6 @@ const Header = () => {
 											</h4>
 										</span>
 										<span className="linksSection">
-											<h4>
-											</h4>
 											<h4>
 												<Link to="/gallery" className="links">
 													{currentLanguage.links.gallery}
