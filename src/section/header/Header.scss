@@ -204,3 +204,34 @@ h4 {
     color: black;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  #navigationButton {
+    top: -50px !important;
+    left: 50% !important;
+  }
+
+  .css-k3f0g4-MuiGrid-root {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  footer {  
+    white-space: nowrap;
+    overflow-x: visible;
+
+    .links {
+      display: inline-block;
+      margin-right: 10px;
+    } 
+  }
+}
+
+
+@media only screen and (max-width: 1054px) {
+  .css-k3f0g4-MuiGrid-root {
+    iframe {
+      max-width: 90%;
+    }
+  }
+}
