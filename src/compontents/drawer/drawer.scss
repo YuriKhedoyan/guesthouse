@@ -1,0 +1,39 @@
+.drawer {
+  margin-top: 45px;
+  
+  .css-i4bv87-MuiSvgIcon-root {
+    color: white
+  }
+
+  p {
+    color: black !important;
+  }
+}
+
+#drawerItmes {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  span {
+    display: inline-flex;
+  }
+
+  .linksSection {
+    margin: 0 auto;
+    height: 60px;
+    padding-bottom: 15px;
+  }
+
+  .infoSection {
+    padding-top: 10px;
+    margin-right: 36px;
+    height: 60px;
+    display: flex;
+  }
+
+  a {
+    margin: 0 10px;
+    color: black;
+  }
+}

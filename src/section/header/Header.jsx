@@ -1,3 +1,4 @@
+import React, { memo, useContext, lazy, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PlaceIcon from "@mui/icons-material/Place";
 import EmailIcon from "@mui/icons-material/Email";
@@ -5,7 +6,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import { Grid, Button, ButtonGroup } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import React, { memo, useContext, lazy, useState, useEffect } from "react";
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 import eng from '../../locales/eng.json'
 import rus from '../../locales/rus.json'
@@ -20,9 +22,8 @@ import "./Header.scss";
 const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Drawer = withSuspense(lazy(() => import("./../../compontents/drawer/")));
 
-const { otherPictures } = images;
-
 const Header = () => {
+	const { otherPictures } = images;
 	const { theme, setTheme } = useContext(ThemeContext);
 	const [width, setWidth] = useState(window.innerWidth);
 	const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
@@ -38,7 +39,8 @@ const Header = () => {
 	});
 
 
-	const switchTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+	const switchThemeToDark = () => setTheme("dark");
+	const switchThemeToLight = () => setTheme("light");
 
 	const setLanguageAm = () => { setCurrentLanguage(arm) }
 	const setLanguageRu = () => { setCurrentLanguage(rus) }
@@ -55,67 +57,77 @@ const Header = () => {
 			<div id="mainHeader">
 				<header >
 					<Grid container spacing={2} className="content" >
-						<Grid item xs={8}>
-							<h4 className="title">
+						<Grid item xs={5.6}>
+							<h4 className="name">
 								<Link to="/" className="links" id="title">
 									{currentLanguage.links.home}
 								</Link>
-								<Button onClick={switchTheme} variant="contained">{theme}</Button>
-								<span className="languageSelector">
-									<ButtonGroup variant="contained" aria-label="outlined primary button group">
-										<Button><Img src={otherPictures.languages.am.src} alt={otherPictures.languages.am.alt} className="langPhotos" onClick={setLanguageAm} /></Button>
-										<Button><Img src={otherPictures.languages.ru.src} alt={otherPictures.languages.ru.alt} className="langPhotos" onClick={setLanguageRu} /></Button>
-										<Button><Img src={otherPictures.languages.en.src} alt={otherPictures.languages.en.alt} className="langPhotos" onClick={setLanguageEng} /></Button>
-									</ButtonGroup>
-								</span>
 							</h4>
 						</Grid>
 						{width >= 1640 ? <>
-							<Grid item xs={4}>
-								<div id="secondPart">
-									<div>
-										<span className="infoSection">
-											<p className="info"><FacebookIcon /><InstagramIcon /></p>
-										</span>
-										<span className="infoSection">
-											<p className="info"><PlaceIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.place}</p>
-										</span>
-										<span className="infoSection">
-											<p className="info"><LocalPhoneIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.phoneNumber}</p>
-										</span>
-										<span className="infoSection">
-											<p className="info"><EmailIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.email}</p>
-										</span>
-									</div>
-									<div className="linksDiv">
-										<span className="linksSection">
-											<h4>
-												<Link to="/rooms" className="links">
-													{currentLanguage.links.rooms}
-												</Link>
-											</h4>
-										</span>
-										<span className="linksSection">
-											<h4>
-												<Link to="/gallery" className="links">
-													{currentLanguage.links.gallery}
-												</Link>
-											</h4>
-										</span>
-										<span className="linksSection">
-											<h4>
-												<Link to="/restaurant" className="links">
-													{currentLanguage.links.restaurant}
-												</Link>
-											</h4>
-										</span>
-										<span className="linksSection">
-											<h4>
-												<Link to="/contactUs" className="links">
-													{currentLanguage.links.contactUs}
-												</Link>
-											</h4>
-										</span>
+							<Grid item xs={6.2}>
+								<div>
+									<div id='aa1'>
+										<div id="secondPart">
+											<div>
+												<span className="infoSection">
+													<p className="info"><FacebookIcon /><InstagramIcon /></p>
+												</span>
+												<span className="infoSection">
+													<p className="info"><PlaceIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.place}</p>
+												</span>
+												<span className="infoSection">
+													<p className="info"><LocalPhoneIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.phoneNumber}</p>
+												</span>
+												<span className="infoSection">
+													<p className="info"><EmailIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.email}</p>
+												</span>
+											</div>
+										</div>
+										<div className="linksDiv">
+											<span className="linksSection">
+												<h4>
+													<Link to="/rooms" className="links">
+														{currentLanguage.links.rooms}
+													</Link>
+												</h4>
+											</span>
+											<span className="linksSection">
+												<h4>
+													<Link to="/gallery" className="links">
+														{currentLanguage.links.gallery}
+													</Link>
+												</h4>
+											</span>
+											<span className="linksSection">
+												<h4>
+													<Link to="/restaurant" className="links">
+														{currentLanguage.links.restaurant}
+													</Link>
+												</h4>
+											</span>
+											<span className="linksSection">
+												<h4>
+													<Link to="/contactUs" className="links">
+														{currentLanguage.links.contactUs}
+													</Link>
+												</h4>
+											</span>
+											<span className="buttonGroup">
+												<span className="languageSelector">
+													<ButtonGroup variant="contained" id="languageButtons">
+														<Button ><Img src={otherPictures.languages.am.src} alt={otherPictures.languages.am.alt} className="langPhotos" onClick={setLanguageAm} /></Button>
+														<Button ><Img src={otherPictures.languages.ru.src} alt={otherPictures.languages.ru.alt} className="langPhotos" onClick={setLanguageRu} /></Button>
+														<Button ><Img src={otherPictures.languages.en.src} alt={otherPictures.languages.en.alt} className="langPhotos" onClick={setLanguageEng} /></Button>
+													</ButtonGroup>
+												</span>
+												<span className="darkAndLight">
+													<Button onClick={switchThemeToDark} variant="contained" ><Brightness4Icon /></Button>
+													<Button onClick={switchThemeToLight} variant="contained" ><Brightness7Icon /></Button>
+												</span>
+
+											</span>
+										</div>
 									</div>
 								</div>
 							</Grid>

@@ -15,9 +15,8 @@ body {
 }
 
 .centered {
-  position: absolute;
-  top: 25%;
   left: 50%;
+  top: 12%;
   transform: translate(-50%, -50%);
   color: white !important;
   font-family: sans-serif;
@@ -70,5 +69,11 @@ img {
     background-color: white !important;
     border:rgba(0, 0, 0, 0.9) 2px solid;
     border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 403px) {
+  .css-mhc70k-MuiGrid-root4 {
+    display: block !important;
   }
 }

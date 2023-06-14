@@ -84,10 +84,17 @@ label {
 
 .light {
   .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    background: white !important;
+    background: white;
   }
 
   .writingSection {
-    background-color: #1a1a1a !important;
+    background-color: #121212;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .writingSection div {
+    display: grid;
+    grid-template-rows: auto auto;
   }
 }

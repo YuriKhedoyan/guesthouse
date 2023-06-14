@@ -15,17 +15,15 @@ const Footer = withSuspense(lazy(() => import("../../section/footer")));
 const { rooms, otherPictures } = images;
 
 const Rooms = () => {
-	const {theme} = useContext(ThemeContext);
-	const {currentLanguage} = useContext(LanguageContext);
+	const { theme } = useContext(ThemeContext);
+	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
 		<div className={theme}>
-			<Img
-				src={otherPictures.spruceBranch.src}
-				alt={otherPictures.spruceBranch.alt}
-				id="mainImage"
-			/>
-			<h2 className="centered">{currentLanguage.links.rooms}</h2>
+			<div>
+				<Img src={otherPictures.spruceBranch.src} alt={otherPictures.spruceBranch.alt} id="mainImage" />
+				<h2 className="centered">{currentLanguage.links.rooms}</h2>
+			</div>
 			<Container>
 				<div className="top-left">
 					<Header />
