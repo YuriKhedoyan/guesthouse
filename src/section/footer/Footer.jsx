@@ -24,10 +24,6 @@ const Footer = () => {
 					<Grid container spacing={3}>
 						<Grid item xs={5}>
 							<div>
-								<p className="informations">{currentLanguage.informationAboutHouse.place}</p>
-								<p className="informations">{currentLanguage.informationAboutHouse.phoneNumber}</p>
-								<p className="informations">{currentLanguage.informationAboutHouse.email}</p>
-								<p className="informations">Copyright <CopyrightIcon /> 2023 by Yuri Khedoyan</p>
 								<div id="icons">
 									<span>
 										<InstagramIcon />
@@ -36,6 +32,10 @@ const Footer = () => {
 										<FacebookIcon />
 									</span>
 								</div>
+								<p className="informations">{currentLanguage.informationAboutHouse.place}</p>
+								<p className="informations">{currentLanguage.informationAboutHouse.phoneNumber}</p>
+								<p className="informations">{currentLanguage.informationAboutHouse.email}</p>
+								<p className="informations">Copyright <CopyrightIcon /> 2023 by Yuri Khedoyan</p>
 							</div>
 						</Grid>
 						<Grid item xs={1}>

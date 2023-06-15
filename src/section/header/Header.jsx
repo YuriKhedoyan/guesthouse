@@ -54,7 +54,7 @@ const Header = () => {
 
 	return (
 		<div className={theme}>
-			<div id="mainHeader">
+			<div id="mainHeader" className="default">
 				<header >
 					<Grid container spacing={2} className="content" >
 						<Grid item xs={5.6}>
@@ -64,14 +64,25 @@ const Header = () => {
 								</Link>
 							</h4>
 						</Grid>
-						{width >= 1640 ? <>
+						{width >= 1730 ? <>
 							<Grid item xs={6.2}>
 								<div>
-									<div id='aa1'>
+									<div id="informations">
 										<div id="secondPart">
 											<div>
 												<span className="infoSection">
-													<p className="info"><FacebookIcon /><InstagramIcon /></p>
+													<div className="info">
+														<span className="icons">
+															<Link to="https://www.facebook.com/">
+																<FacebookIcon />
+															</Link>
+														</span>
+														<span className="icons">
+															<Link to="https://www.instagram.com/">
+																<InstagramIcon />
+															</Link>
+														</span>
+													</div>
 												</span>
 												<span className="infoSection">
 													<p className="info"><PlaceIcon /></p><p className="info txt">{currentLanguage.informationAboutHouse.place}</p>

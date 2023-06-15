@@ -201,12 +201,6 @@ img {
   filter: brightness(50%);
 }
 
-@media only screen and (max-width: 1935px) {
-  .css-mhc70k-MuiGrid-root {
-    min-width: 100%;
-  }
-}
-
 @media only screen and (max-width: 1860px) {
   #mainHeader .css-gj1fbr-MuiGrid-root {
     margin-left: -100px !important;
@@ -214,18 +208,6 @@ img {
 
   .title {
     max-width: 530px;
-  }
-}
-
-@media only screen and (max-width: 1640px) {
-  .css-mhc70k-MuiGrid-root {
-    max-width: 700px !important;
-  }
-
-  #secondPart {
-    div {
-      min-width: 553px;
-    }
   }
 }
 
@@ -237,7 +219,7 @@ img {
 @media (min-width: 1px) {
   .css-nzinn5-MuiContainer-root {
     margin: 0 auto;
-    max-width: 5000px !important;
+    max-width: 5000px;
   }
 }
 
@@ -272,24 +254,11 @@ img {
   padding: 5px;
   text-align: center;
   z-index: 1;
+  margin: 0 auto;
 
 }
 
 .image-container {
   height: 550px;
   overflow: hidden;
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(1.1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1.1);
-  }
 }

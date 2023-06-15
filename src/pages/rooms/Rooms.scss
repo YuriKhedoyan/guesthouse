@@ -31,6 +31,10 @@ body {
 
 .cards {
   margin-left: 150px;
+
+  img {
+    margin: auto;
+  }
 }
 
 img {
@@ -59,21 +63,31 @@ img {
 
 .light {
   .css-1d9ctjl-MuiPaper-root-MuiCard-root {
-    background-color: #1a1a1a !important;
+    background-color: #1a1a1a;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  }
+
+  .cards h3 {
+    margin: 15px auto;
+    color: #fff;
   }
 }
 
 .dark {
   .css-1d9ctjl-MuiPaper-root-MuiCard-root {
-    background-color: white !important;
-    border:rgba(0, 0, 0, 0.9) 2px solid;
+    background-color: white;
+    border: rgba(0, 0, 0, 0.9) 2px solid;
     border-radius: 5px;
+  }
+
+  .cards h3 {
+    margin: 15px auto;
+    color: rgba(0, 0, 0, 0.87);
   }
 }
 
 @media only screen and (max-width: 403px) {
   .css-mhc70k-MuiGrid-root4 {
-    display: block !important;
+    display: block;
   }
 }

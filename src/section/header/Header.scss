@@ -11,8 +11,9 @@
   padding-bottom: 60px;
 
   .linksDiv {
-    padding-left: 66px;
+    padding-left: 100px;
     overflow: hidden;
+    width: 884px;
 
     .linksSection,
     .buttonGroup {
@@ -51,6 +52,14 @@
   }
 }
 
+a:active {
+  color: #b3b3b3
+}
+
+a:hover {
+  color: #b3b3b3
+}
+
 .content {
   margin-top: 5px;
 }
@@ -78,6 +87,7 @@
   max-width: 826px;
 
   div {
+    max-width: 833px;
     text-align: right;
   }
 }
@@ -101,8 +111,6 @@
 .default {
   animation: defaultColor 0.3s forwards;
 }
-
-.light {}
 
 @keyframes changingColor {
   from {
@@ -146,7 +154,7 @@
   box-shadow: none;
 }
 
-.light {
+.dark {
   background-color: #121212;
 
   h1,
@@ -169,7 +177,7 @@
   }
 }
 
-.dark {
+.light {
   background-color: #fff;
   color: #121212;
 
@@ -233,6 +241,43 @@ h4 {
   }
 }
 
-#aa1 {
+#informations {
   text-align: right;
+}
+
+.icons {
+  margin-right: 5px;
+
+  a {
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1903px) {
+  .linksDiv {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1785px) {
+  #informations {
+    position: relative;
+    left: -250px;
+    padding-left: 16px;
+  }
+}
+
+@media only screen and (max-width: 1730px) {
+  .name {
+    top: 0px;
+    position: relative;
+  }
+
+  .drawer {
+    margin: 30px auto;
+  }
+
+  #mainHeader {
+    height: 30px;
+  }
 }
