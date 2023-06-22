@@ -90,6 +90,16 @@ label {
   .writingSection {
     background-color: #121212;
   }
+
+  input {
+    background: #121212;
+  }
+}
+
+.dark {
+  input {
+    background: white;
+  }
 }
 
 @media only screen and (max-width: 785px) {
