@@ -1,4 +1,5 @@
 {
+  "homepage": "https://YuriKhedoyan.github.io/khedoyans-guesthouse",
   "name": "khedoyans-guesthouse",
   "private": true,
   "version": "0.0.0",
@@ -6,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -28,6 +31,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.8",
     "vite": "^4.2.1"
   }
