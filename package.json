@@ -1,13 +1,13 @@
 {
   "homepage": "https://YuriKhedoyan.github.io/khedoyans-guesthouse",
   "name": "khedoyans-guesthouse",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
