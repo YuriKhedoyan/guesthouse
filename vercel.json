@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "src/pages/**/*.jsx",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "src/components/**/*.jsx",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "api/index.js",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/pages/$1",
+      "headers": {
+        "Cache-Control": "max-age=31536000"
+      }
+    }
+  ]
+}
