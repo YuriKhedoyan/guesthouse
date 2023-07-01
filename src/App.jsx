@@ -21,8 +21,8 @@ const App = () => {
 			<LanguageContext.Provider value={{ currentLanguage, setCurrentLanguage }}>
 				<BrowserRouter>
 					<Routes>
-						<Route path="/khedoyans-guesthouse/" element={<Home />} />
 						<Route path="*" element={<Home />} />
+						<Route path="/khedoyans-guesthouse/" element={<Home />} />
 						<Route path="/khedoyans-guesthouse/rooms" element={<Rooms />} />
 						<Route path="/khedoyans-guesthouse/gallery" element={<Gallery />} />
 						<Route path="/khedoyans-guesthouse/contactUs" element={<ContactUs />} />
