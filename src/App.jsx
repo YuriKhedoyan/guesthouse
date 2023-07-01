@@ -17,11 +17,11 @@ const App = () => {
 	const [currentLanguage, setCurrentLanguage] = useState(eng)
 
 	return (
-		<ThemeContext.Provider value={{theme, setTheme}}>
-			<LanguageContext.Provider value={{currentLanguage, setCurrentLanguage}}>
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			<LanguageContext.Provider value={{ currentLanguage, setCurrentLanguage }}>
 				<BrowserRouter>
 					<Routes>
-						<Route path="/" element={<Home />}/>
+						<Route path="/khedoyans-guesthouse" element={<Home />} />
 						<Route path="/rooms" element={<Rooms />} />
 						<Route path="/gallery" element={<Gallery />} />
 						<Route path="/contactUs" element={<ContactUs />} />

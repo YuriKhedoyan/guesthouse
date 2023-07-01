@@ -4,7 +4,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import images from "../../locales/images.js";
 
-import "./Slider.scss";
+import "src/compontents/slider/Slider.scss";
 
 const { house } = images;
 
