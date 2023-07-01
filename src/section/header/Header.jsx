@@ -59,7 +59,7 @@ const Header = () => {
 					<Grid container spacing={2} className="content" >
 						<Grid item xs={5.6}>
 							<h4 className="name">
-								<Link to="/" className="links" id="title">
+								<Link to="/khedoyans-guesthouse/" className="links" id="title">
 									{currentLanguage.links.home}
 								</Link>
 							</h4>
@@ -98,28 +98,28 @@ const Header = () => {
 										<div className="linksDiv">
 											<span className="linksSection">
 												<h4>
-													<Link to="/rooms" className="links">
+													<Link to="/khedoyans-guesthouse/rooms" className="links">
 														{currentLanguage.links.rooms}
 													</Link>
 												</h4>
 											</span>
 											<span className="linksSection">
 												<h4>
-													<Link to="/gallery" className="links">
+													<Link to="/khedoyans-guesthouse/gallery" className="links">
 														{currentLanguage.links.gallery}
 													</Link>
 												</h4>
 											</span>
 											<span className="linksSection">
 												<h4>
-													<Link to="/restaurant" className="links">
+													<Link to="/khedoyans-guesthouse/restaurant" className="links">
 														{currentLanguage.links.restaurant}
 													</Link>
 												</h4>
 											</span>
 											<span className="linksSection">
 												<h4>
-													<Link to="/contactUs" className="links">
+													<Link to="/khedoyans-guesthouse/contactUs" className="links">
 														{currentLanguage.links.contactUs}
 													</Link>
 												</h4>

@@ -43,19 +43,19 @@ const Footer = () => {
 								<div>
 									<p className="texts">SITEMAP</p>
 								</div>
-								<Link to="/" className="texts links">
+								<Link to="/khedoyans-guesthouse/" className="texts links">
 									<p className="texts">{currentLanguage.links.mainPage[0] + currentLanguage.links.mainPage.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<Link to="/restaurant" className="texts links">
+								<Link to="/khedoyans-guesthouse/restaurant" className="texts links">
 									<p className="texts">{currentLanguage.links.restaurant[0] + currentLanguage.links.restaurant.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<Link to="/rooms" className="texts links">
+								<Link to="/khedoyans-guesthouse/rooms" className="texts links">
 									<p className="texts">{currentLanguage.links.rooms[0] + currentLanguage.links.rooms.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<Link to="/gallery" className="texts links">
+								<Link to="/khedoyans-guesthouse/gallery" className="texts links">
 									<p className="texts">{currentLanguage.links.gallery[0] + currentLanguage.links.gallery.slice(1).toLocaleLowerCase()}</p>
 								</Link>
-								<Link to="/contactUs" className="texts links">
+								<Link to="/khedoyans-guesthouse/contactUs" className="texts links">
 									<p className="texts">{currentLanguage.links.contactUs[0] + currentLanguage.links.contactUs.slice(1).toLocaleLowerCase()}</p>
 								</Link>
 							</div>

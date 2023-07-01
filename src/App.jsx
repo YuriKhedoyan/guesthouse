@@ -21,12 +21,12 @@ const App = () => {
 			<LanguageContext.Provider value={{ currentLanguage, setCurrentLanguage }}>
 				<BrowserRouter>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/khedoyans-guesthouse/" element={<Home />} />
 						<Route path="*" element={<Home />} />
-						<Route path="/rooms" element={<Rooms />} />
-						<Route path="/gallery" element={<Gallery />} />
-						<Route path="/contactUs" element={<ContactUs />} />
-						<Route path="/restaurant" element={<Restaurant />} />
+						<Route path="/khedoyans-guesthouse/rooms" element={<Rooms />} />
+						<Route path="/khedoyans-guesthouse/gallery" element={<Gallery />} />
+						<Route path="/khedoyans-guesthouse/contactUs" element={<ContactUs />} />
+						<Route path="/khedoyans-guesthouse/restaurant" element={<Restaurant />} />
 					</Routes>
 				</BrowserRouter>
 			</LanguageContext.Provider>
