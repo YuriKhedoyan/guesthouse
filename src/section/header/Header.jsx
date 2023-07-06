@@ -53,7 +53,7 @@ const Header = () => {
 	})
 
 	return (
-		<div className={theme}>
+		<div>
 			<div id="mainHeader" className="default">
 				<header >
 					<Grid container spacing={2} className="content" >

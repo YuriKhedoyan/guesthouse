@@ -5,10 +5,10 @@
 }
 
 footer {
-  background: #353535 !important;
+  background: #353535;
   width: 100%;
   overflow: hidden;
-  min-height: 250px !important;
+  min-height: 250px;
   padding-top: 10px;
 
   #icons {
@@ -22,12 +22,12 @@ footer {
   }
 
   .texts {
-    color: white !important;
-    margin: 0;
+    color: white;
+    margin: 5;
   }
 
   .informations {
-    color: white !important;
+    color: white;
     margin-top: 5px;
   }
 }
@@ -39,8 +39,12 @@ footer {
 
 @media only screen and (max-width: 1200px) {
   #navigationButton {
-    top: -50px !important;
-    left: 50% !important;
+    top: -50px;
+    left: 50%;
+  }
+
+  .texts {
+    margin: 0;
   }
 
   .css-k3f0g4-MuiGrid-root {
@@ -65,13 +69,13 @@ footer {
 }
 
 
-@media only screen and (max-width: 1054px) {
-  .css-k3f0g4-MuiGrid-root {
-    iframe {
-      max-width: 90%;
-    }
-  }
-}
+// @media only screen and (max-width: 1054px) {
+//   .css-k3f0g4-MuiGrid-root {
+//     iframe {
+//       max-width: 90%;
+//     }
+//   }
+// }
 
 .css-zow5z4-MuiGrid-root .MuiGrid-item {
   padding-left: 0;

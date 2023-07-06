@@ -14,12 +14,11 @@ import "./Footer.scss";
 const Maps = withSuspense(lazy(() => import("../../compontents/maps/Maps")));
 
 const Footer = () => {
-	const { theme } = useContext(ThemeContext);
 	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
 		<>
-			<footer className={theme}>
+			<footer>
 				<Container>
 					<Grid container spacing={3}>
 						<Grid item xs={5}>
@@ -40,9 +39,6 @@ const Footer = () => {
 						</Grid>
 						<Grid item xs={1}>
 							<div>
-								<div>
-									<p className="texts">SITEMAP</p>
-								</div>
 								<Link to="/khedoyans-guesthouse/" className="texts links">
 									<p className="texts">{currentLanguage.links.mainPage[0] + currentLanguage.links.mainPage.slice(1).toLocaleLowerCase()}</p>
 								</Link>
