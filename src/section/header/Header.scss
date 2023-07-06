@@ -133,12 +133,21 @@ a:hover {
 }
 
 .darkAndLight {
+  top: -4px;
+  margin-left: 40px;
+  position: relative;
 
   button {
+    padding: 0;
+    color: white;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    margin-left: 2px;
+    box-shadow: none;
     background-color: transparent;
     border-color: transparent;
-    color: white;
-    box-shadow: none;
   }
 
   .button:hover {
@@ -147,7 +156,6 @@ a:hover {
     background-color: transparent;
     box-shadow: none;
   }
-
 }
 
 #languageButtons {
@@ -236,19 +244,6 @@ h4 {
   }
 }
 
-.darkAndLight {
-  margin-left: 40px;
-
-  button {
-    padding: 0;
-    min-width: 40px;
-    max-width: 40px;
-    min-height: 40px;
-    max-height: 40px;
-    margin-left: 2px;
-  }
-}
-
 #informations {
   text-align: right;
 }
@@ -267,10 +262,10 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 1785px) {
+@media only screen and (max-width: 1810px) {
   #informations {
     position: relative;
-    left: -250px;
+    left: -175px;
     padding-left: 16px;
   }
 }

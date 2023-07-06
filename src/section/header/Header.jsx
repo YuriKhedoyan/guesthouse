@@ -57,7 +57,7 @@ const Header = () => {
 			<div id="mainHeader" className="default">
 				<header >
 					<Grid container spacing={2} className="content" >
-						<Grid item xs={5.6}>
+						<Grid item xs={5.2}>
 							<h4 className="name">
 								<Link to="/khedoyans-guesthouse/" className="links" id="title">
 									{currentLanguage.links.home}
@@ -65,7 +65,7 @@ const Header = () => {
 							</h4>
 						</Grid>
 						{width >= 1730 ? <>
-							<Grid item xs={6.2}>
+							<Grid item xs={6.3}>
 								<div>
 									<div id="informations">
 										<div id="secondPart">
