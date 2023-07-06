@@ -1,16 +1,18 @@
 #navigationButton {
-  min-width: 30px !important;
+  min-width: 30px;
   max-width: 50px;
   height: 30px;
   padding-top: 5px;
   background-color: #248f24;
   border-radius: 4px;
   position: relative;
-  top: -50px;
-  left: 417px;
+  top: -105px;
+  left: 6px;
 
   a {
+    display: grid;
     color: white;
+    place-items: center;
     text-decoration: none;
   }
 }

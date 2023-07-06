@@ -12,13 +12,15 @@ footer {
   padding-top: 10px;
 
   #icons {
-    text-align: center;
+    text-align: left;
   }
 
-  div {
+  #informationFooter {
+    padding-top: 40px;
+    padding-left: 81px;
     color: white;
-    text-align: center;
-    min-width: 130px;
+    text-align: left;
+    width: 300px;
   }
 
   .texts {
@@ -32,48 +34,37 @@ footer {
   }
 }
 
-.googleMap {
-  margin-left: 70px;
+.map {
+  margin-left: 50px;
 }
 
+// @media only screen and (max-width: 1200px) {
+//   #navigationButton {
+//     top: -50px;
+//     left: 50%;
+//   }
 
-@media only screen and (max-width: 1200px) {
-  #navigationButton {
-    top: -50px;
-    left: 50%;
-  }
+//   .texts {
+//     margin: 0;
+//   }
 
-  .texts {
-    margin: 0;
-  }
+//   #informationFooter,
+//   .mapFooter {
+//     flex: 1 0 100%;
+//     margin-right: 0;
+//   }
 
-  .informationFooter,
-  .mapFooter {
-    flex: 1 0 100%;
-    max-width: 100%;
-    margin-right: 0;
-  }
-
-  footer {
-    white-space: nowrap;
-    overflow-x: visible;
-
-    .links {
-      display: inline-block;
-      margin-right: 10px !important;
-    }
-
-    .linksFooter {
-      min-width: 100%;
-    }
-  }
-}
+//   footer {
+//     white-space: nowrap;
+//     overflow-x: visible;
+//   }
+// }
 
 
 @media only screen and (max-width: 1054px) {
 
   .mapFooter,
-  .informationFooter {
+  #informationFooter {
     iframe {
       max-width: 90%;
     }
