@@ -132,27 +132,35 @@ a:hover {
   }
 }
 
-.css-zqcytf-MuiButtonGroup-root,
-.MuiButtonGroup-grouped,
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
-  background-color: transparent;
-  border-color: transparent;
-  color: white;
-  box-shadow: none;
+.darkAndLight {
+
+  button {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    box-shadow: none;
+  }
+
+  .button:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
 }
 
 #languageButtons {
-  .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  box-shadow: none;
+
+  button {
+    background-color: transparent;
     border-color: transparent;
+    color: white;
+    box-shadow: none;
   }
 }
 
-.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: transparent;
-  box-shadow: none;
-}
 
 .dark {
   background-color: #121212;
