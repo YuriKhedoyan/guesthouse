@@ -21,7 +21,7 @@ const Footer = () => {
 			<footer>
 				<Container>
 					<Grid container spacing={3}>
-						<Grid item xs={5}>
+						<Grid item xs={5} className="informationFooter">
 							<div>
 								<div id="icons">
 									<span>
@@ -37,7 +37,7 @@ const Footer = () => {
 								<p className="informations">Copyright <CopyrightIcon /> 2023 by Yuri Khedoyan</p>
 							</div>
 						</Grid>
-						<Grid item xs={1}>
+						<Grid item xs={1} className="linksFooter">
 							<div>
 								<Link to="/khedoyans-guesthouse/" className="texts links">
 									<p className="texts">{currentLanguage.links.mainPage[0] + currentLanguage.links.mainPage.slice(1).toLocaleLowerCase()}</p>
@@ -56,7 +56,7 @@ const Footer = () => {
 								</Link>
 							</div>
 						</Grid>
-						<Grid item xs={5}>
+						<Grid item xs={5} className="mapFooter">
 							<div className="map">
 								<Maps></Maps>
 							</div>

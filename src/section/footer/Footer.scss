@@ -47,7 +47,8 @@ footer {
     margin: 0;
   }
 
-  .css-k3f0g4-MuiGrid-root {
+  .informationFooter,
+  .mapFooter {
     flex: 1 0 100%;
     max-width: 100%;
     margin-right: 0;
@@ -62,20 +63,22 @@ footer {
       margin-right: 10px !important;
     }
 
-    .css-u78q51-MuiGrid-root {
+    .linksFooter {
       min-width: 100%;
     }
   }
 }
 
 
-// @media only screen and (max-width: 1054px) {
-//   .css-k3f0g4-MuiGrid-root {
-//     iframe {
-//       max-width: 90%;
-//     }
-//   }
-// }
+@media only screen and (max-width: 1054px) {
+
+  .mapFooter,
+  .informationFooter {
+    iframe {
+      max-width: 90%;
+    }
+  }
+}
 
 .css-zow5z4-MuiGrid-root .MuiGrid-item {
   padding-left: 0;
