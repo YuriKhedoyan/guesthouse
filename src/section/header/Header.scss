@@ -23,7 +23,7 @@
 
     .buttonGroup {
       overflow: hidden;
-      margin-bottom: 13px;
+      margin-bottom: 20px;
       width: 370px;
     }
   }
@@ -135,7 +135,7 @@ a:hover {
 }
 
 .darkAndLight {
-  top: -4px;
+  top: 3px;
   margin-left: 40px;
   position: relative;
 
@@ -152,7 +152,7 @@ a:hover {
     border-color: transparent;
   }
 
-  .button:hover {
+  button:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
     background-color: transparent;
@@ -190,8 +190,10 @@ a:hover {
     }
   }
 
-  button:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+  .darkAndLight {
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
   }
 }
 
@@ -216,8 +218,10 @@ a:hover {
     }
   }
 
-  button:hover {
-    background-color: rgba(0, 0, 0, 0.54);
+  .darkAndLight {
+    button:hover {
+      background-color: rgba(0, 0, 0, 0.54);
+    }
   }
 }
 
@@ -239,6 +243,8 @@ h4 {
 }
 
 .languageSelector {
+  top: 5px;
+  position: relative;
   margin-right: 18px;
 
   button {
