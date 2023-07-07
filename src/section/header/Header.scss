@@ -11,9 +11,8 @@
   padding-bottom: 60px;
 
   .linksDiv {
-    padding-left: 100px;
     overflow: hidden;
-    width: 884px;
+    width: 976px;
 
     .linksSection,
     .buttonGroup {
@@ -47,8 +46,11 @@
     .txt {
       color: white;
       font-size: 15px;
-      padding-bottom: 13px;
     }
+  }
+
+  svg {
+    overflow-x: hidden;
   }
 }
 
