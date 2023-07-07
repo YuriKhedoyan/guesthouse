@@ -82,8 +82,8 @@ const Home = () => {
 					</div>
 					<div class="image-container">
 						<img src={restaurant[2].src} alt="Image 2" class="responsive-image" />
-						<p className="image-text title">{currentLanguage.roomsInformation.standardRoom.category}</p>
-						<p className="image-text">{currentLanguage.roomsInformation.standardRoom.price}</p>
+						<p className="image-text title">{currentLanguage.roomsInformation.deluxeSuperior.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.deluxeSuperior.price}</p>
 					</div>
 					<div class="image-container">
 						<img src={restaurant[3].src} alt="Image 3" class="responsive-image" />
@@ -92,8 +92,8 @@ const Home = () => {
 					</div>
 					<div class="image-container">
 						<img src={restaurant[4].src} alt="Image 4" class="responsive-image" />
-						<p className="image-text title">{currentLanguage.roomsInformation.standardRoom.category}</p>
-						<p className="image-text">{currentLanguage.roomsInformation.standardRoom.price}</p>
+						<p className="image-text title">{currentLanguage.roomsInformation.duplex.category}</p>
+						<p className="image-text">{currentLanguage.roomsInformation.duplex.price}</p>
 					</div>
 				</div>
 				<Link to="/rooms" className={`links ${theme}`}>
