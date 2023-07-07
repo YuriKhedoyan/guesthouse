@@ -69,6 +69,7 @@ body {
 
 #sc3 {
   padding-top: 10px;
+  max-width: fit-content;
 
   #aboutHotel {
     justify-content: center;
@@ -264,10 +265,4 @@ img {
 
 .css-hltdia {
   max-width: auto;
-}
-
-@media (min-width: 0px) {
-  .css-hltdia {
-    max-width: auto;
-  }
 }
