@@ -21,7 +21,7 @@ const Footer = () => {
 			<footer>
 				<Container>
 					<Grid container spacing={3}>
-						<Grid item xs={5} id="informationFooter">
+						<Grid item xs={5} className="informationFooter">
 							<div>
 								<div id="icons">
 									<span>

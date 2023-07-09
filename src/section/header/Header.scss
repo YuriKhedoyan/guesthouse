@@ -94,18 +94,6 @@ a:hover {
   }
 }
 
-.css-1osj8n2-MuiGrid-root {
-  text-align: center;
-}
-
-.css-1boa1lb-MuiGrid-root {
-  margin-top: 32px;
-}
-
-.css-gj1fbr-MuiGrid-root {
-  margin: 0;
-}
-
 .sticky {
   animation: changingColor 0.3s forwards !important;
 }
@@ -162,6 +150,10 @@ a:hover {
 
 #languageButtons {
   box-shadow: none;
+  position: relative;
+  top: 5px;
+  left: 25px;
+  overflow: hidden;
 
   button {
     background-color: transparent;
@@ -231,12 +223,6 @@ a:hover {
   filter: brightness(100%);
 }
 
-.css-zqcytf-MuiButtonGroup-root {
-  position: relative;
-  top: 6px;
-  left: 25px;
-  overflow: hidden;
-}
 
 h4 {
   overflow: hidden;

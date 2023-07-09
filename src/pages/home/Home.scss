@@ -69,7 +69,7 @@ body {
 #sc3 {
   margin: 0 auto;
   padding-top: 10px;
-  max-width: fit-content;
+  max-width: max-content;
 
   #aboutHotel {
     justify-content: center;
@@ -78,7 +78,6 @@ body {
 
   div {
     min-width: 410px;
-    max-width: fit-content;
   }
 
   .texts {
@@ -98,9 +97,15 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  #sc3 {
+    max-width: min-content;
+  }
+}
+
 #sc4 {
   #backgroundImg1 {
-    background-image: url('../../assets/images/restaurant3.jpg');
+    background-image: url('...../assets/images/restaurant3.jpg');
     margin: 0;
   }
 
@@ -267,10 +272,4 @@ img {
 
 .css-hltdia {
   max-width: auto;
-}
-
-@media only screen and (max-width: 400px) {
-  #sc3 {
-    max-width: min-content;
-  }
 }
