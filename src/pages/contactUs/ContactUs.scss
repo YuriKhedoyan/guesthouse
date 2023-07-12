@@ -1,12 +1,12 @@
-* {
-  overflow-x: hidden;
-}
-
 body {
   margin: 0;
   font-family: 'Webly Sleek UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainHeader .infoSection .txt {
+  overflow: hidden;
 }
 
 #mainImage {
@@ -53,7 +53,7 @@ body {
 }
 
 #outlined-basic {
-  height: 5px !important;
+  height: 5px;
   width: 251px;
 }
 
@@ -73,17 +73,12 @@ label {
   margin-bottom: 10px;
 }
 
-.css-mhc70k-MuiGrid-root {
+.writingSection div {
   margin-bottom: 10px;
 }
-
-.css-1oqqzyl-MuiContainer-root {
-  margin-bottom: 10px;
-}
-
 
 .light {
-  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  .inputTexts input {
     background: white;
   }
 
@@ -94,11 +89,31 @@ label {
   input {
     background: #121212;
   }
+
+  label {
+    color: white
+  }
 }
 
 .dark {
+  .inputTexts input {
+    background: #121212;
+  }
+
+  .writingSection {
+    background-color: white;
+  }
+
   input {
     background: white;
+  }
+
+  #message {
+    background-color: #121212;
+  }
+
+  label {
+    color: #121212
   }
 }
 

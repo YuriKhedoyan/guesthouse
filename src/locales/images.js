@@ -73,7 +73,7 @@ const data = {
 			alt: "Photo of the Garden",
 		},
 		{
-			src: "/src/images/garden5.jpg",
+			src: "/images/garden5.jpg",
 			alt: "Photo of the Garden",
 		},
 		{

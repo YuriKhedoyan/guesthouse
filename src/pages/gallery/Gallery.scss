@@ -1,10 +1,16 @@
-* {
-  overflow-x: hidden;
-}
-
 body {
   margin: 0;
 }
+
+#mainHeader .infoSection .txt {
+  overflow: hidden;
+}
+
+// #mainDiv {
+//   header #secondPart {
+//     margin-left: 75px;
+//   }
+// }
 
 .photos {
   max-width: 325px;

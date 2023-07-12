@@ -16,11 +16,11 @@ const { restaurant, house, garden } = images;
 const pictures = [restaurant, house, garden];
 
 const Gallery = () => {
-	const {theme} = useContext(ThemeContext);
-	const {currentLanguage} = useContext(LanguageContext);
+	const { theme } = useContext(ThemeContext);
+	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
-		<div className={theme}>
+		<div className={theme} id="mainDiv">
 			<Img id="mainImage" src={house[3].src} alt={house[3].alt} />
 			<h2 className="centered">{currentLanguage.links.gallery}</h2>
 			<Container>

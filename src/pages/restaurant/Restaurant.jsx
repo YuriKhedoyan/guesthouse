@@ -15,8 +15,8 @@ const Footer = withSuspense(lazy(() => import("../../section/footer")));
 const { restaurant } = images;
 
 const Restaurant = () => {
-	const {theme} = useContext(ThemeContext);
-	const {currentLanguage} = useContext(LanguageContext);
+	const { theme } = useContext(ThemeContext);
+	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
 		<div className={theme}>
@@ -27,7 +27,7 @@ const Restaurant = () => {
 					<Header />
 				</div>
 			</Container>
-			<Container>
+			<Container className="mainDiv">
 				<Grid container spacing={2}>
 					<Grid item xs={5}>
 						<h3>{currentLanguage.restaurantInformation.breakfast}</h3>

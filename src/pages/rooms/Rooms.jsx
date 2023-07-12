@@ -30,35 +30,35 @@ const Rooms = () => {
 				</div>
 				<Grid container spacing={2}>
 					<Grid item xs={6}>
-						<div className="cards">
+						<div className="cardsDiv">
 							<span>
-								<Card sx={{ maxWidth: 450 }}>
+								<Card sx={{ maxWidth: 450 }} className="cards">
 									<CardMedia
 										height="300"
 										component="img"
 										alt={rooms.standardRoom.alt}
 										image={rooms.standardRoom.src}
 									/>
-									<CardContent>
+									<CardContent className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.standardRoom.category}</h3>
 									</CardContent>
-									<CardActions disableSpacing>
+									<CardActions disableSpacing className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.standardRoom.price}</h3>
 									</CardActions>
 								</Card>
 							</span>
 							<span>
-								<Card sx={{ maxWidth: 450 }}>
+								<Card sx={{ maxWidth: 450 }} className="cards">
 									<CardMedia
 										height="300"
 										component="img"
 										alt={rooms.deluxe.alt}
 										image={rooms.deluxe.src}
 									/>
-									<CardContent>
+									<CardContent className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.deluxeSuperior.category}</h3>
 									</CardContent>
-									<CardActions disableSpacing>
+									<CardActions disableSpacing className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.deluxeSuperior.price}</h3>
 									</CardActions>
 								</Card>
@@ -66,35 +66,35 @@ const Rooms = () => {
 						</div>
 					</Grid>
 					<Grid item xs={6}>
-						<div className="cards">
+						<div className="cardsDiv">
 							<span>
-								<Card sx={{ maxWidth: 450 }}>
+								<Card sx={{ maxWidth: 450 }} className="cards">
 									<CardMedia
 										height="300"
 										component="img"
 										alt={rooms.deluxeSuperior.alt}
 										image={rooms.deluxeSuperior.src}
 									/>
-									<CardContent>
+									<CardContent className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.deluxe.category}</h3>
 									</CardContent>
-									<CardActions disableSpacing>
+									<CardActions disableSpacing className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.deluxe.price}</h3>
 									</CardActions>
 								</Card>
 							</span>
 							<span>
-								<Card sx={{ maxWidth: 450 }}>
+								<Card sx={{ maxWidth: 450 }} className="cards">
 									<CardMedia
 										height="300"
 										component="img"
 										alt={rooms.duplex.alt}
 										image={rooms.duplex.src}
 									/>
-									<CardContent>
+									<CardContent className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.duplex.category}</h3>
 									</CardContent>
-									<CardActions disableSpacing>
+									<CardActions disableSpacing className="roomsTitle">
 										<h3>{currentLanguage.roomsInformation.duplex.price}</h3>
 									</CardActions>
 								</Card>

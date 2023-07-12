@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+#mainHeader .infoSection .txt {
+  overflow: hidden;
+}
+
 #mainImage {
   object-fit: cover;
   position: relative;
@@ -25,7 +29,7 @@ body {
   width: 100%;
 }
 
-.cards {
+.cardsDiv {
   margin-left: 150px;
 
   img {
@@ -37,46 +41,37 @@ img {
   filter: brightness(50%);
 }
 
-.css-1oqqzyl-MuiContainer-root {
-  margin-top: 10px;
-}
-
-.css-1osj8n2-MuiGrid-root {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.css-1rwjz6-MuiCardActions-root,
-.css-46bh2p-MuiCardContent-root {
+.roomsTitle {
+  text-align: center;
   padding: 0;
 }
 
-.css-1d9ctjl-MuiPaper-root-MuiCard-root {
+.cards {
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 8px;
 }
 
 .light {
-  .css-1d9ctjl-MuiPaper-root-MuiCard-root {
+  .cards {
     background-color: #1a1a1a;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   }
 
-  .cards h3 {
+  .cardsDiv h3 {
     margin: 15px auto;
     color: #fff;
   }
 }
 
 .dark {
-  .css-1d9ctjl-MuiPaper-root-MuiCard-root {
+  .cards {
     background-color: white;
     border: rgba(0, 0, 0, 0.9) 2px solid;
     border-radius: 5px;
   }
 
-  .cards h3 {
+  .cardsDiv h3 {
     margin: 15px auto;
     color: rgba(0, 0, 0, 0.87);
   }

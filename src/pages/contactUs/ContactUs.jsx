@@ -14,11 +14,11 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const {house} = images
+const { house } = images
 
 const ContactUs = () => {
-	const {theme} = useContext(ThemeContext);
-	const {currentLanguage} = useContext(LanguageContext);
+	const { theme } = useContext(ThemeContext);
+	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
 		<div className={theme}>
