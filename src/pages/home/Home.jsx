@@ -56,7 +56,7 @@ const Home = () => {
 			</section>
 			<section id="sc3" className={theme}>
 				<div>
-					<Grid container spacing={1} sx={{ maxWidth: '851px' }}>
+					<Grid container spacing={1} sx={{ maxWidth: '852px' }}>
 						<Grid item xs={12}>
 							<Container maxWidth="xs" id="aboutHotel">
 								<Grid container spacing={2} >
