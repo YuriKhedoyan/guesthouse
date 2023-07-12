@@ -58,8 +58,8 @@ const Home = () => {
 				<div>
 					<Grid container spacing={1}>
 						<Grid item xs={12}>
-							<Container maxWidth="xs">
-								<Grid container spacing={2} id="aboutHotel">
+							<Container maxWidth="xs" id="aboutHotel">
+								<Grid container spacing={2} >
 									<Grid item xs={4}>
 										<h4 className="texts">{currentLanguage.welcome}</h4>
 										<p className="texts">{currentLanguage.about}</p>
