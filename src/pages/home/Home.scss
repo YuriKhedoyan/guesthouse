@@ -76,6 +76,8 @@ body {
   max-width: max-content;
 
   #aboutHotel {
+    max-width: 852px !important;
+
     div {
       justify-content: center;
       align-items: center;
@@ -84,12 +86,6 @@ body {
 
   div {
     min-width: 410px;
-  }
-
-  @media (min-width: 0px) {
-    #aboutHotel {
-      max-width: 852px !important;
-    }
   }
 
   .texts {
