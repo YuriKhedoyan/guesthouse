@@ -76,8 +76,6 @@ body {
   max-width: max-content;
 
   #aboutHotel {
-    max-width: auto !important;
-
     div {
       justify-content: center;
       align-items: center;
@@ -88,6 +86,11 @@ body {
     min-width: 410px;
   }
 
+  @media (min-width: 0px) {
+    #aboutHotel {
+      max-width: auto !important;
+    }
+  }
 
   .texts {
     font-family: 'Webly Sleek UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
