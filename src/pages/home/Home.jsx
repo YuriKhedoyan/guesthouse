@@ -56,21 +56,23 @@ const Home = () => {
 			</section>
 			<section id="sc3" className={theme}>
 				<div>
-					<Grid container spacing={1} sx={{ maxWidth: '852px' }}>
-						<Grid item xs={12}>
-							<Container maxWidth="xs" id="aboutHotel">
-								<Grid container spacing={2} >
-									<Grid item xs={4}>
-										<h4 className="texts">{currentLanguage.welcome}</h4>
-										<p className="texts">{currentLanguage.about}</p>
+					<Container>
+						<Grid container spacing={1} sx={{ maxWidth: '852cpx' }}>
+							<Grid item xs={12}>
+								<Container maxWidth="xs" id="aboutHotel">
+									<Grid container spacing={2} >
+										<Grid item xs={4}>
+											<h4 className="texts">{currentLanguage.welcome}</h4>
+											<p className="texts">{currentLanguage.about}</p>
+										</Grid>
+										<Grid item xs={4}>
+											<Img className="photos" src={house[0].src} alt={house[0].alt} />
+										</Grid>
 									</Grid>
-									<Grid item xs={4}>
-										<Img className="photos" src={house[0].src} alt={house[0].alt} />
-									</Grid>
-								</Grid>
-							</Container>
+								</Container>
+							</Grid>
 						</Grid>
-					</Grid>
+					</Container>
 				</div>
 			</section>
 			<section id="sc4">
