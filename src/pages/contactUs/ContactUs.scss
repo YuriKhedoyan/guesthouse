@@ -86,8 +86,14 @@ label {
     background-color: #121212;
   }
 
-  input {
+  input,
+  textarea {
+    color: #121212;
     background: #121212;
+  }
+
+  #message {
+    background-color: white;
   }
 
   label {
@@ -104,7 +110,9 @@ label {
     background-color: white;
   }
 
-  input {
+  input,
+  textarea {
+    color: white;
     background: white;
   }
 
