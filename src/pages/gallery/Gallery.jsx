@@ -20,7 +20,7 @@ const Gallery = () => {
 	const { currentLanguage } = useContext(LanguageContext);
 
 	return (
-		<div className={theme} id="mainDiv">
+		<div className={theme}>
 			<Img id="mainImage" src={house[3].src} alt={house[3].alt} />
 			<h2 className="centered">{currentLanguage.links.gallery}</h2>
 			<Container>
