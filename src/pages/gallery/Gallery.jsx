@@ -12,8 +12,8 @@ const Img = withSuspense(lazy(() => import("../../compontents/img")));
 const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 
-const { restaurant, house, garden } = images;
-const pictures = [restaurant, house, garden];
+const { restaurant, house, garden, reseption } = images;
+const pictures = [restaurant, house, garden, reseption];
 
 const Gallery = () => {
 	const { theme } = useContext(ThemeContext);
@@ -41,6 +41,11 @@ const Gallery = () => {
 						</Grid>
 					))}
 					{Object.values(pictures[2]).map(picture => (
+						<Grid item xs={4} key={picture.id}>
+							<Img src={picture.src} className="photos" alt={picture.alt} />
+						</Grid>
+					))}
+					{Object.values(pictures[3]).map(picture => (
 						<Grid item xs={4} key={picture.id}>
 							<Img src={picture.src} className="photos" alt={picture.alt} />
 						</Grid>

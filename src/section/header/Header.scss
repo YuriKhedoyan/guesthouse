@@ -257,14 +257,36 @@ h4 {
 }
 
 @media only screen and (max-width: 1810px) {
-  #informations {
-    position: relative;
-    left: -175px;
-    padding-left: 16px;
+  #mainHeader {
+    #informations {
+      position: relative;
+      left: -175px;
+      padding-left: 16px;
+    }
   }
 }
 
-@media only screen and (max-width: 1730px) {
+@media only screen and (max-width: 1700px) {
+  #mainHeader {
+    #informations {
+      position: fixed;
+      left: 606px;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  #mainHeader {
+    #informations {
+      position: fixed;
+      left: 506px;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1430px) {
   .name {
     top: 0px;
     position: relative;

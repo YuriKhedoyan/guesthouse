@@ -14,7 +14,8 @@ const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 const Slider = withSuspense(lazy(() => import("../../compontents/slider")));
 
-const { house, restaurant } = images;
+const { restaurant, house, reseption } = images;
+const pictures = [restaurant];
 
 const Home = () => {
 	const { theme } = useContext(ThemeContext);
@@ -57,7 +58,7 @@ const Home = () => {
 			<section id="sc3" className={theme}>
 				<div>
 					<Container>
-						<Grid container spacing={1} sx={{ maxWidth: '852cpx' }}>
+						<Grid container spacing={1} sx={{ maxWidth: '852px' }}>
 							<Grid item xs={12}>
 								<Container maxWidth="xs" id="aboutHotel">
 									<Grid container spacing={2} >
@@ -105,18 +106,21 @@ const Home = () => {
 				</Link>
 			</section>
 			<section id="sc5" className={theme}>
-				<p className="texts">{currentLanguage.otherInformation.ourBenefites}</p>
-				<Grid container spacing={3}>
-					<Grid item xs={4}>
-						<p className="texts yellow">{currentLanguage.otherInformation.highClassRooms}</p>
-					</Grid>
-					<Grid item xs={4}>
-						<p className="texts">{currentLanguage.otherInformation.bestCuisine}</p>
-					</Grid>
-					<Grid item xs={4}>
-						<p className="texts yellow">{currentLanguage.otherInformation.wonderfulNature}</p>
-					</Grid>
-				</Grid>
+				<div id="about">
+					<Container>
+						<Grid container spacing={2} >
+							<Grid item xs={6}>
+								<p>{currentLanguage.otherInformation.welcome1}</p>
+								<p>{currentLanguage.otherInformation.welcome2}</p>
+								<p>{currentLanguage.otherInformation.welcome3}</p>
+								<p>{currentLanguage.otherInformation.welcome4}</p>
+							</Grid>
+							<Grid item xs={6}>
+								<Img id="backgroundImg" src={reseption[14].src} alt={reseption[14].alt} />
+							</Grid>
+						</Grid>
+					</Container>
+				</div>
 			</section>
 			<Footer />
 		</>

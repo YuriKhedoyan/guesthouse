@@ -64,7 +64,7 @@ const Header = () => {
 								</Link>
 							</h4>
 						</Grid>
-						{width >= 1731 ? <>
+						{width >= 1431 ? <>
 							<Grid item xs={6.3}>
 								<div>
 									<div id="informations">

@@ -49,11 +49,7 @@ const data = {
 		{
 			src: "/images/restaurant6.jpg",
 			alt: "Photo of the Restaurant",
-		},
-		{
-			src: "/images/restaurant7.jpg",
-			alt: "Photo of the Restaurant",
-		},
+		}
 	],
 	garden: [
 		{
@@ -115,6 +111,72 @@ const data = {
 			alt: "Photo of the Duplex Room",
 		},
 	},
+	reseption: [
+		{
+			src: "/images/reseption1.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption2.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption3.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption4.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption5.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption6.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption7.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption8.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption9.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption10.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption11.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption12.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption13.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption14.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption15.jpg",
+			alt: "Photo of the Reseption",
+		},
+		{
+			src: "/images/reseption16.jpg",
+			alt: "Photo of the Reseption",
+		}
+	],
 	otherPictures: {
 		spruceBranch: {
 			src: "/images/9S5A9235-1-scaled.jpg",
