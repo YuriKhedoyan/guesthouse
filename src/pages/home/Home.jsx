@@ -117,6 +117,7 @@ const Home = () => {
 							</Grid>
 							<Grid item xs={6}>
 								<Img id="backgroundImg" src={reseption[14].src} alt={reseption[14].alt} />
+								<Img id="backgroundImg" src={reseption[12].src} alt={reseption[15].alt} />
 							</Grid>
 						</Grid>
 					</Container>

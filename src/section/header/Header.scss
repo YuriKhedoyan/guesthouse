@@ -286,7 +286,37 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 1430px) {
+@media only screen and (max-width: 1420px) {
+  #mainHeader {
+    #informations {
+      position: fixed;
+      left: 406px;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #mainHeader {
+    #informations {
+      position: fixed;
+      left: 356px;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #mainHeader {
+    #informations {
+      position: fixed;
+      left: 306px;
+      padding-left: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
   .name {
     top: 0px;
     position: relative;
