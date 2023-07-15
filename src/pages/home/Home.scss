@@ -86,6 +86,10 @@ body {
 
   div {
     min-width: 406px;
+
+    div div {
+      max-width: 1145px;
+    }
   }
 
   .texts {
