@@ -347,3 +347,31 @@ img {
     margin-top: 25px;
   }
 }
+
+
+#sc6 {
+  text-align: center;
+
+  h1 {
+    font-family: 'EB Garamond', serif;
+    color: #c29a5c;
+    font-size: 30px;
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 0;
+    padding-top: 15px;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .cardImages {
+    background-size: 100;
+    width: 450px;
+    max-width: 500px;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 300px;
+  }
+}

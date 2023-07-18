@@ -182,6 +182,22 @@ const data = {
 			src: "/images/9S5A9235-1-scaled.jpg",
 			alt: "Spruce Branch",
 		},
+		hagartsin: {
+			src: "/images/Haghartsin.jpg",
+			alt: "Haghartsin Monastery",
+		},
+		mimino: {
+			src: "/images/MIMINO.jpg",
+			alt: "Monument to the Heroes of the Film Mimino"
+		},
+		goshavank: {
+			src: "/images/Goshavank.jpg",
+			alt: "Goshavank Monastery"
+		},
+		parz: {
+			src: "/images/parz.jpg",
+			alt: "Parz lake",
+		},
 		languages: {
 			am: {
 				src: "/images/flag-of-armenia-logo.png",
