@@ -110,10 +110,10 @@ const Home = () => {
 					<Container>
 						<Grid container spacing={2} >
 							<Grid item xs={6}>
-								<p>{currentLanguage.otherInformation.welcome1}</p>
-								<p>{currentLanguage.otherInformation.welcome2}</p>
-								<p>{currentLanguage.otherInformation.welcome3}</p>
-								<p>{currentLanguage.otherInformation.welcome4}</p>
+								<b><p>{currentLanguage.otherInformation.welcome1}</p></b>
+								<b><p>{currentLanguage.otherInformation.welcome2}</p></b>
+								<b><p>{currentLanguage.otherInformation.welcome3}</p></b>
+								<b><p>{currentLanguage.otherInformation.welcome4}</p></b>
 							</Grid>
 							<Grid item xs={6}>
 								<Img id="backgroundImg" src={reseption[14].src} alt={reseption[14].alt} />

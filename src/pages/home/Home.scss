@@ -217,14 +217,15 @@ body {
   padding-top: 15px;
 
   #backgroundImg {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     height: auto;
+    margin-top: 115px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
   p {
     color: white;
-    font-weight: 600;
   }
 
   #about {
@@ -313,4 +314,36 @@ img {
 
 img {
   filter: brightness(50%);
+}
+
+@media only screen and (min-width: 1150px) {
+  #backgroundImg {
+    animation: marginDefault 1s forwards;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  #backgroundImg {
+    animation: margin 1s forwards;
+  }
+}
+
+@keyframes margin {
+  0% {
+    margin-top: 25px;
+  }
+
+  100% {
+    margin-top: 20%;
+  }
+}
+
+@keyframes marginDefault {
+  0% {
+    margin-top: 20%;
+  }
+
+  100% {
+    margin-top: 25px;
+  }
 }
