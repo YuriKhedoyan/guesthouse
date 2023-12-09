@@ -350,6 +350,8 @@ img {
 
 
 #sc6 {
+  height: 600px;
+  padding-top: 5%;
   text-align: center;
 
   h1 {
@@ -366,12 +368,18 @@ img {
     font-family: 'EB Garamond', serif;
   }
 
+  p {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 15px;
+  }
+
   .cardImages {
     background-size: 100;
-    width: 450px;
+    width: 350px;
     max-width: 500px;
     margin-left: 25px;
     margin-right: 25px;
-    height: 300px;
+    height: 250px;
   }
 }

@@ -126,6 +126,7 @@ const Home = () => {
 				<div id="title">
 					<h4>LOCAL ATTRACTION</h4>
 					<h1>Place of Interest</h1>
+					<p>Embark on an Unforgettable Adventure: Discover the Hidden Gems of Dilijan, Armenia. Immerse yourself in the natural beauty and rich cultural heritage as you explore the captivating places of interest, from the serene landscapes of Dilijan National Park to the ancient monasteries like Haghartsin and Goshavank. Unveil the charm of this picturesque town and create cherished memories in the heart of Armenia's breathtaking countryside.</p>
 				</div>
 				<Grid container spacing={4} >
 					<Grid item sm={3}>
