@@ -14,8 +14,7 @@ const Header = withSuspense(lazy(() => import("../../section/header")));
 const Footer = withSuspense(lazy(() => import("../../section/footer")));
 const Slider = withSuspense(lazy(() => import("../../compontents/slider")));
 
-const { restaurant, house, reseption } = images;
-const pictures = [restaurant];
+const { restaurant, house, reseption, otherPictures } = images;
 
 const Home = () => {
 	const { theme } = useContext(ThemeContext);
@@ -122,6 +121,31 @@ const Home = () => {
 						</Grid>
 					</Container>
 				</div>
+			</section>
+			<section id="sc6" className={theme}>
+				<div id="title">
+					<h4>LOCAL ATTRACTION</h4>
+					<h1>Place of Interest</h1>
+					<p>Embark on an Unforgettable Adventure: Discover the Hidden Gems of Dilijan, Armenia. Immerse yourself in the natural beauty and rich cultural heritage as you explore the captivating places of interest, from the serene landscapes of Dilijan National Park to the ancient monasteries like Haghartsin and Goshavank. Unveil the charm of this picturesque town and create cherished memories in the heart of Armenia's breathtaking countryside.</p>
+				</div>
+				<Grid container spacing={4} >
+					<Grid item sm={3}>
+						<Img className="cardImages" src={otherPictures.hagartsin.src} alt={otherPictures.hagartsin.alt} />
+						<h3 className="imgTitlles">{otherPictures.hagartsin.alt}</h3>
+					</Grid>
+					<Grid item sm={3}>
+						<Img className="cardImages" src={otherPictures.mimino.src} alt={otherPictures.mimino.alt} />
+						<h3 className="imgTitlles">{otherPictures.mimino.alt}</h3>
+					</Grid>
+					<Grid item sm={3}>
+						<Img className="cardImages" src={otherPictures.goshavank.src} alt={otherPictures.goshavank.alt} />
+						<h3 className="imgTitlles">{otherPictures.goshavank.alt}</h3>
+					</Grid>
+					<Grid item sm={3}>
+						<Img className="cardImages" src={otherPictures.parz.src} alt={otherPictures.parz.alt} />
+						<h3 className="imgTitlles">{otherPictures.parz.alt}</h3>
+					</Grid>
+				</Grid>
 			</section>
 			<Footer />
 		</>
